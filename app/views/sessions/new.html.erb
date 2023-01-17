@@ -1,0 +1,25 @@
+<% if current_user %>
+  <h1 class="text-green-700">Hello <%= current_user.employee_name.capitalize %> </h1>
+<% else %>
+<div class="flex flex-col h-screen bg-gradient-to-b from-[#063970] to-blue-200">
+        <%= render "shared/flashes" %>
+        <div class="grid place-items-center mx-2 my-20 sm:my-auto" x-data="{ showPass: true }">
+            <div class="w-11/12 p-12 sm:w-8/12 md:w-6/12 lg:w-5/12 2xl:w-4/12 px-6 py-10 sm:px-10 sm:py-6 bg-white rounded-lg shadow-md lg:shadow-lg">
+                <div class="text-center mb-4">
+                  <h6 class="font-semibold text-[#063970] text-xl">Login</h6>
+                </div> 
+      <%= form_for(:sessions,data:{turbo:false},class: "space-y-5") do |f| %>
+        <div>
+          <%= f.text_field :email, placeholder:"example@gmail.com",class:"block w-full py-3 px-3 mt-2 text-gray-800 appearance-none border-2 border-gray-100 focus:text-gray-500 focus:outline-none focus:border-gray-200 rounded-md" %>
+        </div>
+        <div class="relative w-full">
+         <%= f.password_field :password ,placeholder:"******",class:"block w-full py-3 px-3 mt-2 mb-4 text-gray-800 appearance-none border-2 border-gray-100 focus:text-gray-500 focus:outline-none focus:border-gray-200 rounded-md" %>
+        </div>
+        <%= f.submit 'Sign in',class:"w-full py-3 mt-10 bg-[#063970] rounded-md font-medium text-white uppercase focus:outline-none hover:shadow-none" %>
+     <% end %>
+     </div>
+    </div>
+  </div>
+<% end %>
+
+<script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
