@@ -1,1 +1,48 @@
-<h1 class="text-green-700"><%= current_user.employee_name %></h1>
+<br><br>
+<table>
+ <tr>
+  <td>Client</td>
+  <td> #################</td>
+  <td>Admin</td>
+  <td>Dispatcher</td>
+  <td>Mechanic</td>
+  <td>Office_Staff</td>
+  <td>Sub_Contractor</td>
+  <td>Technician</td>
+  <td>Consumers</td>
+  <td>Telematics(GPS)</td>
+  <td>Accounting</td>
+  <td>Bin Module</td>
+  <td>Bin Monitoring</td>
+  <td>SMS Delivery</td>
+  <td>Rounting</td>
+  <td>Total Users</td>
+ </tr>
+
+ <% @clients.each do |client| %>
+ <tr>
+ <td rowspan="3"><%= client.client_name %></td>
+ <td>Rate</td>
+ <td><%= User.user_type("Admin",client.id).first.user_price if User.user_type("Admin",client.id).any? %></td>
+ <td><%= User.user_type("Dispatcher",client.id).first.user_price if User.user_type("Dispatcher",client.id).any? %></td>
+ <td><%= User.user_type("Mechanic",client.id).first.user_price if User.user_type("Mechanic",client.id).any? %></td>
+ <td><%= User.user_type("Office_Staff",client.id).first.user_price if User.user_type("Office_Staff",client.id).any? %></td>
+ <td><%= User.user_type("Sub_Contractor",client.id).first.user_price if User.user_type("Sub_Contractor",client.id).any? %></td>
+ <td><%= User.user_type("Technician",client.id).first.user_price if User.user_type("Technician",client.id).any? %></td>
+ <td><%= User.user_type("Consumer",client.id).first.user_price if User.user_type("Consumer",client.id).any? %></td>
+ 
+ <td><%= Standard.standard_type("Telematics",client.id).first.standard_price if Standard.standard_type("Telematics",client.id).any? %></td>
+ <td><%= Standard.standard_type("Accounting",client.id).first.standard_price if Standard.standard_type("Accounting",client.id).any? %></td>
+ <td><%= Standard.standard_type("Bin Module",client.id).first.standard_price if Standard.standard_type("Bin Module",client.id).any? %></td>
+ <td><%= Standard.standard_type("Bin Monitoring",client.id).first.standard_price if Standard.standard_type("Bin Monitoring",client.id).any? %></td>
+ <td><%= Standard.standard_type("SMS Delivery",client.id).first.standard_price if Standard.standard_type("SMS Delivery",client.id).any? %></td>
+ <td><%= Standard.standard_type("Routing",client.id).first.standard_price if Standard.standard_type("Routing",client.id).any? %></td>
+
+ </tr>
+
+ <tr>
+ </tr>
+ <tr>
+ </tr>
+ <% end %>
+</table>
