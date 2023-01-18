@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
     def log_in(user)
         session[:user_id] = user.id
         @current_user = user
-        redirect_to admin_pannel_path
+        redirect_to root_path
     end
   
     def logged_in?
@@ -21,5 +21,9 @@ class ApplicationController < ActionController::Base
     def log_out
         session.delete(:user_id)
         @current_user = nil
+    end
+
+    def check_signin 
+       redirect_to root_path unless logged_in?
     end
 end

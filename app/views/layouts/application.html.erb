@@ -13,7 +13,7 @@
 
   <body>
   <% if current_user %> 
-    <%= link_to "Logout",logout_path %>
+    <%= render "layouts/header" %>
   <% end %>
     <%= yield %>
   </body>
