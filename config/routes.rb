@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   post '/signin', to: 'sessions#create'
   get '/signout', to: 'sessions#logout', as:"logout"
 
-  get'/admin_pannel', to: "admin_pannel#index"
+  get'/admin_panel', to: "admin_panel#index"
   root 'sessions#new'
 end
