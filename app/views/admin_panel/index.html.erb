@@ -1,86 +1,98 @@
+<div class="min-w-full text-center py-6 rounded-md border border-transparent">
+<%= form_tag  admin_panel_path,:method =>"get",class:"bg-gray-200 py-4" do  %>
+   <select name="client" class="font-light">
+    <% @clients.each do |client|%>
+     <option value="<%= client.id %>" class="font-light"><%= client.client_name %></option>
+    <% end %>
+   </select>
+   <%= submit_tag("Search",:name => nil,class:"bg-sky-700 text-white px-4 py-2.5 rounded-md border border-transparent hover:bg-indigo-700") %>
+<% end %>
+</div>
 
+<% if @client %>
 <div class="flex flex-col">
-<div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+<div>
 <div class="py-4 inline-block min-w-full sm:px-6 lg:px-8">
 <div class="overflow-hidden">
 <table class="min-w-full text-center">
 <caption class="text-xl italic font-semibold text-gray-900 dark:text-white">Client: <%= @client.client_name %> (Users)</caption>
 <thead class="border-b bg-gray-600">
   <tr>
-   <th scope="col" class="text-sm font-medium text-white px-6 py-4"></th>
-   <th scope="col" class="text-sm font-medium text-white px-6 py-4">Rate</th>
-   <th scope="col" class="text-sm font-medium text-white px-6 py-4">Registered</th>
-   <th scope="col" class="text-sm font-medium text-white px-6 py-4">Actives</th>
-   <th scope="col" class="text-sm font-medium text-white px-6 py-4">Total Amount</th>
+   <th scope="col" class="text-sm font-medium text-white px-4 py-4"></th>
+   <th scope="col" class="text-sm font-medium text-white px-4 py-4">Rate</th>
+   <th scope="col" class="text-sm font-medium text-white px-4 py-4">Registered</th>
+   <th scope="col" class="text-sm font-medium text-white px-4 py-4">Actives</th>
+   <th scope="col" class="text-sm font-medium text-white px-4 py-4">Total Amount</th>
   </tr>
 </thead class="border-b">
 <tbody>
  <tr class="bg-white border-b">
-  <td class="text-sm text-gray-900 font-bold px-6 py-4 whitespace-nowrap text-center bg-gray-300"> Admin</td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">$<%= User.user_type("Admin",@client.id).first.user_price if User.user_type("Admin",@client.id).any?  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"><%= User.user_type("Admin",@client.id).count if User.user_type("Admin",@client.id).count > 0  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"><%= User.active_user("Admin",@client.id).count if User.active_user("Admin",@client.id).count > 0  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"> $<%= (User.active_user("Admin",@client.id).count * User.user_type("Admin",@client.id).first.user_price).round(2) if User.user_type("Admin",@client.id).any? && User.active_user("Admin",@client.id).count > 0 %></td>
-  <% total_amount_user=(User.active_user("Admin",@client.id).count * User.user_type("Admin",@client.id).first.user_price).round(2) if User.user_type("Admin",@client.id).any? && User.active_user("Admin",@client.id).count > 0%>
+  <td class="text-sm text-gray-900 font-bold px-4 py-4 whitespace-nowrap text-center bg-gray-300"> Admin</td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r">$<%= User.user_type("Admin",@client.id).first.user_price if User.user_type("Admin",@client.id).any?  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"><%= User.user_type("Admin",@client.id).count if User.user_type("Admin",@client.id).count > 0  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"><%= User.active_user("Admin",@client.id).count if User.active_user("Admin",@client.id).count > 0  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"> $<%= (User.active_user("Admin",@client.id).count * User.user_type("Admin",@client.id).first.user_price).round(2) if User.user_type("Admin",@client.id).any? && User.active_user("Admin",@client.id).count > 0 %></td>
+  <% total_amount_user = 0 %>
+  <% total_amount_user= total_amount_user + (User.active_user("Admin",@client.id).count * User.user_type("Admin",@client.id).first.user_price).round(2) if User.user_type("Admin",@client.id).any? && User.active_user("Admin",@client.id).count > 0%>
  </tr class="bg-white border-b">
 
   <tr class="bg-white border-b">
-  <td class="text-sm text-gray-900 font-bold px-6 py-4 whitespace-nowrap text-center bg-gray-300">Dispatcher</td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">$<%= User.user_type("Dispatcher",@client.id).first.user_price if User.user_type("Dispatcher",@client.id).any?  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"><%= User.user_type("Dispatcher",@client.id).count if User.user_type("Dispatcher",@client.id).count > 0  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"><%= User.active_user("Dispatcher",@client.id).count if User.active_user("Dispatcher",@client.id).count > 0  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"> $<%= (User.active_user("Dispatcher",@client.id).count * User.user_type("Dispatcher",@client.id).first.user_price).round(2) if User.user_type("Dispatcher",@client.id).any? && User.active_user("Dispatcher",@client.id).count > 0 %></td>
+  <td class="text-sm text-gray-900 font-bold px-4 py-4 whitespace-nowrap text-center bg-gray-300">Dispatcher</td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r">$<%= User.user_type("Dispatcher",@client.id).first.user_price if User.user_type("Dispatcher",@client.id).any?  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"><%= User.user_type("Dispatcher",@client.id).count if User.user_type("Dispatcher",@client.id).count > 0  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"><%= User.active_user("Dispatcher",@client.id).count if User.active_user("Dispatcher",@client.id).count > 0  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"> $<%= (User.active_user("Dispatcher",@client.id).count * User.user_type("Dispatcher",@client.id).first.user_price).round(2) if User.user_type("Dispatcher",@client.id).any? && User.active_user("Dispatcher",@client.id).count > 0 %></td>
   <% total_amount_user = total_amount_user + (User.active_user("Dispatcher",@client.id).count * User.user_type("Dispatcher",@client.id).first.user_price).round(2) if User.user_type("Dispatcher",@client.id).any? && User.active_user("Dispatcher",@client.id).count > 0 %>
  </tr class="bg-white border-b">
 
  <tr class="bg-white border-b">
-  <td class="text-sm text-gray-900 font-bold px-6 py-4 whitespace-nowrap text-center bg-gray-300">Mechanic</td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">$<%= User.user_type("Mechanic",@client.id).first.user_price if User.user_type("Mechanic",@client.id).any?  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"><%= User.user_type("Mechanic",@client.id).count if User.user_type("Mechanic",@client.id).count > 0  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"><%= User.active_user("Mechanic",@client.id).count if User.active_user("Mechanic",@client.id).count > 0  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"> $<%= (User.active_user("Mechanic",@client.id).count * User.user_type("Mechanic",@client.id).first.user_price).round(2) if User.user_type("Mechanic",@client.id).any? && User.active_user("Mechanic",@client.id).count > 0 %></td>
+  <td class="text-sm text-gray-900 font-bold px-4 py-4 whitespace-nowrap text-center bg-gray-300">Mechanic</td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r">$<%= User.user_type("Mechanic",@client.id).first.user_price if User.user_type("Mechanic",@client.id).any?  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"><%= User.user_type("Mechanic",@client.id).count if User.user_type("Mechanic",@client.id).count > 0  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"><%= User.active_user("Mechanic",@client.id).count if User.active_user("Mechanic",@client.id).count > 0  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"> $<%= (User.active_user("Mechanic",@client.id).count * User.user_type("Mechanic",@client.id).first.user_price).round(2) if User.user_type("Mechanic",@client.id).any? && User.active_user("Mechanic",@client.id).count > 0 %></td>
   <% total_amount_user = total_amount_user + (User.active_user("Mechanic",@client.id).count * User.user_type("Mechanic",@client.id).first.user_price).round(2) if User.user_type("Mechanic",@client.id).any? && User.active_user("Mechanic",@client.id).count > 0%>
  </tr class="bg-white border-b">
 
  <tr class="bg-white border-b">
-  <td class="text-sm text-gray-900 font-bold px-6 py-4 whitespace-nowrap text-center bg-gray-300">Office_Staff</td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">$<%= User.user_type("Office_Staff",@client.id).first.user_price if User.user_type("Office_Staff",@client.id).any?  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"><%= User.user_type("Office_Staff",@client.id).count if User.user_type("Office_Staff",@client.id).count > 0  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"><%= User.active_user("Office_Staff",@client.id).count if User.active_user("Office_Staff",@client.id).count > 0  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"> $<%= (User.active_user("Office_Staff",@client.id).count * User.user_type("Office_Staff",@client.id).first.user_price).round(2) if User.user_type("Office_Staff",@client.id).any? && User.active_user("Office_Staff",@client.id).count > 0 %></td>
+  <td class="text-sm text-gray-900 font-bold px-4 py-4 whitespace-nowrap text-center bg-gray-300">Office_Staff</td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r">$<%= User.user_type("Office_Staff",@client.id).first.user_price if User.user_type("Office_Staff",@client.id).any?  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"><%= User.user_type("Office_Staff",@client.id).count if User.user_type("Office_Staff",@client.id).count > 0  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"><%= User.active_user("Office_Staff",@client.id).count if User.active_user("Office_Staff",@client.id).count > 0  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"> $<%= (User.active_user("Office_Staff",@client.id).count * User.user_type("Office_Staff",@client.id).first.user_price).round(2) if User.user_type("Office_Staff",@client.id).any? && User.active_user("Office_Staff",@client.id).count > 0 %></td>
   <% total_amount_user = total_amount_user + (User.active_user("Office_Staff",@client.id).count * User.user_type("Office_Staff",@client.id).first.user_price).round(2) if User.user_type("Office_Staff",@client.id).any? && User.active_user("Office_Staff",@client.id).count > 0 %>
  </tr class="bg-white border-b">
  
   <tr class="bg-white border-b">
-  <td class="text-sm text-gray-900 font-bold px-6 py-4 whitespace-nowrap text-center bg-gray-300">Sub_Contractor</td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">$<%= User.user_type("Sub_Contractor",@client.id).first.user_price if User.user_type("Sub_Contractor",@client.id).any?  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"><%= User.user_type("Sub_Contractor",@client.id).count if User.user_type("Sub_Contractor",@client.id).count > 0  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"><%= User.active_user("Sub_Contractor",@client.id).count if User.active_user("Sub_Contractor",@client.id).count > 0  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"> $<%= (User.active_user("Sub_Contractor",@client.id).count * User.user_type("Sub_Contractor",@client.id).first.user_price).round(2) if User.user_type("Sub_Contractor",@client.id).any? && User.active_user("Sub_Contractor",@client.id).count > 0 %></td>
+  <td class="text-sm text-gray-900 font-bold px-4 py-4 whitespace-nowrap text-center bg-gray-300">Sub_Contractor</td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r">$<%= User.user_type("Sub_Contractor",@client.id).first.user_price if User.user_type("Sub_Contractor",@client.id).any?  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"><%= User.user_type("Sub_Contractor",@client.id).count if User.user_type("Sub_Contractor",@client.id).count > 0  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"><%= User.active_user("Sub_Contractor",@client.id).count if User.active_user("Sub_Contractor",@client.id).count > 0  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"> $<%= (User.active_user("Sub_Contractor",@client.id).count * User.user_type("Sub_Contractor",@client.id).first.user_price).round(2) if User.user_type("Sub_Contractor",@client.id).any? && User.active_user("Sub_Contractor",@client.id).count > 0 %></td>
  <% total_amount_user = total_amount_user +  (User.active_user("Sub_Contractor",@client.id).count * User.user_type("Sub_Contractor",@client.id).first.user_price).round(2) if User.user_type("Sub_Contractor",@client.id).any? && User.active_user("Sub_Contractor",@client.id).count > 0 %>
  </tr class="bg-white border-b">
 
  <tr class="bg-white border-b">
-  <td class="text-sm text-gray-900 font-bold px-6 py-4 whitespace-nowrap text-center bg-gray-300">Technician</td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">$<%= User.user_type("Technician",@client.id).first.user_price if User.user_type("Technician",@client.id).any?  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"><%= User.user_type("Technician",@client.id).count if User.user_type("Technician",@client.id).count > 0  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"><%= User.active_user("Technician",@client.id).count if User.active_user("Technician",@client.id).count > 0  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"> $<%= (User.active_user("Technician",@client.id).count * User.user_type("Technician",@client.id).first.user_price).round(2) if User.user_type("Technician",@client.id).any? && User.active_user("Technician",@client.id).count > 0 %></td>
+  <td class="text-sm text-gray-900 font-bold px-4 py-4 whitespace-nowrap text-center bg-gray-300">Technician</td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r">$<%= User.user_type("Technician",@client.id).first.user_price if User.user_type("Technician",@client.id).any?  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"><%= User.user_type("Technician",@client.id).count if User.user_type("Technician",@client.id).count > 0  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"><%= User.active_user("Technician",@client.id).count if User.active_user("Technician",@client.id).count > 0  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"> $<%= (User.active_user("Technician",@client.id).count * User.user_type("Technician",@client.id).first.user_price).round(2) if User.user_type("Technician",@client.id).any? && User.active_user("Technician",@client.id).count > 0 %></td>
   <% total_amount_user = total_amount_user + (User.active_user("Technician",@client.id).count * User.user_type("Technician",@client.id).first.user_price).round(2) if User.user_type("Technician",@client.id).any? && User.active_user("Technician",@client.id).count > 0 %>
  </tr class="bg-white border-b">
 
   <tr class="bg-white border-b">
-  <td class="text-sm text-gray-900 font-bold px-6 py-4 whitespace-nowrap text-center bg-gray-300">Consumers</td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">$<%= User.user_type("Consumer",@client.id).first.user_price if User.user_type("Consumer",@client.id).any?  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"><%= User.user_type("Consumer",@client.id).count if User.user_type("Consumer",@client.id).count > 0  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"><%= User.active_user("Consumer",@client.id).count if User.active_user("Consumer",@client.id).count > 0  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"> $<%= (User.active_user("Consumer",@client.id).count * User.user_type("Consumer",@client.id).first.user_price).round(2) if User.user_type("Consumer",@client.id).any? && User.active_user("Consumer",@client.id).count > 0 %></td>
+  <td class="text-sm text-gray-900 font-bold px-4 py-4 whitespace-nowrap text-center bg-gray-300">Consumers</td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r">$<%= User.user_type("Consumer",@client.id).first.user_price if User.user_type("Consumer",@client.id).any?  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"><%= User.user_type("Consumer",@client.id).count if User.user_type("Consumer",@client.id).count > 0  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"><%= User.active_user("Consumer",@client.id).count if User.active_user("Consumer",@client.id).count > 0  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"> $<%= (User.active_user("Consumer",@client.id).count * User.user_type("Consumer",@client.id).first.user_price).round(2) if User.user_type("Consumer",@client.id).any? && User.active_user("Consumer",@client.id).count > 0 %></td>
   <% total_amount_user = total_amount_user + (User.active_user("Consumer",@client.id).count * User.user_type("Consumer",@client.id).first.user_price).round(2) if User.user_type("Consumer",@client.id).any? && User.active_user("Consumer",@client.id).count > 0 %>
  </tr class="bg-white border-b">
 
  <tr class="bg-white border-b">
-  <td colspan="4" class="text-sm text-gray-900 font-bold px-6 py-4 whitespace-nowrap text-center bg-gray-300">Total Amount</td>
-  <td class="text-sm text-gray-900 font-bold px-6 py-4 whitespace-nowrap text-center bg-gray-300"> $<%= total_amount_user.round(2) %></td>
+  <td colspan="4" class="text-sm text-gray-900 font-bold px-4 py-4 whitespace-nowrap text-center bg-gray-300">Total Amount</td>
+  <td class="text-sm text-gray-900 font-bold px-4 py-4 whitespace-nowrap text-center bg-gray-300"> $<%= total_amount_user.round(2) %></td>
  </tr class="bg-white border-b">
 
 
@@ -92,78 +104,79 @@
 
 
 <div class="flex flex-col">
-<div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+<div>
 <div class="py-4 inline-block min-w-full sm:px-6 lg:px-8">
 <div class="overflow-hidden">
 <table class="min-w-full text-center">
 <caption class="text-xl italic font-semibold text-gray-900 dark:text-white">Client: <%= @client.client_name %> (Standard)</caption>
 <thead class="border-b bg-gray-600">
   <tr>
-   <th scope="col" class="text-sm font-medium text-white px-6 py-4"></th>
-   <th scope="col" class="text-sm font-medium text-white px-6 py-4">Rate</th>
-   <th scope="col" class="text-sm font-medium text-white px-6 py-4">Registered</th>
-   <th scope="col" class="text-sm font-medium text-white px-6 py-4">Actives</th>
-   <th scope="col" class="text-sm font-medium text-white px-6 py-4">Total Amount</th>
+   <th scope="col" class="text-sm font-medium text-white px-4 py-4"></th>
+   <th scope="col" class="text-sm font-medium text-white px-4 py-4">Rate</th>
+   <th scope="col" class="text-sm font-medium text-white px-4 py-4">Registered</th>
+   <th scope="col" class="text-sm font-medium text-white px-4 py-4">Actives</th>
+   <th scope="col" class="text-sm font-medium text-white px-4 py-4">Total Amount</th>
   </tr>
 </thead class="border-b">
 <tbody>
  <tr class="bg-white border-b">
-  <td class="text-sm text-gray-900 font-bold px-6 py-4 whitespace-nowrap text-center bg-gray-300">Telematics(GPS)</td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">$<%= Standard.standard_type("Telematics",@client.id).first.standard_price if Standard.standard_type("Telematics",@client.id).any?  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"><%= Standard.standard_type("Telematics",@client.id).count if Standard.standard_type("Telematics",@client.id).count > 0  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"><%= Standard.active_standard("Telematics",@client.id).count if Standard.active_standard("Telematics",@client.id).count > 0  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"> $<%= (Standard.active_standard("Telematics",@client.id).count * Standard.standard_type("Telematics",@client.id).first.standard_price).round(2) if Standard.standard_type("Telematics",@client.id).any? && Standard.active_standard("Telematics",@client.id).count > 0 %></td>
-  <% total_amount_standard=(Standard.active_standard("Telematics",@client.id).count * Standard.standard_type("Telematics",@client.id).first.standard_price).round(2) if Standard.standard_type("Telematics",@client.id).any? && Standard.active_standard("Telematics",@client.id).count > 0 %>
+  <td class="text-sm text-gray-900 font-bold px-4 py-4 whitespace-nowrap text-center bg-gray-300">Telematics(GPS)</td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r">$<%= Standard.standard_type("Telematics",@client.id).first.standard_price if Standard.standard_type("Telematics",@client.id).any?  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"><%= Standard.standard_type("Telematics",@client.id).count if Standard.standard_type("Telematics",@client.id).count > 0  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"><%= Standard.active_standard("Telematics",@client.id).count if Standard.active_standard("Telematics",@client.id).count > 0  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"> $<%= (Standard.active_standard("Telematics",@client.id).count * Standard.standard_type("Telematics",@client.id).first.standard_price).round(2) if Standard.standard_type("Telematics",@client.id).any? && Standard.active_standard("Telematics",@client.id).count > 0 %></td>
+  <% total_amount_standard = 0 %>
+  <% total_amount_standard= total_amount_standard + (Standard.active_standard("Telematics",@client.id).count * Standard.standard_type("Telematics",@client.id).first.standard_price).round(2) if Standard.standard_type("Telematics",@client.id).any? && Standard.active_standard("Telematics",@client.id).count > 0 %>
  </tr class="bg-white border-b">
 
  <tr class="bg-white border-b">
-  <td class="text-sm text-gray-900 font-bold px-6 py-4 whitespace-nowrap text-center bg-gray-300">Accounting</td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">$<%= Standard.standard_type("Accounting",@client.id).first.standard_price if Standard.standard_type("Accounting",@client.id).any?  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"><%= Standard.standard_type("Accounting",@client.id).count if Standard.standard_type("Accounting",@client.id).count > 0  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"><%= Standard.active_standard("Accounting",@client.id).count if Standard.active_standard("Accounting",@client.id).count > 0  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"> $<%= (Standard.active_standard("Accounting",@client.id).count * Standard.standard_type("Accounting",@client.id).first.standard_price).round(2) if Standard.standard_type("Accounting",@client.id).any? && Standard.active_standard("Accounting",@client.id).count > 0 %></td>
+  <td class="text-sm text-gray-900 font-bold px-4 py-4 whitespace-nowrap text-center bg-gray-300">Accounting</td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r">$<%= Standard.standard_type("Accounting",@client.id).first.standard_price if Standard.standard_type("Accounting",@client.id).any?  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"><%= Standard.standard_type("Accounting",@client.id).count if Standard.standard_type("Accounting",@client.id).count > 0  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"><%= Standard.active_standard("Accounting",@client.id).count if Standard.active_standard("Accounting",@client.id).count > 0  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"> $<%= (Standard.active_standard("Accounting",@client.id).count * Standard.standard_type("Accounting",@client.id).first.standard_price).round(2) if Standard.standard_type("Accounting",@client.id).any? && Standard.active_standard("Accounting",@client.id).count > 0 %></td>
   <% total_amount_standard= total_amount_standard + (Standard.active_standard("Accounting",@client.id).count * Standard.standard_type("Accounting",@client.id).first.standard_price).round(2) if Standard.standard_type("Accounting",@client.id).any? && Standard.active_standard("Accounting",@client.id).count > 0 %>
  </tr class="bg-white border-b">
 
  <tr class="bg-white border-b">
-  <td class="text-sm text-gray-900 font-bold px-6 py-4 whitespace-nowrap text-center bg-gray-300">Bin Module</td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">$<%= Standard.standard_type("Bin Module",@client.id).first.standard_price if Standard.standard_type("Bin Module",@client.id).any?  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"><%= Standard.standard_type("Bin Module",@client.id).count if Standard.standard_type("Bin Module",@client.id).count > 0  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"><%= Standard.active_standard("Bin Module",@client.id).count if Standard.active_standard("Bin Module",@client.id).count > 0  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"> $<%= (Standard.active_standard("Bin Module",@client.id).count * Standard.standard_type("Bin Module",@client.id).first.standard_price).round(2) if Standard.standard_type("Bin Module",@client.id).any? && Standard.active_standard("Bin Module",@client.id).count > 0 %></td>
+  <td class="text-sm text-gray-900 font-bold px-4 py-4 whitespace-nowrap text-center bg-gray-300">Bin Module</td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r">$<%= Standard.standard_type("Bin Module",@client.id).first.standard_price if Standard.standard_type("Bin Module",@client.id).any?  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"><%= Standard.standard_type("Bin Module",@client.id).count if Standard.standard_type("Bin Module",@client.id).count > 0  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"><%= Standard.active_standard("Bin Module",@client.id).count if Standard.active_standard("Bin Module",@client.id).count > 0  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"> $<%= (Standard.active_standard("Bin Module",@client.id).count * Standard.standard_type("Bin Module",@client.id).first.standard_price).round(2) if Standard.standard_type("Bin Module",@client.id).any? && Standard.active_standard("Bin Module",@client.id).count > 0 %></td>
   <% total_amount_standard= total_amount_standard + (Standard.active_standard("Bin Module",@client.id).count * Standard.standard_type("Bin Module",@client.id).first.standard_price).round(2) if Standard.standard_type("Bin Module",@client.id).any? && Standard.active_standard("Bin Module",@client.id).count > 0 %>
  </tr class="bg-white border-b">
 
  <tr class="bg-white border-b">
-  <td class="text-sm text-gray-900 font-bold px-6 py-4 whitespace-nowrap text-center bg-gray-300">Bin Monitoring </td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">$<%= Standard.standard_type("Bin Monitoring",@client.id).first.standard_price if Standard.standard_type("Bin Monitoring",@client.id).any?  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"><%= Standard.standard_type("Bin Monitoring",@client.id).count if Standard.standard_type("Bin Monitoring",@client.id).count > 0  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"><%= Standard.active_standard("Bin Monitoring",@client.id).count if Standard.active_standard("Bin Monitoring",@client.id).count > 0  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"> $<%= (Standard.active_standard("Bin Monitoring",@client.id).count * Standard.standard_type("Bin Monitoring",@client.id).first.standard_price).round(2) if Standard.standard_type("Bin Monitoring",@client.id).any? && Standadr.active_standard("Bin Monitoring",@client.id).count > 0 %></td>
+  <td class="text-sm text-gray-900 font-bold px-4 py-4 whitespace-nowrap text-center bg-gray-300">Bin Monitoring </td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r">$<%= Standard.standard_type("Bin Monitoring",@client.id).first.standard_price if Standard.standard_type("Bin Monitoring",@client.id).any?  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"><%= Standard.standard_type("Bin Monitoring",@client.id).count if Standard.standard_type("Bin Monitoring",@client.id).count > 0  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"><%= Standard.active_standard("Bin Monitoring",@client.id).count if Standard.active_standard("Bin Monitoring",@client.id).count > 0  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"> $<%= (Standard.active_standard("Bin Monitoring",@client.id).count * Standard.standard_type("Bin Monitoring",@client.id).first.standard_price).round(2) if Standard.standard_type("Bin Monitoring",@client.id).any? && Standard.active_standard("Bin Monitoring",@client.id).count > 0 %></td>
   <% total_amount_standard= total_amount_standard + (Standard.active_standard("Bin Monitoring",@client.id).count * Standard.standard_type("Bin Monitoring",@client.id).first.standard_price).round(2) if Standard.standard_type("Bin Monitoring",@client.id).any? && Standard.active_standard("Bin Monitoring",@client.id).count > 0 %>
  </tr class="bg-white border-b">
 
  <tr class="bg-white border-b">
-  <td class="text-sm text-gray-900 font-bold px-6 py-4 whitespace-nowrap text-center bg-gray-300">SMS Delivery</td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">$<%= Standard.standard_type("SMS Delivery",@client.id).first.standard_price if Standard.standard_type("SMS Delivery",@client.id).any?  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"><%= Standard.standard_type("SMS Delivery",@client.id).count if Standard.standard_type("SMS Delivery",@client.id).count > 0  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"><%= Standard.active_standard("SMS Delivery",@client.id).count if Standard.active_standard("SMS Delivery",@client.id).count > 0  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"> $<%= (Standard.active_standard("SMS Delivery",@client.id).count * Standard.standard_type("SMS Delivery",@client.id).first.standard_price).round(2) if Standard.standard_type("SMS Delivery",@client.id).any? && User.active_user("SMS Delivery",@client.id).count > 0 %></td>
-  <% total_amount_standard= total_amount_standard + (Standard.active_standard("SMS Delivery",@client.id).count * Standard.standard_type("SMS Delivery",@client.id).first.standard_price).round(2) if Standard.standard_type("SMS Delivery",@client.id).any? && Stanadard.active_standard("SMS Delivery",@client.id).count > 0 %>
+  <td class="text-sm text-gray-900 font-bold px-4 py-4 whitespace-nowrap text-center bg-gray-300">SMS Delivery</td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r">$<%= Standard.standard_type("SMS Delivery",@client.id).first.standard_price if Standard.standard_type("SMS Delivery",@client.id).any?  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"><%= Standard.standard_type("SMS Delivery",@client.id).count if Standard.standard_type("SMS Delivery",@client.id).count > 0  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"><%= Standard.active_standard("SMS Delivery",@client.id).count if Standard.active_standard("SMS Delivery",@client.id).count > 0  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"> $<%= (Standard.active_standard("SMS Delivery",@client.id).count * Standard.standard_type("SMS Delivery",@client.id).first.standard_price).round(2) if Standard.standard_type("SMS Delivery",@client.id).any? && Standard.active_standard("SMS Delivery",@client.id).count > 0 %></td>
+  <% total_amount_standard= total_amount_standard + (Standard.active_standard("SMS Delivery",@client.id).count * Standard.standard_type("SMS Delivery",@client.id).first.standard_price).round(2) if Standard.standard_type("SMS Delivery",@client.id).any? && Standard.active_standard("SMS Delivery",@client.id).count > 0 %>
  </tr class="bg-white border-b">
 
  <tr class="bg-white border-b">
-  <td class="text-sm text-gray-900 font-bold px-6 py-4 whitespace-nowrap text-center bg-gray-300">Routing</td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">$<%= Standard.standard_type("Routing",@client.id).first.standard_price if Standard.standard_type("Routing",@client.id).any?  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"><%= Standard.standard_type("Routing",@client.id).count if Standard.standard_type("Routing",@client.id).count > 0  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"><%= Standard.active_standard("Routing",@client.id).count if Standard.active_standard("Routing",@client.id).count > 0  %></td>
-  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r"> $<%= (Standard.active_standard("Routing",@client.id).count * Standard.standard_type("Routing",@client.id).first.standard_price).round(2) if Standard.standard_type("Routing",@client.id).any? && Standard.active_standard("Routing",@client.id).count > 0 %></td>
+  <td class="text-sm text-gray-900 font-bold px-4 py-4 whitespace-nowrap text-center bg-gray-300">Routing</td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r">$<%= Standard.standard_type("Routing",@client.id).first.standard_price if Standard.standard_type("Routing",@client.id).any?  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"><%= Standard.standard_type("Routing",@client.id).count if Standard.standard_type("Routing",@client.id).count > 0  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"><%= Standard.active_standard("Routing",@client.id).count if Standard.active_standard("Routing",@client.id).count > 0  %></td>
+  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap border-r"> $<%= (Standard.active_standard("Routing",@client.id).count * Standard.standard_type("Routing",@client.id).first.standard_price).round(2) if Standard.standard_type("Routing",@client.id).any? && Standard.active_standard("Routing",@client.id).count > 0 %></td>
   <% total_amount_standard= total_amount_standard + (Standard.active_standard("Routing",@client.id).count * Standard.standard_type("Routing",@client.id).first.standard_price).round(2) if Standard.standard_type("Routing",@client.id).any? && Standard.active_standard("Routing",@client.id).count > 0 %>
  </tr class="bg-white border-b">
 
  <tr class="bg-white border-b">
-  <td colspan="4" class="text-sm text-gray-900 font-bold px-6 py-4 whitespace-nowrap text-center bg-gray-300">Total Amount</td>
-  <td class="text-sm text-gray-900 font-bold px-6 py-4 whitespace-nowrap text-center bg-gray-300"> $<%= total_amount_standard.round(2) %></td>
+  <td colspan="4" class="text-sm text-gray-900 font-bold px-4 py-4 whitespace-nowrap text-center bg-gray-300">Total Amount</td>
+  <td class="text-sm text-gray-900 font-bold px-4 py-4 whitespace-nowrap text-center bg-gray-300"> $<%= total_amount_standard.round(2) %></td>
  </tr class="bg-white border-b">
 
 
@@ -172,3 +185,5 @@
 </div>
 </div>
 </div>
+
+<% end %>

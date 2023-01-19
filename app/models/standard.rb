@@ -6,5 +6,4 @@ class Standard < ApplicationRecord
   validates :standard_name, presence: true
   validates :standard_price, presence: true
   validates :standard_type, presence: true
-  validates :active_standard, presence: true
 end
