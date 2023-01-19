@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
     def log_in(user)
         session[:user_id] = user.id
         @current_user = user
-        redirect_to root_path
+        redirect_to admin_panel_path
     end
   
     def logged_in?

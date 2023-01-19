@@ -1,0 +1,308 @@
+<div class="flex flex-col">
+<div>
+<div class="py-4 inline-block min-w-full sm:px-6 lg:px-8">
+<div class="overflow-hidden">
+<table class="min-w-full text-center">
+<caption class="text-xl italic font-semibold text-gray-900 dark:text-white">Client: <%= @client.client_name %> (Users)</caption>
+<thead class="border-b bg-gray-600">
+  <tr>
+   <th scope="col" class="text-sm font-medium text-white px-4 py-4"></th>
+   <th scope="col" class="text-sm font-medium text-white px-4 py-4">Rate</th>
+   <th scope="col" class="text-sm font-medium text-white px-4 py-4">Registered</th>
+   <th scope="col" class="text-sm font-medium text-white px-4 py-4">Actives</th>
+   <th scope="col" class="text-sm font-medium text-white px-4 py-4">Total Amount</th>
+  </tr>
+</thead class="border-b">
+<tbody>
+ <tr class="bg-white border-b">
+  <td class="text-sm text-gray-900 font-bold px-4 py-4 whitespace-nowrap text-center bg-gray-300"> Admin</td>
+  <td class="text-sm text-gray-900 font-light px-2 py-4 whitespace-nowrap border-r">$
+  <% if User.user_type("Admin",@client.id).any?  %> 
+   <%= User.user_type("Admin",@client.id).first.user_price %>
+   <% total_rate_user= 0 + User.user_type("Admin",@client.id).first.user_price %>
+   <%= link_to "Edit",edit_price_path,class:"text-left text-sky-700 hover:font-bold pl-2" %>
+  <% else %>
+    0.0
+  <% end %> 
+  </td>
+
+  <td class="text-sm text-gray-900 font-light px-2 py-4 whitespace-nowrap border-r">
+  <% if User.user_type("Admin",@client.id).count > 0  %>
+     <%= User.user_type("Admin",@client.id).count  %>
+  <% else %>
+    0
+  <% end %>
+  </td>
+
+  <td class="text-sm text-gray-900 font-light px-2 py-4 whitespace-nowrap border-r">
+  <% if User.active_user("Admin",@client.id).count > 0  %>
+    <%=  User.active_user("Admin",@client.id).count%> 
+    <%= link_to "Edit",edit_active_user_path,class:"text-left text-sky-700 hover:font-bold pl-2" %>
+  <% else %>
+   0
+  <% end %> 
+  </td>
+
+  <td class="text-sm text-gray-900 font-light px-2 py-4 whitespace-nowrap border-r"> $
+  <% if User.user_type("Admin",@client.id).any? && User.active_user("Admin",@client.id).count > 0 %>
+   <%= (User.active_user("Admin",@client.id).count * User.user_type("Admin",@client.id).first.user_price).round(2) %>
+  <% else %>
+  0.0
+  <% end %>
+  </td>
+
+  <% total_amount_user = 0 %>
+  <% total_amount_user= total_amount_user + (User.active_user("Admin",@client.id).count * User.user_type("Admin",@client.id).first.user_price).round(2) if User.user_type("Admin",@client.id).any? && User.active_user("Admin",@client.id).count > 0%>
+ </tr class="bg-white border-b">
+
+  <tr class="bg-white border-b">
+  <td class="text-sm text-gray-900 font-bold px-4 py-4 whitespace-nowrap text-center bg-gray-300">Dispatcher</td>
+  <td class="text-sm text-gray-900 font-light px-2 py-4 whitespace-nowrap border-r">$
+  <% if User.user_type("Dispatcher",@client.id).any?  %>
+   <%= User.user_type("Dispatcher",@client.id).first.user_price %>
+   <% total_rate_user = total_rate_user + User.user_type("Dispatcher",@client.id).first.user_price %>
+   <%= link_to "Edit",edit_price_path,class:"text-left text-sky-700 hover:font-bold pl-2" %>
+  <% else %>
+  0.0
+  <% end %>
+   </td>
+
+  <td class="text-sm text-gray-900 font-light px-2 py-4 whitespace-nowrap border-r">
+  <% if User.user_type("Dispatcher",@client.id).count > 0  %>
+    <%= User.user_type("Dispatcher",@client.id).count %>
+  <% else %>
+  0
+  <% end %>
+  </td>
+
+  <td class="text-sm text-gray-900 font-light px-2 py-4 whitespace-nowrap border-r">
+  <% if User.active_user("Dispatcher",@client.id).count > 0  %>
+   <%= User.active_user("Dispatcher",@client.id).count %> 
+  <%= link_to "Edit",edit_active_user_path,class:"text-left text-sky-700 hover:font-bold pl-2" %>
+  <% else %> 
+    0
+  <% end %>
+  </td>
+
+  <td class="text-sm text-gray-900 font-light px-2 py-4 whitespace-nowrap border-r"> $
+  <% if User.user_type("Dispatcher",@client.id).any? && User.active_user("Dispatcher",@client.id).count > 0 %>
+      <%=  (User.active_user("Dispatcher",@client.id).count * User.user_type("Dispatcher",@client.id).first.user_price).round(2)  %>
+  <% else %>
+  0.0
+  <% end %>
+  </td>
+  <% total_amount_user = total_amount_user + (User.active_user("Dispatcher",@client.id).count * User.user_type("Dispatcher",@client.id).first.user_price).round(2) if User.user_type("Dispatcher",@client.id).any? && User.active_user("Dispatcher",@client.id).count > 0 %>
+ </tr class="bg-white border-b">
+
+ <tr class="bg-white border-b">
+  <td class="text-sm text-gray-900 font-bold px-4 py-4 whitespace-nowrap text-center bg-gray-300">Mechanic</td>
+  <td class="text-sm text-gray-900 font-light px-2 py-4 whitespace-nowrap border-r">$
+  <% if User.user_type("Mechanic",@client.id).any?  %> 
+   <%=  User.user_type("Mechanic",@client.id).first.user_price %>
+   <% total_rate_user = total_rate_user + User.user_type("Mechanic",@client.id).first.user_price %>
+   <%= link_to "Edit",edit_price_path,class:"text-left text-sky-700 hover:font-bold pl-2" %>
+  <% else %>
+  0.0
+  <% end %>
+  </td>
+
+  <td class="text-sm text-gray-900 font-light px-2 py-4 whitespace-nowrap border-r">
+  <% if User.user_type("Mechanic",@client.id).count > 0  %>
+   <%= User.user_type("Mechanic",@client.id).count %>
+  <% else %>
+   0
+  <% end %>
+  </td>
+
+  <td class="text-sm text-gray-900 font-light px-2 py-4 whitespace-nowrap border-r">
+  <% if User.active_user("Mechanic",@client.id).count > 0  %>
+    <%= User.active_user("Mechanic",@client.id).count   %>
+     <%= link_to "Edit",edit_active_user_path,class:"text-left text-sky-700 hover:font-bold pl-2" %>
+  <% else %>
+    0
+  <% end %>  
+  </td>
+
+  <td class="text-sm text-gray-900 font-light px-2 py-4 whitespace-nowrap border-r"> $
+  <% if User.user_type("Mechanic",@client.id).any? && User.active_user("Mechanic",@client.id).count > 0 %>
+   <%= (User.active_user("Mechanic",@client.id).count * User.user_type("Mechanic",@client.id).first.user_price).round(2) %>
+  <% else %>
+  0.0
+  <% end %>
+  </td>
+  
+  <% total_amount_user = total_amount_user + (User.active_user("Mechanic",@client.id).count * User.user_type("Mechanic",@client.id).first.user_price).round(2) if User.user_type("Mechanic",@client.id).any? && User.active_user("Mechanic",@client.id).count > 0%>
+ </tr class="bg-white border-b">
+
+ <tr class="bg-white border-b">
+  <td class="text-sm text-gray-900 font-bold px-4 py-4 whitespace-nowrap text-center bg-gray-300">Office_Staff</td>
+  <td class="text-sm text-gray-900 font-light px-2 py-4 whitespace-nowrap border-r">$
+  <% if User.user_type("Office_Staff",@client.id).any?  %>
+    <%= User.user_type("Office_Staff",@client.id).first.user_price %>
+    <% total_rate_user = total_rate_user + User.user_type("Office_Staff",@client.id).first.user_price %>
+    <%= link_to "Edit",edit_price_path,class:"text-left text-sky-700 hover:font-bold pl-2" %>
+  <% else %>
+   0.0
+  <% end %> 
+   </td>
+
+  <td class="text-sm text-gray-900 font-light px-2 py-4 whitespace-nowrap border-r">
+  <% if User.user_type("Office_Staff",@client.id).count > 0  %>
+   <%= User.user_type("Office_Staff",@client.id).count %>
+  <% else %>
+   0
+  <% end %>
+  </td>
+
+  <td class="text-sm text-gray-900 font-light px-2 py-4 whitespace-nowrap border-r">
+  <% if User.active_user("Office_Staff",@client.id).count > 0  %>
+   <%=   User.active_user("Office_Staff",@client.id).count %>
+   <%= link_to "Edit",edit_active_user_path,class:"text-left text-sky-700 hover:font-bold pl-2" %>
+  <% else %>
+   0
+  <% end %>
+  </td>
+
+  <td class="text-sm text-gray-900 font-light px-2 py-4 whitespace-nowrap border-r"> $
+  <% if User.user_type("Office_Staff",@client.id).any? && User.active_user("Office_Staff",@client.id).count > 0 %>
+  <%= (User.active_user("Office_Staff",@client.id).count * User.user_type("Office_Staff",@client.id).first.user_price).round(2)  %>
+  <% else %>
+    0.0
+  <% end %>
+  </td>
+
+  <% total_amount_user = total_amount_user + (User.active_user("Office_Staff",@client.id).count * User.user_type("Office_Staff",@client.id).first.user_price).round(2) if User.user_type("Office_Staff",@client.id).any? && User.active_user("Office_Staff",@client.id).count > 0 %>
+ </tr class="bg-white border-b">
+ 
+  <tr class="bg-white border-b">
+  <td class="text-sm text-gray-900 font-bold px-4 py-4 whitespace-nowrap text-center bg-gray-300">Sub_Contractor</td>
+  <td class="text-sm text-gray-900 font-light px-2 py-4 whitespace-nowrap border-r">$
+  <% if User.user_type("Sub_Contractor",@client.id).any?  %> 
+    <%= User.user_type("Sub_Contractor",@client.id).first.user_price %>
+    <% total_rate_user = total_rate_user + User.user_type("Sub_Contractor",@client.id).first.user_price %>
+    <%= link_to "Edit",edit_price_path,class:"text-left text-sky-700 hover:font-bold pl-2" %>
+  <% else %>
+   0.0
+  <% end %>
+  </td>
+
+  <td class="text-sm text-gray-900 font-light px-2 py-4 whitespace-nowrap border-r">
+  <% if User.user_type("Sub_Contractor",@client.id).count > 0  %>
+   <%= User.user_type("Sub_Contractor",@client.id).count %>
+  <% else %>
+   0
+  <% end %>
+  </td>
+
+  <td class="text-sm text-gray-900 font-light px-2 py-4 whitespace-nowrap border-r">
+  <% if User.active_user("Sub_Contractor",@client.id).count > 0  %>
+   <%= User.active_user("Sub_Contractor",@client.id).count %>
+    <%= link_to "Edit",edit_active_user_path,class:"text-left text-sky-700 hover:font-bold pl-2" %>
+  <% else %>
+    0
+  <% end %>  
+  </td>
+
+  <td class="text-sm text-gray-900 font-light px-2 py-4 whitespace-nowrap border-r"> $
+  <% if User.user_type("Sub_Contractor",@client.id).any? && User.active_user("Sub_Contractor",@client.id).count > 0 %>
+    <%=  (User.active_user("Sub_Contractor",@client.id).count * User.user_type("Sub_Contractor",@client.id).first.user_price).round(2) %>
+  <% else %>
+    0.0
+  <% end %>
+  </td>
+
+ <% total_amount_user = total_amount_user +  (User.active_user("Sub_Contractor",@client.id).count * User.user_type("Sub_Contractor",@client.id).first.user_price).round(2) if User.user_type("Sub_Contractor",@client.id).any? && User.active_user("Sub_Contractor",@client.id).count > 0 %>
+ </tr class="bg-white border-b">
+
+ <tr class="bg-white border-b">
+  <td class="text-sm text-gray-900 font-bold px-4 py-4 whitespace-nowrap text-center bg-gray-300">Technician</td>
+  <td class="text-sm text-gray-900 font-light px-2 py-4 whitespace-nowrap border-r">$
+  <% if User.user_type("Technician",@client.id).any?  %>
+   <%=  User.user_type("Technician",@client.id).first.user_price  %>
+   <% total_rate_user = total_rate_user + User.user_type("Technician",@client.id).first.user_price %>
+   <%= link_to "Edit",edit_price_path,class:"text-left text-sky-700 hover:font-bold pl-2" %>
+  <% else %>
+   0.0
+  <% end %>   
+  </td>
+
+  <td class="text-sm text-gray-900 font-light px-2 py-4 whitespace-nowrap border-r">
+  <% if User.user_type("Technician",@client.id).count > 0  %>
+   <%=  User.user_type("Technician",@client.id).count %>
+  <% else %>
+   0
+  <% end %>
+  </td>
+
+  <td class="text-sm text-gray-900 font-light px-2 py-4 whitespace-nowrap border-r">
+  <%  if User.active_user("Technician",@client.id).count > 0  %> 
+   <%= User.active_user("Technician",@client.id).count  %> 
+    <%= link_to "Edit",edit_active_user_path,class:"text-left text-sky-700 hover:font-bold pl-2" %>
+  <% else %>
+    0
+  <% end %>
+  </td>
+
+  <td class="text-sm text-gray-900 font-light px-2 py-4 whitespace-nowrap border-r"> $
+  <% if User.user_type("Technician",@client.id).any? && User.active_user("Technician",@client.id).count > 0 %>
+   <%= (User.active_user("Technician",@client.id).count * User.user_type("Technician",@client.id).first.user_price).round(2) %>
+  <% else %>
+  0.0
+  <% end %>
+  </td>
+
+  <% total_amount_user = total_amount_user + (User.active_user("Technician",@client.id).count * User.user_type("Technician",@client.id).first.user_price).round(2) if User.user_type("Technician",@client.id).any? && User.active_user("Technician",@client.id).count > 0 %>
+ </tr class="bg-white border-b">
+
+  <tr class="bg-white border-b">
+  <td class="text-sm text-gray-900 font-bold px-4 py-4 whitespace-nowrap text-center bg-gray-300">Consumers</td>
+  <td class="text-sm text-gray-900 font-light px-2 py-4 whitespace-nowrap border-r">$
+  <% if User.user_type("Consumer",@client.id).any?  %>
+   <%= User.user_type("Consumer",@client.id).first.user_price  %>
+  <% else %>
+  0.0
+  <% end %>
+  </td>
+
+  <td class="text-sm text-gray-900 font-light px-2 py-4 whitespace-nowrap border-r">
+  <% if User.user_type("Consumer",@client.id).count > 0  %>
+    <%= User.user_type("Consumer",@client.id).count %>
+  <% else %>
+   0
+  <% end %>
+  </td>
+
+  <td class="text-sm text-gray-900 font-light px-2 py-4 whitespace-nowrap border-r">
+  <% if User.active_user("Consumer",@client.id).count > 0  %>
+    <%= User.active_user("Consumer",@client.id).count%>
+    <%= link_to "Edit",edit_active_user_path,class:"text-left text-sky-700 hover:font-bold pl-2" %>
+  <% else %>
+    0
+  <% end %>
+  </td>
+
+  <td class="text-sm text-gray-900 font-light px-2 py-4 whitespace-nowrap border-r"> $
+  <% if User.user_type("Consumer",@client.id).any? && User.active_user("Consumer",@client.id).count > 0 %>
+    <%= (User.active_user("Consumer",@client.id).count * User.user_type("Consumer",@client.id).first.user_price).round(2) %>
+  <% else %>
+   0.0
+  <% end %>
+  </td>
+
+  <% total_amount_user = total_amount_user + (User.active_user("Consumer",@client.id).count * User.user_type("Consumer",@client.id).first.user_price).round(2) if User.user_type("Consumer",@client.id).any? && User.active_user("Consumer",@client.id).count > 0 %>
+ </tr class="bg-white border-b">
+
+ <tr class="bg-white border-b">
+  <td class="text-sm text-gray-900 font-bold px-4 py-4 whitespace-nowrap text-center bg-gray-300">Total Amount</td>
+  <td class="text-sm text-gray-900 font-bold px-4 py-4 whitespace-nowrap text-center bg-gray-300"> $<%= total_rate_user %></td>
+  <td class="text-sm text-gray-900 font-bold px-4 py-4 whitespace-nowrap text-center bg-gray-300"> <%= User.where(client: @client).count %></td>
+  <td class="text-sm text-gray-900 font-bold px-4 py-4 whitespace-nowrap text-center bg-gray-300"> <%= User.where(active_user: true,client: @client).count %></td>
+  <td class="text-sm text-gray-900 font-bold px-4 py-4 whitespace-nowrap text-center bg-gray-300"> $<%= total_amount_user.round(2) %></td>
+ </tr class="bg-white border-b">
+
+
+</tbody>
+</table>
+</div>
+</div>
+</div>

@@ -8,4 +8,10 @@ class AdminPanelController < ApplicationController
         @clients = Client.all
         
     end
+
+    def edit_price 
+    end 
+
+    def edit_active_user
+    end
 end
