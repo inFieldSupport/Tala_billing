@@ -8,7 +8,14 @@ Rails.application.routes.draw do
   get '/signout', to: 'sessions#logout', as:"logout"
 
   get'/admin_panel', to: "admin_panel#index"
-  get'/edit_price',to: "admin_panel#edit_price"
-  get'/edit_active_user',to: "admin_panel#edit_active_user"
+  get'/new_price',to: "admin_panel#new_price"
+  
+  resources :users,only: [:update]
+  put '/active_user',to: "users#active_user"
+
+  resources :standards,only: [:update]
+  put '/active_standard',to: "standards#active_standard"
+
+  get'/new_active_user',to: "admin_panel#new_active_user"
   root 'sessions#new'
 end

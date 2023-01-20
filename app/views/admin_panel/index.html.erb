@@ -1,17 +1,20 @@
 <div class="min-w-full text-center py-6 rounded-md border border-transparent">
 <%= form_tag  admin_panel_path,:method =>"get",class:"bg-gray-200 py-4" do  %>
-   <select name="client" class="font-light">
+   <select name="client" class="font-semibold font-sans">
     <% @clients.each do |client|%>
-     <option value="<%= client.id %>" class="font-light"><%= client.client_name %></option>
+     <option value="<%= client.id %>" class="font-semibold font-sans"><%= client.client_name %></option>
     <% end %>
    </select>
-   <%= submit_tag("Search",:name => nil,class:"bg-sky-700 text-white px-4 py-2.5 rounded-md border border-transparent hover:bg-indigo-700") %>
+   <%= submit_tag("Search",:name => nil,class:"bg-sky-700 font-sans text-white px-4 py-2.5 rounded-md border border-transparent hover:bg-indigo-700 font-semibold") %>
 <% end %>
 </div>
 
 <% if @client %>
- <%= render "users" %>
- <%= render "standards" %>
+ <%= turbo_frame_tag "updates" do %>
+  <%= render "admin_panel/users" %>
+   <%= render "admin_panel/standards" %>
+ <% end %>
 <% end %>
+
 
 

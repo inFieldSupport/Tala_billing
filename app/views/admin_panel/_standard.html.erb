@@ -1,0 +1,42 @@
+<td class="text-sm text-gray-900 font-semibold font-sans px-4 py-4 whitespace-nowrap text-center bg-gray-300"><%= type %></td>
+
+  <td class="text-sm text-gray-900 font-semibold font-sans px-2 py-4 whitespace-nowrap border-r">
+  <% if Standard.standard_type(type,@client.id).any?  %>
+   <% @total_rate_standard= @total_rate_standard + Standard.standard_type(type,@client.id).first.standard_price  %>
+   <%= turbo_frame_tag "new_price" do %>
+   $<%= Standard.standard_type(type,@client.id).first.standard_price %>
+    <%= link_to "Edit",new_price_path(client: @client,standard_type: type ),class:"text-left font-sans text-sky-700 hover:font-bold pl-2" %>
+   <% end %>
+  <% else %>
+   $ 0.0
+  <% end %>
+  </td>
+
+  <td class="text-sm text-gray-900 font-semibold font-sans px-2 py-4 whitespace-nowrap border-r">
+  <% if Standard.standard_type(type,@client.id).count > 0  %>
+   <%= Standard.standard_type(type,@client.id).count %>
+  <% else %>
+   0
+  <% end %>
+  </td>
+
+  <td class="text-sm text-gray-900 font-semibold font-sans px-2 py-4 whitespace-nowrap border-r">
+  <% if Standard.standard_type(type,@client.id).count > 0  %>
+    <%= turbo_frame_tag "new_active_standard" do %>
+    <%=  Standard.active_standard(type,@client.id).count%> 
+    <%= link_to "Edit",new_active_user_path(client: @client,standard_type: type),class:"text-left font-sans text-sky-700 font-semibold hover:font-bold pl-2" %>
+  <% end %>
+  <% else %>
+   0
+  <% end %>
+  </td>
+
+  <td class="text-sm text-gray-900 font-semibold font-sans px-2 py-4 whitespace-nowrap border-r"> $
+   <% if Standard.standard_type(type,@client.id).any? && Standard.active_standard(type,@client.id).count > 0 %>
+    <%= (Standard.active_standard(type,@client.id).count * Standard.standard_type(type,@client.id).first.standard_price).round(2) %>
+  <% else %>
+   0.0
+  <% end %>
+  </td>
+
+  <% @total_amount_standard= @total_amount_standard + (Standard.active_standard(type,@client.id).count * Standard.standard_type(type,@client.id).first.standard_price).round(2) if Standard.standard_type(type,@client.id).any? && Standard.active_standard(type,@client.id).count > 0 %>

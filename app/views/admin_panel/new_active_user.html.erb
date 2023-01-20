@@ -1,0 +1,21 @@
+<% if @user %>
+<%= turbo_frame_tag "new_active_user" do %>
+  <%= form_with url: active_user_path,:method=>'put' do |f| %>
+  <%= hidden_field_tag 'user_type', @user.user_type  %>
+  <%= hidden_field_tag 'client', @user.client.id  %>
+  <%= f.text_field :active_user_count,placeholder: "#{User.where(client: @user.client,user_type: @user.user_type,active_user: true).count}" ,class:"text-center p-2 font-sans" %>
+  <%= f.submit "edit" ,class:"bg-sky-700 text-white font-sans rounded-md border border-transparent p-2 hover:bg-sky-800"%>
+  <% end %>
+<% end %>
+<% end %>
+
+<% if @standard %>
+ <%= turbo_frame_tag "new_active_standard" do %>
+  <%= form_with url: active_standard_path,:method=>'put' do |f| %>
+  <%= hidden_field_tag 'standard_type', @standard.standard_type  %>
+  <%= hidden_field_tag 'client', @standard.client.id %>
+  <%= f.text_field :active_standard_count ,placeholder: "#{Standard.where(client: @standard.client,standard_type: @standard.standard_type,active_standard: true).count}" ,class:"text-center p-2 font-sans" %>
+  <%= f.submit "edit",class:"bg-sky-700 text-white font-sans rounded-md border border-transparent p-2 hover:bg-sky-800" %>
+  <% end %>
+<% end %>
+<% end %>

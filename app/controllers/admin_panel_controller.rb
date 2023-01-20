@@ -9,9 +9,21 @@ class AdminPanelController < ApplicationController
         
     end
 
-    def edit_price 
-    end 
+    def new_price
+        if params[:client] && params[:user_type] 
+            @user = User.where(client: params[:client],user_type: params[:user_type]).first
+        end
+        if params[:client] && params[:standard_type] 
+            @standard = Standard.where(client: params[:client],standard_type: params[:standard_type]).first
+        end
+    end
 
-    def edit_active_user
+    def new_active_user
+        if params[:client] && params[:user_type] 
+            @user = User.where(client: params[:client],user_type: params[:user_type]).first
+        end
+        if params[:client] && params[:standard_type] 
+            @standard = Standard.where(client: params[:client],standard_type: params[:standard_type]).first
+        end
     end
 end
