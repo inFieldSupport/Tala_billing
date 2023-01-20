@@ -1,7 +1,7 @@
-<td class="text-sm text-gray-900 font-bold font-semibold v px-4 py-4 whitespace-nowrap text-center bg-gray-300"> <%= type %></td>
+<td class="text-base text-gray-900 font-serif font-semibold v px-4 py-4 whitespace-nowrap text-center bg-gray-300"> <%= type %></td>
 
 
-  <td class="text-sm text-gray-900 font-semibold font-sans px-2 py-4 whitespace-nowrap border-r">
+  <td class="text-base text-gray-900 font-semibold ffont-sans px-2 py-4 whitespace-nowrap border-r">
   <% if User.user_type( type,@client.id).any?  %>  
     <% if type == "Consumer" %>
       $<%= User.user_type( type,@client.id).first.user_price %>
@@ -9,7 +9,7 @@
      <% @total_rate_user= @total_rate_user + User.user_type(type,@client.id).first.user_price %>
       <%= turbo_frame_tag "new_price" do %>
        $<%= User.user_type( type,@client.id).first.user_price %>
-        <%= link_to "Edit",new_price_path(client: @client,user_type: type),class:"text-left text-sky-700 font-sans font-semibold hover:font-bold pl-2" %>
+        <%= link_to "Edit",new_price_path(client: @client,user_type: type),class:"text-left text-sky-700 font-serif font-semibold hover:font-bold pl-2" %>
       <% end %>
     <% end %>
   <% else %>
@@ -17,7 +17,7 @@
   <% end %> 
   </td>
 
-  <td class="text-sm text-gray-900 font-semibold font-sans px-2 py-4 whitespace-nowrap border-r">
+  <td class="text-base text-gray-900 font-semibold font-sans px-2 py-4 whitespace-nowrap border-r">
   <% if User.user_type(type,@client.id).count > 0  %>
      <%= User.user_type(type,@client.id).count  %>
   <% else %>
@@ -25,18 +25,18 @@
   <% end %>
   </td>
 
-  <td class="text-sm text-gray-900 font-semibold font-sans px-2 py-4 whitespace-nowrap border-r">
+  <td class="text-base text-gray-900 font-semibold font-sans px-2 py-4 whitespace-nowrap border-r">
   <% if User.user_type(type,@client.id).count > 0  %>
   <%= turbo_frame_tag "new_active_user" do %>
     <%=  User.active_user(type,@client.id).count %> 
-    <%= link_to "Edit",new_active_user_path(client: @client,user_type: type),class:"text-left font-sans text-sky-700 font-semibold hover:font-bold pl-2" %>
+    <%= link_to "Edit",new_active_user_path(client: @client,user_type: type),class:"text-left font-serif text-sky-700 font-semibold hover:font-bold pl-2" %>
   <% end %>
   <% else %>
    0
   <% end %> 
   </td>
 
-  <td class="text-sm text-gray-900 font-semibold font-sans px-2 py-4 whitespace-nowrap border-r"> $
+  <td class="text-base text-gray-900 font-semibold font-sans px-2 py-4 whitespace-nowrap border-r"> $
   <% if User.user_type(type,@client.id).any? && User.active_user(type,@client.id).count > 0 %>
    <%= (User.active_user(type,@client.id).count * User.user_type(type,@client.id).first.user_price).round(2) %>
   <% else %>

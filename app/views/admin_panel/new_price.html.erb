@@ -2,7 +2,7 @@
 <%= turbo_frame_tag "new_price" do %>
   <%= form_with model: @user,:method=>'put' do |f| %>
   <%= f.text_field :price,placeholder: "#{@user.user_price}",class:"text-center p-2 font-sans" %>
-  <%= f.submit "edit" ,class:"bg-sky-700 font-sans text-white rounded-md border border-transparent p-2 hover:bg-sky-800"%>
+  <%= f.submit "Edit" ,class:"bg-sky-700 font-serif text-sm text-white rounded-md border border-transparent p-3 hover:bg-sky-800"%>
   <% end %>
 <% end %>
 <% end %>
@@ -11,7 +11,7 @@
  <%= turbo_frame_tag "new_price" do %>
   <%= form_with model: @standard,:method=>'put' do |f| %>
    <%= f.text_field :price,placeholder: "#{@standard.standard_price}",class:"text-center p-2 font-sans" %>
-  <%= f.submit "edit" ,class:"bg-sky-700 font-sans text-white rounded-md border border-transparent p-2 hover:bg-sky-800" %>
+  <%= f.submit "Edit" ,class:"bg-sky-700 font-serif text-sm text-white rounded-md border border-transparent p-3 hover:bg-sky-800" %>
   <% end %>
 <% end %>
 <% end %>

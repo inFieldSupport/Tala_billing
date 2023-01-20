@@ -4,14 +4,14 @@
 <div class="py-4 inline-block min-w-full sm:px-6 lg:px-8">
 <div class="overflow-hidden">
 <table class="min-w-full text-center">
-<caption class="text-xl italic font-semibold text-gray-900 dark:text-white">Client: <%= @client.client_name %> (Users)</caption>
+<caption class="text-xl p-2 font-serif font-semibold text-gray-900 dark:text-white">Client: <%= @client.client_name %> (Users)</caption>
 <thead class="border-b bg-gray-600">
   <tr>
-   <th scope="col" class="text-sm font-semibold  font-sans text-white px-4 py-4"></th>
-   <th scope="col" class="text-sm font-semibold font-sans text-white px-4 py-4">Rate</th>
-   <th scope="col" class="text-sm font-semibold font-sans text-white px-4 py-4">Registered</th>
-   <th scope="col" class="text-sm font-semibold font-sans text-white px-4 py-4">Actives</th>
-   <th scope="col" class="text-sm font-semibold font-sans text-white px-4 py-4">Total Amount</th>
+   <th scope="col" class="text-base font-semibold font-serif text-white px-4 py-4"></th>
+   <th scope="col" class="text-base font-semibold font-serif text-white px-4 py-4">Rate</th>
+   <th scope="col" class="text-base font-semibold font-serif text-white px-4 py-4">Registered</th>
+   <th scope="col" class="text-base font-semibold font-serif text-white px-4 py-4">Actives</th>
+   <th scope="col" class="text-base font-semibold font-serif text-white px-4 py-4">Total Amount</th>
   </tr>
 </thead class="border-b">
 <tbody>
@@ -48,11 +48,11 @@
  </tr class="bg-white border-b">
 
  <tr class="bg-white border-b">
-  <td class="text-sm text-gray-900 font-bold font-sans px-4 py-4 whitespace-nowrap text-center bg-gray-300">Total Amount</td>
-  <td class="text-sm text-gray-900 font-bold font-sans px-4 py-4 whitespace-nowrap text-center bg-gray-300"> $<%= @total_rate_user.round(2) %></td>
-  <td class="text-sm text-gray-900 font-bold font-sans px-4 py-4 whitespace-nowrap text-center bg-gray-300"> <%= User.where(client: @client).count %></td>
-  <td class="text-sm text-gray-900 font-bold font-sans px-4 py-4 whitespace-nowrap text-center bg-gray-300"> <%= User.where(active_user: true,client: @client).count %></td>
-  <td class="text-sm text-gray-900 font-bold font-sans px-4 py-4 whitespace-nowrap text-center bg-gray-300"> $<%= @total_amount_user.round(2) %></td>
+  <td class="text-base text-gray-900 font-bold font-serif px-4 py-4 whitespace-nowrap text-center bg-gray-300">Total Amount</td>
+  <td class="text-base text-gray-900 font-bold font-sans px-4 py-4 whitespace-nowrap text-center bg-gray-300"> $<%= @total_rate_user.round(2) %></td>
+  <td class="text-base text-gray-900 font-bold font-sans px-4 py-4 whitespace-nowrap text-center bg-gray-300"> <%= User.where(client: @client).count %></td>
+  <td class="text-base text-gray-900 font-bold font-sans px-4 py-4 whitespace-nowrap text-center bg-gray-300"> <%= User.where(active_user: true,client: @client).count %></td>
+  <td class="text-base text-gray-900 font-bold font-sans px-4 py-4 whitespace-nowrap text-center bg-gray-300"> $<%= @total_amount_user.round(2) %></td>
  </tr class="bg-white border-b">
 
 
