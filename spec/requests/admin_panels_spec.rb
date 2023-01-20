@@ -1,0 +1,33 @@
+require 'rails_helper'
+
+RSpec.describe "AdminPanels", type: :request do
+  describe "admin_panels controller" do
+    it "index" do
+      client = Client.new(client_name:"A&G")
+      client.save
+      get admin_panel_path,:params=>{:client=>client.id}
+    end
+
+    it "new price" do
+      client = Client.new(client_name:"A&G")
+      client.save
+      get new_price_path,:params=>{:client=> client.id,:user_type=>"Admin"}
+      
+      client = Client.new(client_name:"A&G")
+      client.save
+      get new_price_path,:params=>{:client=> client.id,:standard_type=>"Routing"}
+    end
+
+    it "new active user" do
+      client = Client.new(client_name:"A&G")
+      client.save
+      get new_active_user_path,:params=>{:client=> client.id,:user_type=>"Admin"}
+      
+      client = Client.new(client_name:"A&G")
+      client.save
+      get new_active_user_path,:params=>{:client=> client.id,:standard_type=>"Routing"}
+    end
+
+
+  end
+end
