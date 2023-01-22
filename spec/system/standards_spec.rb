@@ -5,7 +5,7 @@ RSpec.describe "Standards", type: :system do
   context "integration testing standards" do
 
     it "edit the activity and price for standards with specific type" do 
-      client= Client.new(client_name:"A&G")
+      client= Client.new(client_name:"A&G",email:"example@gmail.com")
       client.save
       standard = Standard.new(standard_name:"test",standard_price: 20,standard_type:"Routing",client: client)
       standard.save

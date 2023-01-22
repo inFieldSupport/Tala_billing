@@ -4,7 +4,7 @@ RSpec.describe "Users", type: :system do
   context "integration testing users" do
 
    it "edit the activity and price for users with specific type" do 
-    client= Client.new(client_name:"A&G")
+    client= Client.new(client_name:"A&G",email:"example@gmail.com")
     client.save
     user = User.new(user_name:"test",user_price: 20,user_type:"Admin",client: client)
     user.save

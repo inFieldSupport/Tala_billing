@@ -1,0 +1,3 @@
+<h2>Hello <%= @client.client_name.capitalize %></h2>
+
+<p>To check your invoice,click on the link: <%= link_to "Bill",invoice_url(client: @client) %></p>

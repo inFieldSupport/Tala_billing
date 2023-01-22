@@ -4,7 +4,7 @@ RSpec.describe "Standards", type: :request do
   describe "standard controller" do
 
     it "update" do 
-      client= Client.new(client_name:"A&G")
+      client= Client.new(client_name:"A&G",email:"example@gmail.com")
       client.save
       standard = Standard.new(standard_name:"test",standard_price: 20,standard_type:"Routing",client: client)
       standard.save
@@ -12,7 +12,7 @@ RSpec.describe "Standards", type: :request do
     end
 
     it "active standard" do 
-      client= Client.new(client_name:"A&G")
+      client= Client.new(client_name:"A&G",email:"example@gmail.com")
       client.save
       standard = Standard.new(standard_name:"test",standard_price: 20,standard_type:"Routing",client: client)
       standard.save

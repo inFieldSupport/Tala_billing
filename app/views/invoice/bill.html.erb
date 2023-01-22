@@ -1,0 +1,41 @@
+<h1><%= @client.client_name %></h1>
+<% total_amount = 0 %>
+<table>
+<tr>
+<td>description</td>
+<td>Qty</td>
+<td>Rate</td>
+<td>Total Amount</td>
+</tr>
+
+<% @users_type.each do |user_type| %>
+ <% if User.active_user(user_type,@client).count > 0 %>
+  <tr>
+   <td>inField Clipboard - <%= user_type %></td>
+   <td><%=  User.active_user(user_type,@client).count %></td>
+   <td> <%= User.user_type(user_type,@client).first.user_price %></td>
+   <td><%= (User.active_user(user_type,@client).count * User.user_type(user_type,@client).first.user_price).round(2)  %></td>
+   <% total_amount = total_amount + (User.active_user(user_type,@client).count * User.user_type(user_type,@client).first.user_price).round(2) %>
+  </tr>
+  <% end %>
+<% end %>
+
+<% @standards_type.each do |standard_type| %>
+ <% if Standard.active_standard(standard_type,@client).count > 0 %>
+  <tr>
+   <td>inField Tracker - <%= standard_type %></td>
+   <td><%=  Standard.active_standard(standard_type,@client).count %></td>
+   <td> <%= Standard.standard_type(standard_type,@client).first.standard_price %></td>
+   <td><%= (Standard.active_standard(standard_type,@client).count * Standard.standard_type(standard_type,@client).first.standard_price).round(2)  %></td>
+   <% total_amount = total_amount + (Standard.active_standard(standard_type,@client).count * Standard.standard_type(standard_type,@client).first.standard_price).round(2) %>
+  </tr>
+  <% end %>
+<% end %>
+
+
+</table>
+<br>
+<br>
+<h2>SUBTOTAL: <%= total_amount %></h2>
+<h2>HST (ON) @ 13%: <%= total_amount * 0.13 %></h2>
+<h2>TOTAL: <%= total_amount + total_amount * 0.13  %></h2>

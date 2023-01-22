@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "Users", type: :request do
   describe "user controller" do
     it "update" do 
-      client= Client.new(client_name:"A&G")
+      client= Client.new(client_name:"A&G",email:"example@gmail.com")
       client.save
       user = User.new(user_name:"test",user_price: 20,user_type:"Admin",client: client)
       user.save
@@ -11,7 +11,7 @@ RSpec.describe "Users", type: :request do
     end
 
     it "active user" do 
-      client= Client.new(client_name:"A&G")
+      client= Client.new(client_name:"A&G",email:"example@gmail.com")
       client.save
       user = User.new(user_name:"test",user_price: 20,user_type:"Admin",client: client)
       user.save

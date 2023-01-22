@@ -26,4 +26,12 @@ class AdminPanelController < ApplicationController
             @standard = Standard.where(client: params[:client],standard_type: params[:standard_type]).first
         end
     end
+
+    def send_email 
+        client = Client.find(params[:client_id])
+        ClientBillingMailer.billing_mail(client).deliver_now
+        flash[:success]="Email is sent to #{client.client_name}."
+        redirect_to admin_panel_path
+    end
+
 end

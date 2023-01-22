@@ -8,7 +8,7 @@ Employee.create!(employee_name:"tala",email:"tala@gmail.com",password:"tala1234"
 ############# client 1 ########################
 ############################################################################################################
 
-Client.create(client_name: "A&G")
+Client.create(client_name: "A&G",email: "ag_company@gmail.com")
 client = Client.last
 
 5.times do |n|
@@ -111,7 +111,7 @@ end
 ######client 2 ############
 ###############################################################################################################
 
-Client.create(client_name: "Custom Brands (Eclipse)")
+Client.create(client_name: "Custom Brands (Eclipse)",email:"custom_brands@gmail.com")
 client_2 = Client.last
 
 15.times do |n|
@@ -191,7 +191,7 @@ end
 # ####### client 3 ############
 # ###################################################################################################
 
-Client.create(client_name: "Eastwing")
+Client.create(client_name: "Eastwing",email:"eastwing@gmail.com")
 client_3 = Client.last
 
 2.times do |n|
