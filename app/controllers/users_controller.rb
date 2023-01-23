@@ -10,6 +10,7 @@ class UsersController < ApplicationController
 
         @client = Client.find_by(id: user.client.id)
         respond_to do |format|
+            flash[:success ]="Updated!!" 
             format.turbo_stream
             format.html { redirect_to admin_panel_path }
         end
@@ -18,7 +19,7 @@ class UsersController < ApplicationController
 
     def active_user
            count = User.where(client: params[:client],user_type: params[:user_type]).count
-
+           @client = Client.find( params[:client])
            if count >= params[:active_user_count].to_i && params[:active_user_count].to_i >= 0
             count_unactive = User.where(client: params[:client],user_type: params[:user_type],active_user: false).count
             count_active =  User.where(client: params[:client],user_type: params[:user_type],active_user: true).count
@@ -38,14 +39,17 @@ class UsersController < ApplicationController
                     new_unactive = new_unactive - 1
                 end
              end
-             @client = Client.find( params[:client])
              respond_to do |format|
+                flash[:success ]="Updated!!" 
                 format.turbo_stream
                 format.html { redirect_to admin_panel_path }
             end
             else
-                 flash[:danger]="Failed. It may because you enter unvalid number. PLease be careful that you need to enter a number between 0 and total registered."
-                 redirect_to admin_panel_path 
+                respond_to do |format|
+                    flash[:danger ]="Failed. It may because you enter unvalid number. PLease be careful that you need to enter a number between 0 and total registered." 
+                    format.turbo_stream
+                    format.html {  redirect_to admin_panel_path(client: @client.client_name)}
+                end
             end
         end
             

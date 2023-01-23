@@ -1,3 +1,12 @@
 <h3>Billing Sheet</h3>
 
-<p class="text-l">Hello <%= @client.client_name %>,to check your invoice click on this link: <%= link_to "Bill",invoice_url(client: @client) %></p>
+<p>Dear <%= @client.client_name %>,</p>
+<p>I hope my email finds you well.</p><br>
+<p>Kindly find below the link of the invoice sheet.<%= link_to "Invoice Sheet",invoice_url(client: @client) %></p>
+<p>If you have any question, please don't hesitate to contact us.</p>
+<br>
+<p>Kind regards,</p>
+<p>Employee <%= @employee.employee_name.capitalize %> From Infield Solution</p>
+<br>
+<p>For review contact us on: <%= @employee.email %></p>
+

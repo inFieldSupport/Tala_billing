@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   post '/signin', to: 'sessions#create'
   get '/signout', to: 'sessions#logout', as:"logout"
 
-  get'/admin_panel', to: "admin_panel#index"
+  get '/admin_panel', to: "admin_panel#index"
   get'/new_price',to: "admin_panel#new_price"
   
   resources :users,only: [:update]

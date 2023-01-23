@@ -2,7 +2,11 @@
   <%= render "admin_panel/users"  %>
   <%= render "admin_panel/standards" %>
   <div class="text-center p-4">
-   <span class="text-base font-bold font-serif px-4 py-4"> Click on the button bellow to send the bill to client :</span> 
-   <%= link_to "Send",send_email_path(client_id: @client.id),class:"bg-sky-700 font-serif text-white px-4 py-2.5 rounded-md border border-transparent hover:bg-sky-900 font-semibold" %>
+    <span class="text-base font-bold font-serif px-4 py-4"> Click on the button bellow to check The Bill Sheet:</span> 
+    <%= link_to "Check",invoice_path(client: @client.id),class:"bg-sky-700 font-serif text-white px-4 py-2.5 rounded-md border border-transparent hover:bg-sky-900 font-semibold" %>
   </div>
+<% end %>
+
+<%= turbo_stream.update "flashes" do  %>
+ <%= render "shared/flashes" %>
 <% end %>

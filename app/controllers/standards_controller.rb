@@ -9,6 +9,7 @@ class StandardsController < ApplicationController
         end
         @client = Client.find_by(id: standard.client.id)
         respond_to do |format|
+            flash[:success ]="Updated!!" 
             format.turbo_stream
             format.html { redirect_to admin_panel_path }
         end
@@ -16,6 +17,7 @@ class StandardsController < ApplicationController
 
     def active_standard 
         count = Standard.where(client: params[:client],standard_type: params[:standard_type]).count
+        @client = Client.find( params[:client])
         if count >= params[:active_standard_count].to_i && params[:active_standard_count].to_i >= 0
             count_unactive = Standard.where(client: params[:client],standard_type: params[:standard_type],active_standard: false).count
             count_active =  Standard.where(client: params[:client],standard_type: params[:standard_type],active_standard: true).count
@@ -35,14 +37,17 @@ class StandardsController < ApplicationController
                     new_unactive = new_unactive - 1
                 end
              end
-             @client = Client.find( params[:client])
              respond_to do |format|
+                flash[:success ]="Updated!!" 
                 format.turbo_stream
                 format.html { redirect_to admin_panel_path }
             end
-        else
-            flash[:danger]="Failed. It may because you enter unvalid number. PLease be careful that you need to enter a number between 0 and total registered."
-            redirect_to admin_panel_path
+        else 
+            respond_to do |format|
+                flash[:danger ]="Failed. It may because you enter unvalid number. PLease be careful that you need to enter a number between 0 and total registered." 
+                format.turbo_stream
+                format.html {  redirect_to admin_panel_path(client: @client.client_name)}
+            end
         end
         
     end

@@ -1,21 +1,40 @@
+<%= turbo_frame_tag "flashes" do %>
+ <%= render "shared/flashes" %>
+<% end %>
+
 <div class="min-w-full text-center py-6 rounded-md border border-transparent">
-<%= form_tag  admin_panel_path,:method =>"get",class:"bg-gray-200 py-4" do  %>
-   <select name="client" class="font-semibold font-serif">
-    <% @clients.each do |client|%>
-     <option value="<%= client.id %>" class="font-semibold font-serif text-sm"><%= client.client_name %></option>
-    <% end %>
-   </select>
+<%= form_tag admin_panel_path,:method =>"get",class:"bg-gray-200 py-4" do  %>
+   <%= text_field_tag 'client',nil,placeholder:"Client Name", class:"font-serif" %>
    <%= submit_tag("Search",:name => nil,class:"bg-sky-700 font-serif text-white px-4 py-2.5 rounded-md border border-transparent hover:bg-sky-900 font-semibold") %>
 <% end %>
 </div>
+
+<% if @clients %>
+  <table class="min-w-full text-center">
+     <thead class="border-b bg-gray-500">
+     <tr>
+        <th scope="col" class="text-base font-semibold font-serif text-white px-4 py-4"> Company Name</th>
+        <th scope="col" class="text-base font-semibold font-serif text-white px-4 py-4">Email</th>
+     </tr>
+     </thead class="border-b">
+     <tbody>
+     <% @clients.each do |client| %>
+       <tr class="bg-white border-b">
+         <td class="text-base font-semibold font-serif px-4 py-4 border-r"><%= client.client_name %></td>
+         <td class="text-base font-semibold font-serif px-4 py-4 border-r"><%= client.email %></td>
+       </tr class="bg-white border-b">
+     <% end %>
+     </tbody>
+  </table>
+<% end %>
 
 <% if @client %>
  <%= turbo_frame_tag "updates" do %>
   <%= render "admin_panel/users" %>
   <%= render "admin_panel/standards" %>
   <div class="text-center p-4">
-    <span class="text-base font-bold font-serif px-4 py-4"> Click on the button bellow to send the bill to client :</span> 
-    <%= link_to "Send",send_email_path(client_id: @client.id),class:"bg-sky-700 font-serif text-white px-4 py-2.5 rounded-md border border-transparent hover:bg-sky-900 font-semibold" %>
+    <span class="text-base font-bold font-serif px-4 py-4"> Click on the button bellow to check The Bill Sheet:</span> 
+    <%= link_to "Check",invoice_path(client: @client.id),class:"bg-sky-700 font-serif text-white px-4 py-2.5 rounded-md border border-transparent hover:bg-sky-900 font-semibold" %>
   </div>
  <% end %>
 <% end %>

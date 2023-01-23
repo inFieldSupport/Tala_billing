@@ -3,7 +3,8 @@ class ClientBillingPreview < ActionMailer::Preview
 
     def billing 
         client = Client.first
-        ClientBillingMailer.billing_mail(client)
+        employee= Employee.first
+        ClientBillingMailer.billing_mail(client,employee)
     end
 
 end

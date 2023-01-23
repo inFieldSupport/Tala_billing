@@ -1,4 +1,4 @@
-<div class="min-w-full p-20">
+<div class="min-w-full p-20 pt-10">
 <div class="grid grid-cols-2 gap-4 pl-20">
  <div class="font-sans">
  <span class="font-bold">inField Clipboard Inc o/a inField Solutions</span><br>
@@ -28,19 +28,21 @@
  <span class="bg-gray-500 p-2 text-white font-sans">DATE 2023.01.01 TERMS Due on receipt</span><br><br>
  <span class="bg-gray-500 p-2 text-white font-sans">DUE DATE 2023.01.01</span><br><br>
  </div>
-
  </div>
-
+<br>
+<hr class="border-2 border-gray-400 pl-4 ">
 <br><br>
 
 <% total_amount = 0 %>
-<table class="min-w-full text-center">
-<thead class="border-b bg-gray-500">
+<div class="grid grid-cols-2 gap-4 pl-20">
+<div>
+<table class="w-full text-center">
+<thead class="border-b bg-orange-500">
 <tr>
-<th scope="col" class="text-base font-semibold  text-white py-2 font-sans">description</th>
-<th scope="col" class="text-base font-semibold  text-white px-4 py-2 font-sans">Qty</th>
-<th scope="col" class="text-base font-semibold  text-white px-4 py-2 font-sans">Rate</th>
-<th scope="col" class="text-base font-semibold  text-white px-4 py-2 font-sans">Total Amount</th>
+<th scope="col" class="text-base font-semibold  text-white py-2 font-sans">Description</th>
+<th scope="col" class="text-base font-semibold  text-white px-6 py-2 font-sans">Qty</th>
+<th scope="col" class="text-base font-semibold  text-white px-6 py-2 font-sans">Rate</th>
+<th scope="col" class="text-base font-semibold  text-white px-6 py-2 font-sans">Total Amount</th>
 </tr>
 </thead>
 
@@ -70,34 +72,36 @@
 <% end %>
 </tbody>
 </table>
+</div>
+
+<div class="text-base font-semibold grid grid-cols-2 gap-4 pl-20 font-sans pt-10">
+<div>
+SUBTOTAL: <br>
+HST (ON) @ 13%:<br>
+TOTAL:<br><br><br>
+<span class="bg-orange-500 text-l text-white py-3 px-5 text-center">Total Due: <span class="pl-5">$<%= (total_amount + total_amount * 0.13).round(2)  %></span></span>
+</div>
+<div class="font-sans">
+ <span><%= total_amount %></span><br>
+ <span> <%= total_amount * 0.13 %></span><br>
+ <span><%= (total_amount + total_amount * 0.13).round(2)  %></span>
+</div>
+</div>
+
+</div>
+
 <br>
 <br>
 
-<div class="grid grid-cols-2 gap-4 pl-20">
 <div class="font-sans">
 Make all deposit checks payable to inField Clipboard Inc.,
 otherwise all recurring payments will be processed via credit
-card.<br><br>
-Send email transfers to billing@infieldclipboard.com.<br><br>
+card.
+Send email transfers to billing@infieldclipboard.com.
 Please contact us if you wish to pay via Direct Debit, or by
 Credit Card, we will send an authorization form.
 </div>
 
-<div class="text-base font-semibold grid grid-cols-2 gap-4 pl-20 font-sans">
-<div>
-SUBTOTAL: <br>
-HST (ON) @ 13%:<br>
-TOTAL:<br>
-</div>
-
-<div class="font-sans">
- <span><%= total_amount %></span><br>
- <span> <%= total_amount * 0.13 %></span><br>
- <span><%= total_amount + total_amount * 0.13  %></span><br>
-</div>
- <span class="bg-orange-500 text-xl text-white py-5 px-5 text-center font-sans">Total Due: <span class="pl-5">$<%= total_amount + total_amount * 0.13  %></span></span>
-</div>
-</div>
 <br><br>
 <div>
 <span class="font-semibold text-l text-left font-sans">TAX SUMMARY</span>
@@ -113,9 +117,17 @@ TOTAL:<br>
  <tr class="bg-white border-b">
   <td class="text-base text-gray-900 font-semibold font-sans px-2 py-2 whitespace-nowrap ">HST (ON) @ 13%</td>
   <td class="text-base text-gray-900 font-semibold font-sans px-2 py-2 whitespace-nowrap "><%= total_amount * 0.13 %></td>
-  <td class="text-base text-gray-900 font-semibold font-sans px-2 py-2 whitespace-nowrap ">$<%= total_amount + total_amount * 0.13 %></td>
+  <td class="text-base text-gray-900 font-semibold font-sans px-2 py-2 whitespace-nowrap ">$<%= (total_amount + total_amount * 0.13).round(2) %></td>
  </tr class="bg-white border-b">
 </tbody>
 </table>
 </div>
 </div>
+<br><br>
+<% if current_user %>
+  <div class="text-center p-4 bg-gray-600">
+    <span class="text-base font-bold font-serif px-4 py-4 text-white"> Click on the button to send The Bill Sheet to client:</span> 
+    <%= link_to "Check",send_email_path(client_id: @client.id),class:"bg-orange-500 font-serif text-white px-4 py-2.5 rounded-md border border-transparent hover:bg-orange-900 font-semibold" %>
+  </div>
+<% end %>
+<br><br>

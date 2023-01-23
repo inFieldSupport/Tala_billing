@@ -4,410 +4,428 @@
 
 Employee.create!(employee_name:"tala",email:"tala@gmail.com",password:"tala1234",password_confirmation:"tala1234")
 
+################ clients ###############################################
+# CSV.foreach(Rails.root.join('lib/CSV/client.csv'), headers: true) do |row|
+#     Client.create! do |model|
+#       model.client_name = row[0]
+#       model.email = row[1]
+#     end
+# end
+####################### users ###########################
+# CSV.foreach(Rails.root.join('lib/CSV/client.csv'), headers: true) do |row|
+#     client = Client.find_by(client_name: row[4])
+#     client.users.create(
+#       user_name: row[0],
+#       user_type: row[1],
+#       user_price: row[2],
+#       active_user: row[3]
+#     )
+# end
+
 #############################################################################################################
 ############# client 1 ########################
 ############################################################################################################
 
-Client.create(client_name: "A&G",email: "ag_company@gmail.com")
-client = Client.last
+# Client.create(client_name: "A&G",email: "ag_company@gmail.com")
+# client = Client.last
 
-5.times do |n|
-  user_name= Faker::Name.name
-  user_type="Admin" 
-  user_price= 22.40
-  User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: true,client: client)
-end
+# 5.times do |n|
+#   user_name= Faker::Name.name
+#   user_type="Admin" 
+#   user_price= 22.40
+#   User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: true,client: client)
+# end
 
-5.times do |n|
-    user_name= Faker::Name.name
-    user_type="Admin" 
-    user_price= 22.40
-    User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client)
-end
+# 5.times do |n|
+#     user_name= Faker::Name.name
+#     user_type="Admin" 
+#     user_price= 22.40
+#     User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client)
+# end
 
-3.times do |n|
-    user_name= Faker::Name.name
-    user_type="Dispatcher" 
-    user_price= 22.40
-    User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: true,client: client)
-end
+# 3.times do |n|
+#     user_name= Faker::Name.name
+#     user_type="Dispatcher" 
+#     user_price= 22.40
+#     User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: true,client: client)
+# end
 
-1.times do |n|
-    user_name= Faker::Name.name
-    user_type="Dispatcher" 
-    user_price= 22.40
-    User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client)
-end
-
-
-
-2.times do |n|
-    user_name= Faker::Name.name
-    user_type="Mechanic" 
-    user_price= 22.40
-    User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: true,client: client)
-end
-
-3.times do |n|
-    user_name= Faker::Name.name
-    user_type="Mechanic" 
-    user_price= 22.40
-    User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client)
-end
+# 1.times do |n|
+#     user_name= Faker::Name.name
+#     user_type="Dispatcher" 
+#     user_price= 22.40
+#     User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client)
+# end
 
 
 
-20.times do |n|
-    user_name= Faker::Name.name
-    user_type="Office_Staff" 
-    user_price= 8.96
-    User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: true,client: client)
-end
+# 2.times do |n|
+#     user_name= Faker::Name.name
+#     user_type="Mechanic" 
+#     user_price= 22.40
+#     User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: true,client: client)
+# end
 
-2.times do |n|
-    user_name= Faker::Name.name
-    user_type="Office_Staff" 
-    user_price= 8.96
-    User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client)
-end
-
-5.times do |n|
-    user_name= Faker::Name.name
-    user_type="Sub_Contractor" 
-    user_price= 22.40
-    User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: true,client: client)
-end
-
-3.times do |n|
-    user_name= Faker::Name.name
-    user_type="Sub_Contractor" 
-    user_price= 22.40
-    User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client)
-end
+# 3.times do |n|
+#     user_name= Faker::Name.name
+#     user_type="Mechanic" 
+#     user_price= 22.40
+#     User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client)
+# end
 
 
-2.times do |n|
-    user_name= Faker::Name.name
-    user_type="Technician" 
-    user_price= 22.40
-    User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: true,client: client)
-end
 
-80.times do |n|
-    user_name= Faker::Name.name
-    user_type="Consumer" 
-    user_price= 0.00
-    User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: true,client: client)
-end
+# 20.times do |n|
+#     user_name= Faker::Name.name
+#     user_type="Office_Staff" 
+#     user_price= 8.96
+#     User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: true,client: client)
+# end
 
-20.times do |n|
-    user_name= Faker::Name.name
-    user_type="Consumer" 
-    user_price= 0.00
-    User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client)
-end
+# 2.times do |n|
+#     user_name= Faker::Name.name
+#     user_type="Office_Staff" 
+#     user_price= 8.96
+#     User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client)
+# end
 
-################################################################################################################
-######client 2 ############
-###############################################################################################################
+# 5.times do |n|
+#     user_name= Faker::Name.name
+#     user_type="Sub_Contractor" 
+#     user_price= 22.40
+#     User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: true,client: client)
+# end
 
-Client.create(client_name: "Custom Brands (Eclipse)",email:"custom_brands@gmail.com")
-client_2 = Client.last
-
-15.times do |n|
-  user_name= Faker::Name.name
-  user_type="Admin" 
-  user_price= 43.50
-  User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: true,client: client_2)
-end
-
-3.times do |n|
-    user_name= Faker::Name.name
-    user_type="Admin" 
-    user_price= 43.50
-    User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client_2)
-  end
+# 3.times do |n|
+#     user_name= Faker::Name.name
+#     user_type="Sub_Contractor" 
+#     user_price= 22.40
+#     User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client)
+# end
 
 
-10.times do |n|
-    user_name= Faker::Name.name
-    user_type="Technician" 
-    user_price= 43.40
-    User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client_2)
-end
+# 2.times do |n|
+#     user_name= Faker::Name.name
+#     user_type="Technician" 
+#     user_price= 22.40
+#     User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: true,client: client)
+# end
 
-4.times do |n|
-    user_name= Faker::Name.name
-    user_type="Technician" 
-    user_price= 43.40
-    User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: true,client: client_2)
-end
+# 80.times do |n|
+#     user_name= Faker::Name.name
+#     user_type="Consumer" 
+#     user_price= 0.00
+#     User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: true,client: client)
+# end
 
-100.times do |n|
-    user_name= Faker::Name.name
-    user_type="Consumer" 
-    user_price= 0.00
-    User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: true,client: client_2)
-end
+# 20.times do |n|
+#     user_name= Faker::Name.name
+#     user_type="Consumer" 
+#     user_price= 0.00
+#     User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client)
+# end
 
-50.times do |n|
-    user_name= Faker::Name.name
-    user_type="Consumer" 
-    user_price= 0.00
-    User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client_2)
-end
+# ################################################################################################################
+# ######client 2 ############
+# ###############################################################################################################
 
-10.times do |n|
-    user_name= Faker::Name.name
-    user_type="Dispatcher" 
-    user_price= 0.00
-    User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client_2)
-end
+# Client.create(client_name: "Custom Brands (Eclipse)",email:"custom_brands@gmail.com")
+# client_2 = Client.last
 
-11.times do |n|
-    user_name= Faker::Name.name
-    user_type="Mechanic" 
-    user_price= 0.00
-    User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client_2)
-end
+# 15.times do |n|
+#   user_name= Faker::Name.name
+#   user_type="Admin" 
+#   user_price= 43.50
+#   User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: true,client: client_2)
+# end
 
-11.times do |n|
-    user_name= Faker::Name.name
-    user_type="Office_Staff" 
-    user_price= 0.00
-    User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client_2)
-end
+# 3.times do |n|
+#     user_name= Faker::Name.name
+#     user_type="Admin" 
+#     user_price= 43.50
+#     User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client_2)
+#   end
 
-10.times do |n|
-    user_name= Faker::Name.name
-    user_type="Sub_Contractor" 
-    user_price= 0.00
-    User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client_2)
-end
+
+# 10.times do |n|
+#     user_name= Faker::Name.name
+#     user_type="Technician" 
+#     user_price= 43.40
+#     User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client_2)
+# end
+
+# 4.times do |n|
+#     user_name= Faker::Name.name
+#     user_type="Technician" 
+#     user_price= 43.40
+#     User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: true,client: client_2)
+# end
+
+# 100.times do |n|
+#     user_name= Faker::Name.name
+#     user_type="Consumer" 
+#     user_price= 0.00
+#     User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: true,client: client_2)
+# end
+
+# 50.times do |n|
+#     user_name= Faker::Name.name
+#     user_type="Consumer" 
+#     user_price= 0.00
+#     User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client_2)
+# end
+
+# 10.times do |n|
+#     user_name= Faker::Name.name
+#     user_type="Dispatcher" 
+#     user_price= 0.00
+#     User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client_2)
+# end
+
+# 11.times do |n|
+#     user_name= Faker::Name.name
+#     user_type="Mechanic" 
+#     user_price= 0.00
+#     User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client_2)
+# end
+
+# 11.times do |n|
+#     user_name= Faker::Name.name
+#     user_type="Office_Staff" 
+#     user_price= 0.00
+#     User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client_2)
+# end
+
+# 10.times do |n|
+#     user_name= Faker::Name.name
+#     user_type="Sub_Contractor" 
+#     user_price= 0.00
+#     User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client_2)
+# end
+
+
+
+# # ###################################################################################################
+# # ####### client 3 ############
+# # ###################################################################################################
+
+# Client.create(client_name: "Eastwing",email:"eastwing@gmail.com")
+# client_3 = Client.last
+
+# 2.times do |n|
+#   user_name= Faker::Name.name
+#   user_type="Admin" 
+#   user_price= 36.00
+#   User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: true,client: client_3)
+# end
+
+
+# 10.times do |n|
+#     user_name= Faker::Name.name
+#     user_type="Sub_Contractor" 
+#     user_price= 36.00
+#     User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: true,client: client_3)
+# end
+
+# 7.times do |n|
+#     user_name= Faker::Name.name
+#     user_type="Technician" 
+#     user_price= 36.00
+#     User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: true,client: client_3)
+# end
+
+# 6.times do |n|
+#     user_name= Faker::Name.name
+#     user_type="Technician" 
+#     user_price= 36.00
+#     User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client_3)
+# end
+
+# 11.times do |n|
+#     user_name= Faker::Name.name
+#     user_type="Office_Staff" 
+#     user_price= 0.00
+#     User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client_3)
+# end
+
+# 10.times do |n|
+#     user_name= Faker::Name.name
+#     user_type="Dispatcher" 
+#     user_price= 0.00
+#     User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client_3)
+# end
+
+# 11.times do |n|
+#     user_name= Faker::Name.name
+#     user_type="Mechanic" 
+#     user_price= 0.00
+#     User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client_3)
+# end
+
+# 80.times do |n|
+#     user_name= Faker::Name.name
+#     user_type="Consumer" 
+#     user_price= 0.00
+#     User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client_3)
+# end
 
 
 
 # ###################################################################################################
-# ####### client 3 ############
+# ################# standards for client 1###########################################################
 # ###################################################################################################
 
-Client.create(client_name: "Eastwing",email:"eastwing@gmail.com")
-client_3 = Client.last
+# client = Client.find_by(client_name: "A&G")
+# 1.times do |n|
+#     standard_name="standard name" 
+#     standard_type="Accounting" 
+#     standard_price= 280.00
+#     Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: true,client: client)
+# end
 
-2.times do |n|
-  user_name= Faker::Name.name
-  user_type="Admin" 
-  user_price= 36.00
-  User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: true,client: client_3)
-end
+# 10.times do |n|
+#     standard_name="standard name" 
+#     standard_type="Telematics" 
+#     standard_price= 50.00
+#     Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: true,client: client)
+# end
 
+# 5.times do |n|
+#     standard_name="standard name" 
+#     standard_type="Telematics" 
+#     standard_price= 50.00
+#     Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: false,client: client)
+# end
 
-10.times do |n|
-    user_name= Faker::Name.name
-    user_type="Sub_Contractor" 
-    user_price= 36.00
-    User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: true,client: client_3)
-end
+# 5.times do |n|
+#     standard_name="standard name" 
+#     standard_type="Bin Module" 
+#     standard_price= 0.00
+#     Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: false,client: client)
+# end
 
-7.times do |n|
-    user_name= Faker::Name.name
-    user_type="Technician" 
-    user_price= 36.00
-    User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: true,client: client_3)
-end
+# 5.times do |n|
+#     standard_name="standard name" 
+#     standard_type="Bin Monitoring" 
+#     standard_price= 0.00
+#     Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: false,client: client)
+# end
 
-6.times do |n|
-    user_name= Faker::Name.name
-    user_type="Technician" 
-    user_price= 36.00
-    User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client_3)
-end
+# 5.times do |n|
+#     standard_name="standard name" 
+#     standard_type="SMS Delivery" 
+#     standard_price= 0.00
+#     Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: false,client: client)
+# end
 
-11.times do |n|
-    user_name= Faker::Name.name
-    user_type="Office_Staff" 
-    user_price= 0.00
-    User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client_3)
-end
-
-10.times do |n|
-    user_name= Faker::Name.name
-    user_type="Dispatcher" 
-    user_price= 0.00
-    User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client_3)
-end
-
-11.times do |n|
-    user_name= Faker::Name.name
-    user_type="Mechanic" 
-    user_price= 0.00
-    User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client_3)
-end
-
-80.times do |n|
-    user_name= Faker::Name.name
-    user_type="Consumer" 
-    user_price= 0.00
-    User.create!(user_name: user_name,user_type: user_type,user_price: user_price,active_user: false,client: client_3)
-end
+# 5.times do |n|
+#     standard_name="standard name" 
+#     standard_type="Routing" 
+#     standard_price= 0.00
+#     Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: false,client: client)
+# end
 
 
 
-###################################################################################################
-################# standards for client 1###########################################################
-###################################################################################################
+# ###################################################################################################
+# ################# standards for client 2###########################################################
+# ###################################################################################################
 
-client = Client.find_by(client_name: "A&G")
-1.times do |n|
-    standard_name="standard name" 
-    standard_type="Accounting" 
-    standard_price= 280.00
-    Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: true,client: client)
-end
+# client = Client.find_by(client_name: "Custom Brands (Eclipse)")
+# 1.times do |n|
+#     standard_name="standard name" 
+#     standard_type="SMS Delivery" 
+#     standard_price= 5.00
+#     Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: true,client: client)
+# end
 
-10.times do |n|
-    standard_name="standard name" 
-    standard_type="Telematics" 
-    standard_price= 50.00
-    Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: true,client: client)
-end
+# 2.times do |n|
+#     standard_name="standard name" 
+#     standard_type="Bin Monitoring" 
+#     standard_price= 289.90
+#     Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: true,client: client)
+# end 
 
-5.times do |n|
-    standard_name="standard name" 
-    standard_type="Telematics" 
-    standard_price= 50.00
-    Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: false,client: client)
-end
+# 2.times do |n|
+#     standard_name="standard name" 
+#     standard_type="Bin Monitoring" 
+#     standard_price= 289.90
+#     Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: false,client: client)
+# end 
 
-5.times do |n|
-    standard_name="standard name" 
-    standard_type="Bin Module" 
-    standard_price= 0.00
-    Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: false,client: client)
-end
+# 1.times do |n|
+#     standard_name="standard name" 
+#     standard_type="Accounting" 
+#     standard_price= 0.00
+#     Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: true,client: client)
+# end
 
-5.times do |n|
-    standard_name="standard name" 
-    standard_type="Bin Monitoring" 
-    standard_price= 0.00
-    Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: false,client: client)
-end
+# 10.times do |n|
+#     standard_name="standard name" 
+#     standard_type="Telematics" 
+#     standard_price= 0.00
+#     Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: true,client: client)
+# end
 
-5.times do |n|
-    standard_name="standard name" 
-    standard_type="SMS Delivery" 
-    standard_price= 0.00
-    Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: false,client: client)
-end
+# 5.times do |n|
+#     standard_name="standard name" 
+#     standard_type="Routing" 
+#     standard_price= 0.00
+#     Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: false,client: client)
+# end
 
-5.times do |n|
-    standard_name="standard name" 
-    standard_type="Routing" 
-    standard_price= 0.00
-    Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: false,client: client)
-end
+# 5.times do |n|
+#     standard_name="standard name" 
+#     standard_type="Bin Module" 
+#     standard_price= 0.00
+#     Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: false,client: client)
+# end
 
+# ###################################################################################################
+# ################# standards for client 3###########################################################
+# ###################################################################################################
+# client = Client.find_by(client_name: "Eastwing")
+# 1.times do |n|
+#     standard_name="standard name" 
+#     standard_type="SMS Delivery" 
+#     standard_price= 5.00
+#     Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: true,client: client)
+# end
 
+# 2.times do |n|
+#     standard_name="standard name" 
+#     standard_type="Bin Monitoring" 
+#     standard_price= 289.90
+#     Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: true,client: client)
+# end 
 
-###################################################################################################
-################# standards for client 2###########################################################
-###################################################################################################
+# 2.times do |n|
+#     standard_name="standard name" 
+#     standard_type="Bin Module" 
+#     standard_price= 289.90
+#     Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: false,client: client)
+# end 
 
-client = Client.find_by(client_name: "Custom Brands (Eclipse)")
-1.times do |n|
-    standard_name="standard name" 
-    standard_type="SMS Delivery" 
-    standard_price= 5.00
-    Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: true,client: client)
-end
+# 1.times do |n|
+#     standard_name="standard name" 
+#     standard_type="Accounting" 
+#     standard_price= 0.00
+#     Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: true,client: client)
+# end
 
-2.times do |n|
-    standard_name="standard name" 
-    standard_type="Bin Monitoring" 
-    standard_price= 289.90
-    Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: true,client: client)
-end 
+# 10.times do |n|
+#     standard_name="standard name" 
+#     standard_type="Telematics" 
+#     standard_price= 0.00
+#     Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: true,client: client)
+# end
 
-2.times do |n|
-    standard_name="standard name" 
-    standard_type="Bin Monitoring" 
-    standard_price= 289.90
-    Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: false,client: client)
-end 
-
-1.times do |n|
-    standard_name="standard name" 
-    standard_type="Accounting" 
-    standard_price= 0.00
-    Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: true,client: client)
-end
-
-10.times do |n|
-    standard_name="standard name" 
-    standard_type="Telematics" 
-    standard_price= 0.00
-    Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: true,client: client)
-end
-
-5.times do |n|
-    standard_name="standard name" 
-    standard_type="Routing" 
-    standard_price= 0.00
-    Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: false,client: client)
-end
-
-5.times do |n|
-    standard_name="standard name" 
-    standard_type="Bin Module" 
-    standard_price= 0.00
-    Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: false,client: client)
-end
-
-###################################################################################################
-################# standards for client 3###########################################################
-###################################################################################################
-client = Client.find_by(client_name: "Eastwing")
-1.times do |n|
-    standard_name="standard name" 
-    standard_type="SMS Delivery" 
-    standard_price= 5.00
-    Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: true,client: client)
-end
-
-2.times do |n|
-    standard_name="standard name" 
-    standard_type="Bin Monitoring" 
-    standard_price= 289.90
-    Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: true,client: client)
-end 
-
-2.times do |n|
-    standard_name="standard name" 
-    standard_type="Bin Module" 
-    standard_price= 289.90
-    Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: false,client: client)
-end 
-
-1.times do |n|
-    standard_name="standard name" 
-    standard_type="Accounting" 
-    standard_price= 0.00
-    Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: true,client: client)
-end
-
-10.times do |n|
-    standard_name="standard name" 
-    standard_type="Telematics" 
-    standard_price= 0.00
-    Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: true,client: client)
-end
-
-5.times do |n|
-    standard_name="standard name" 
-    standard_type="Routing" 
-    standard_price= 0.00
-    Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: false,client: client)
-end
+# 5.times do |n|
+#     standard_name="standard name" 
+#     standard_type="Routing" 
+#     standard_price= 0.00
+#     Standard.create!(standard_name: standard_name,standard_type: standard_type,standard_price: standard_price,active_standard: false,client: client)
+# end
 
 
 

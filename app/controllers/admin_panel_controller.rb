@@ -3,10 +3,10 @@ class AdminPanelController < ApplicationController
 
     def index
         if params[:client]
-            @client = Client.find(params[:client])
-        end  
-        @clients = Client.all
-        
+            @client = Client.find_by(client_name: params[:client])
+        else
+            @clients = Client.all
+        end   
     end
 
     def new_price
@@ -29,7 +29,7 @@ class AdminPanelController < ApplicationController
 
     def send_email 
         client = Client.find(params[:client_id])
-        ClientBillingMailer.billing_mail(client).deliver_now
+        ClientBillingMailer.billing_mail(client,current_user).deliver_now
         flash[:success]="Email is sent to #{client.client_name}."
         redirect_to admin_panel_path
     end
