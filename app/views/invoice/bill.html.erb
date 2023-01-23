@@ -1,41 +1,123 @@
-<h1><%= @client.client_name %></h1>
-<% total_amount = 0 %>
-<table>
-<tr>
-<td>description</td>
-<td>Qty</td>
-<td>Rate</td>
-<td>Total Amount</td>
-</tr>
+<div class="min-w-full p-20">
+<div class="grid grid-cols-2 gap-4 pl-20">
+ <div>
+ <span class="font-bold">inField Clipboard Inc o/a inField Solutions</span><br>
+ <span>
+ 3600 Steeles Ave East<br>
+ Markham ON L3R 9Z7<br>
+ +1 8334634353<br>
+ Billing@inFieldSolutionsInc.com<br>
+ www.inFieldSolutionsInc.com<br>
+ GST/HST Registration No.: 737197897<br>
+ Business Number 737197897RT001<br>
+ </span>
+ <br><br><br><br>
+ <span class="font-bold">BILL TO </span><br>
+ <span>
+  <%= @client.client_name %><br>
+  Mobile Mechanical Solutions Inc.<br>
+  10791 County Road, PO Box 208<br>
+  Iroquois Ontario K0E 1K0<br>
+ </span>
+ </div>
 
+ <div>
+ <%= image_tag("infield.png")%>
+ <br><br><br>
+ <span class="bg-gray-500 p-2 text-white">INVOICE 2184</span><br><br>
+ <span class="bg-gray-500 p-2 text-white">DATE 2023.01.01 TERMS Due on receipt</span><br><br>
+ <span class="bg-gray-500 p-2 text-white">DUE DATE 2023.01.01</span><br><br>
+ </div>
+
+ </div>
+
+<br><br>
+
+<% total_amount = 0 %>
+<table class="min-w-full text-center">
+<thead class="border-b bg-gray-500">
+<tr>
+<th scope="col" class="text-base font-semibold  text-white py-2">description</th>
+<th scope="col" class="text-base font-semibold  text-white px-4 py-2">Qty</th>
+<th scope="col" class="text-base font-semibold  text-white px-4 py-2">Rate</th>
+<th scope="col" class="text-base font-semibold  text-white px-4 py-2">Total Amount</th>
+</tr>
+</thead>
+
+<tbody>
 <% @users_type.each do |user_type| %>
  <% if User.active_user(user_type,@client).count > 0 %>
-  <tr>
-   <td>inField Clipboard - <%= user_type %></td>
-   <td><%=  User.active_user(user_type,@client).count %></td>
-   <td> <%= User.user_type(user_type,@client).first.user_price %></td>
-   <td><%= (User.active_user(user_type,@client).count * User.user_type(user_type,@client).first.user_price).round(2)  %></td>
+  <tr class="bg-white border-b">
+   <td class="text-base text-gray-900 font-semibold py-2 whitespace-nowrap text-left pl-10">inField Clipboard - <%= user_type %></td>
+   <td class="text-base text-gray-900 font-semibold px-2 py-2 whitespace-nowrap "><%=  User.active_user(user_type,@client).count %></td>
+   <td class="text-base text-gray-900 font-semibold px-2 py-2 whitespace-nowrap "> <%= User.user_type(user_type,@client).first.user_price %></td>
+   <td class="text-base text-gray-900 font-semibold px-2 py-2 whitespace-nowrap "><%= (User.active_user(user_type,@client).count * User.user_type(user_type,@client).first.user_price).round(2)  %></td>
    <% total_amount = total_amount + (User.active_user(user_type,@client).count * User.user_type(user_type,@client).first.user_price).round(2) %>
-  </tr>
+  </tr class="bg-white border-b">
   <% end %>
 <% end %>
 
 <% @standards_type.each do |standard_type| %>
  <% if Standard.active_standard(standard_type,@client).count > 0 %>
-  <tr>
-   <td>inField Tracker - <%= standard_type %></td>
-   <td><%=  Standard.active_standard(standard_type,@client).count %></td>
-   <td> <%= Standard.standard_type(standard_type,@client).first.standard_price %></td>
-   <td><%= (Standard.active_standard(standard_type,@client).count * Standard.standard_type(standard_type,@client).first.standard_price).round(2)  %></td>
+  <tr class="bg-white border-b">
+   <td class="text-base text-gray-900 font-semibold py-2 whitespace-nowrap text-left pl-10">inField Tracker - <%= standard_type %></td>
+   <td class="text-base text-gray-900 font-semibold px-2 py-2 whitespace-nowrap "><%=  Standard.active_standard(standard_type,@client).count %></td>
+   <td class="text-base text-gray-900 font-semibold px-2 py-2 whitespace-nowrap"> <%= Standard.standard_type(standard_type,@client).first.standard_price %></td>
+   <td class="text-base text-gray-900 font-semibold px-2 py-2 whitespace-nowrap"><%= (Standard.active_standard(standard_type,@client).count * Standard.standard_type(standard_type,@client).first.standard_price).round(2)  %></td>
    <% total_amount = total_amount + (Standard.active_standard(standard_type,@client).count * Standard.standard_type(standard_type,@client).first.standard_price).round(2) %>
-  </tr>
+  </tr class="bg-white border-b">
   <% end %>
 <% end %>
-
-
+</tbody>
 </table>
 <br>
 <br>
-<h2>SUBTOTAL: <%= total_amount %></h2>
-<h2>HST (ON) @ 13%: <%= total_amount * 0.13 %></h2>
-<h2>TOTAL: <%= total_amount + total_amount * 0.13  %></h2>
+
+<div class="grid grid-cols-2 gap-4 pl-20">
+<div>
+Make all deposit checks payable to inField Clipboard Inc.,
+otherwise all recurring payments will be processed via credit
+card.<br><br>
+Send email transfers to billing@infieldclipboard.com.<br><br>
+Please contact us if you wish to pay via Direct Debit, or by
+Credit Card, we will send an authorization form.
+</div>
+
+<div class="text-base font-semibold grid grid-cols-2 gap-4 pl-20">
+<div>
+SUBTOTAL: <br>
+HST (ON) @ 13%:<br>
+TOTAL:<br>
+</div>
+
+<div>
+ <span><%= total_amount %></span><br>
+ <span> <%= total_amount * 0.13 %></span><br>
+ <span><%= total_amount + total_amount * 0.13  %></span><br>
+</div>
+ <span class="bg-orange-500 text-xl text-white py-5 px-5 text-center">Total Due: <span class="pl-5">$<%= total_amount + total_amount * 0.13  %></span></span>
+</div>
+</div>
+<br><br>
+<div>
+<span class="font-semibold text-l text-left">TAX SUMMARY</span>
+<table class="min-w-full text-center">
+<thead class="border-b bg-gray-500">
+ <tr>
+ <th scope="col" class="text-base font-semibold  text-white px-4 py-2">Rate</th>
+ <th scope="col" class="text-base font-semibold  text-white px-4 py-2"> Tax</th>
+ <th scope="col" class="text-base font-semibold  text-white px-4 py-2"> Net</th>
+ </tr>
+</thead>
+<tbody>
+ <tr class="bg-white border-b">
+  <td class="text-base text-gray-900 font-semibold px-2 py-2 whitespace-nowrap ">HST (ON) @ 13%</td>
+  <td class="text-base text-gray-900 font-semibold px-2 py-2 whitespace-nowrap "><%= total_amount * 0.13 %></td>
+  <td class="text-base text-gray-900 font-semibold px-2 py-2 whitespace-nowrap ">$<%= total_amount + total_amount * 0.13 %></td>
+ </tr class="bg-white border-b">
+</tbody>
+</table>
+</div>
+</div>
+
+</div>

@@ -1,7 +1,7 @@
 <td class="text-base text-gray-900 font-serif font-semibold v px-4 py-4 whitespace-nowrap text-center bg-gray-300"> <%= type %></td>
 
 
-  <td class="text-base text-gray-900 font-semibold ffont-sans px-2 py-4 whitespace-nowrap border-r">
+  <td class="text-base text-gray-900 font-semibold font-sans px-2 py-4 whitespace-nowrap border-r">
   <% if User.user_type( type,@client.id).any?  %>  
     <% if type == "Consumer" %>
       $<%= User.user_type( type,@client.id).first.user_price %>
