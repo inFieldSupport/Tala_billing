@@ -32,9 +32,14 @@
  <%= turbo_frame_tag "updates" do %>
   <%= render "admin_panel/users" %>
   <%= render "admin_panel/standards" %>
-  <div class="text-center p-4">
-    <span class="text-base font-bold font-serif px-4 py-4"> Click on the button bellow to check The Bill Sheet:</span> 
-    <%= link_to "Check",invoice_path(client: @client.id),class:"bg-sky-700 font-serif text-white px-4 py-2.5 rounded-md border border-transparent hover:bg-sky-900 font-semibold" %>
+  <div class="p-4 text-center">
+    <span class="text-base font-bold font-serif"> Enter a date for the bill, then click on the button bellow to check The Bill Sheet:</span>
+     <%= form_tag invoice_path,:method=>"get" do %> 
+      <%= date_field_tag 'date',nil,placeholder:"Date of bill" %>
+      <%= hidden_field_tag :total_amount,@total_amount_standard.round(2) + @total_amount_user.round(2) %>
+      <%= hidden_field_tag :client,@client.id %>
+      <%= submit_tag("Check",:name => nil,class:"bg-sky-700 font-serif text-white px-4 py-2.5 rounded-md border border-transparent hover:bg-sky-900 font-semibold")%>
+    <% end %>
   </div>
  <% end %>
 <% end %>
