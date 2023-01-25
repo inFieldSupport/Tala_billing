@@ -3,14 +3,16 @@ default: &default
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
-  host: localhost
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: postgres
-  password: 'tala1234'
+
 
 development:
   <<: *default
   database: billing_development
+  username: postgres
+  password: 'tala1234'
+  host: localhost
+  port: 5432
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -24,4 +26,4 @@ production:
   url: <%= ENV['DATABASE_URL'] %>
   database: billing_production
   username: billing
-  password: <%= ENV["ODIN_FACEBOOK_DATABASE_PASSWORD"] %>
+  password: <%= ENV["BILLING_DATABASE_PASSWORD"] %>
