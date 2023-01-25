@@ -24,7 +24,7 @@ $ rails tailwindcss:build
 * client name(any client name that is mentioned in table in index page)
 
 ### You can use the following link to see the project:
-* [https://billing-jcr8.onrender.com](#https://billing-jcr8.onrender.com)
+* [Billing](https://billing-jcr8.onrender.com)
 
 
 
