@@ -14,9 +14,9 @@ $ rails tailwindcss:build
 ```
 # Information that you need to enter:
 
-##### Login Page:
+<!-- ##### Login Page:
 * email: tala@gmail.com
-* password: tala1234
+* password: tala1234 -->
 
 ##### Search Bar(for all clients): 
 * month and year (only): 1,2023
