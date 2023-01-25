@@ -23,7 +23,7 @@ $ rails tailwindcss:build
 * month and year (only): 2,2022
 * client name(any client name that is mentioned in table in index page)
 
-### You can use the following link to see the project:
+### You can click on the following link to see the project:
 * [Billing](https://billing-jcr8.onrender.com)
 
 
