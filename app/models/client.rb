@@ -2,7 +2,6 @@ class Client < ApplicationRecord
 
     has_many :users 
     has_many :standars
-    has_many :bills
     validates :client_name, presence: true
 
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i

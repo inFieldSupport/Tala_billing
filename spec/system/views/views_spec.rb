@@ -15,18 +15,22 @@ RSpec.describe "Views", type: :system do
         visit admin_panel_path
         client = Client.new(client_name:"A&G",email:"example@gmail.com")
         client.save #creating client
-        user = User.new(user_name:"test",user_price: 20,user_type:"Admin",client: client).save #creating user for client
-        standard = Standard.new(standard_name:"test",standard_price: 20,standard_type:"Routing",client: client).save #creating standard for client
+        user = User.new(user_name:"test",user_price: 20,user_type:"Admin",client: client,month: 1,year: 2023).save #creating user for client
+        standard = Standard.new(standard_name:"test",standard_price: 20,standard_type:"Routing",client: client,month: 1,year: 2023).save #creating standard for client
         fill_in "client",with: client.client_name
+        select "Jan", :from => 'start-month'
+        select '2023', :from => 'start-year'
         click_on 'Search'
-        visit admin_panel_path(client: client.client_name)
+        visit admin_panel_path(client: client.client_name,select: {month: 1,year: 2023})
         visit new_price_path(client: client,user_type: client.users.first.user_type)
         fill_in "user_price",with: '22.4'
-        visit admin_panel_path(client: client.client_name)
-        fill_in "date",with: '24/1/2023'
+        click_on "Edit"
+        visit  admin_panel_path(client: client.client_name,select: {month: 1,year: 2023})
         click_on "Check"
-        click_on "Send"
-        visit admin_panel_path(client: client.client_name)
+        accept_alert do
+         click_on 'Send'
+       end
+        visit  admin_panel_path(client: client.client_name,select: {month: 1,year: 2023})
         click_on "Logout"
     end 
  end

@@ -2,7 +2,7 @@
 
 <p>Dear <%= @client.client_name %>,</p>
 <p>I hope my email finds you well.</p><br>
-<p>Kindly find below the link of the invoice sheet.<%= link_to "Invoice Sheet",invoice_url(client: @client) %></p>
+<p>Kindly find below the link of the invoice sheet.<%= link_to "Invoice Sheet",invoice_url(client: @client,month: @month,year: @year) %></p>
 <p>If you have any question, please don't hesitate to contact us.</p>
 <br>
 <p>Kind regards,</p>

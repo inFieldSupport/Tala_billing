@@ -50,8 +50,8 @@
  <tr class="bg-white border-b">
   <td class="text-base text-gray-900 font-bold font-serif px-4 py-4 whitespace-nowrap text-center bg-gray-300">Total Amount</td>
   <td class="text-base text-gray-900 font-bold font-sans px-4 py-4 whitespace-nowrap text-center bg-gray-300"> $<%= @total_rate_user.round(2) %></td>
-  <td class="text-base text-gray-900 font-bold font-sans px-4 py-4 whitespace-nowrap text-center bg-gray-300"> <%= User.where(client: @client).count %></td>
-  <td class="text-base text-gray-900 font-bold font-sans px-4 py-4 whitespace-nowrap text-center bg-gray-300"> <%= User.where(active_user: true,client: @client).count %></td>
+  <td class="text-base text-gray-900 font-bold font-sans px-4 py-4 whitespace-nowrap text-center bg-gray-300"> <%= User.where(client: @client,month: session[:month],year: session[:year]).count %></td>
+  <td class="text-base text-gray-900 font-bold font-sans px-4 py-4 whitespace-nowrap text-center bg-gray-300"> <%= User.where(active_user: true,client: @client,month: session[:month],year: session[:year]).count %></td>
   <td class="text-base text-gray-900 font-bold font-sans px-4 py-4 whitespace-nowrap text-center bg-gray-300"> $<%= @total_amount_user.round(2) %></td>
  </tr class="bg-white border-b">
 

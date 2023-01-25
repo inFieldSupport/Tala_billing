@@ -1,121 +1,507 @@
-user_name,user_type,user_price,active_user,client_name
-user1,Admin,22.4,true,A&G
-user2,Admin,22.4,true,A&G
-user3,Admin,22.4,true,A&G
-user4,Admin,22.4,true,A&G
-user5,Admin,22.4,true,A&G
-user6,Admin,22.4,false,A&G
-user7,Admin,22.4,false,A&G
-user8,Admin,22.4,false,A&G
-user9,Admin,22.4,false,A&G
-user10,Admin,22.4,false,A&G
-user11,Dispatcher,22.4,true,A&G
-user12,Dispatcher,22.4,true,A&G
-user13,Dispatcher,22.4,true,A&G
-user14,Dispatcher,22.4,false,A&G
-user15,Dispatcher,22.4,false,A&G
-user16,Mechanic,40,true,A&G
-user17,Mechanic,40,true,A&G
-user18,Mechanic,40,false,A&G
-user19,Office_Staff,35.5,true,A&G
-user20,Office_Staff,35.5,false,A&G
-user21,Office_Staff,35.5,false,A&G
-user22,Office_Staff,35.5,false,A&G
-user23,Office_Staff,35.5,true,A&G
-user24,Sub_Contractor,8.96,true,A&G
-user25,Sub_Contractor,8.96,true,A&G
-user26,Sub_Contractor,8.96,true,A&G
-user27,Sub_Contractor,8.96,true,A&G
-user28,Technician,20,true,A&G
-user29,Technician,20,true,A&G
-user30,Technician,20,true,A&G
-user31,Consumer,0.0,true,A&G
-user32,Consumer,0.0,true,A&G
-user33,Consumer,0.0,true,A&G
-user34,Consumer,0.0,true,A&G
-user35,Consumer,0.0,false,A&G
-user31,Consumer,0.0,false,A&G
-user31,Consumer,0.0,false,A&G
-user31,Consumer,0.0,false,A&G
-user31,Consumer,0.0,false,A&G
-user31,Consumer,0.0,false,A&G
-user31,Consumer,0.0,false,A&G
-user31,Consumer,0.0,false,A&G
-user31,Admin,20,false,Custom Brands (Eclipse)
-user31,Admin,20,true,Custom Brands (Eclipse)
-user31,Admin,20,false,Custom Brands (Eclipse)
-user31,Admin,20,false,Custom Brands (Eclipse)
-user31,Admin,20,false,Custom Brands (Eclipse)
-user31,Dispatcher,30,true,Custom Brands (Eclipse)
-user31,Dispatcher,30,true,Custom Brands (Eclipse)
-user31,Dispatcher,30,true,Custom Brands (Eclipse)
-user31,Dispatcher,30,false,Custom Brands (Eclipse)
-user31,Mechanic,22.4,true,Custom Brands (Eclipse)
-user31,Mechanic,22.4,true,Custom Brands (Eclipse)
-user31,Mechanic,22.4,false,Custom Brands (Eclipse)
-user31,Office_Staff,0,false,Custom Brands (Eclipse)
-user31,Office_Staff,0,false,Custom Brands (Eclipse)
-user31,Office_Staff,0,false,Custom Brands (Eclipse)
-user31,Office_Staff,0,false,Custom Brands (Eclipse)
-user31,Office_Staff,0,false,Custom Brands (Eclipse)
-user31,Technician,0,false,Custom Brands (Eclipse)
-user31,Technician,0,false,Custom Brands (Eclipse)
-user31,Technician,0,false,Custom Brands (Eclipse)
-user31,Technician,0,false,Custom Brands (Eclipse)
-user31,Technician,0,false,Custom Brands (Eclipse)
-user31,Sub_Contractor,0,false,Custom Brands (Eclipse)
-user31,Sub_Contractor,0,false,Custom Brands (Eclipse)
-user31,Sub_Contractor,0,false,Custom Brands (Eclipse)
-user31,Sub_Contractor,0,false,Custom Brands (Eclipse)
-user31,Consumer,0,true,Custom Brands (Eclipse)
-user31,Sub_Contractor,0,false,Custom Brands (Eclipse)
-user31,Consumer,0,true,Custom Brands (Eclipse)
-user31,Consumer,0,true,Custom Brands (Eclipse)
-user31,Consumer,0,true,Custom Brands (Eclipse)
-user31,Consumer,0,true,Custom Brands (Eclipse)
-user31,Consumer,0,true,Custom Brands (Eclipse)
-user31,Consumer,0,true,Custom Brands (Eclipse)
-user31,Consumer,0,true,Custom Brands (Eclipse)
-user31,Consumer,0,false,Custom Brands (Eclipse)
-user31,Consumer,0,false,Custom Brands (Eclipse)
-user31,Consumer,0,false,Custom Brands (Eclipse)
-user31,Admin,0,false,Eastwing
-user31,Admin,0,false,Eastwing
-user31,Admin,0,false,Eastwing
-user31,Admin,0,false,Eastwing
-user31,Admin,0,false,Eastwing
-user31,Admin,0,false,Eastwing
-user31,Dispatcher,22.4,true,Eastwing
-user31,Dispatcher,22.4,true,Eastwing
-user31,Dispatcher,22.4,true,Eastwing
-user31,Mechanic,35,true,Eastwing
-user31,Mechanic,35,true,Eastwing
-user31,Mechanic,35,true,Eastwing
-user31,Mechanic,35,true,Eastwing
-user31,Mechanic,35,true,Eastwing
-user31,Office_Staff,0,false,Eastwing
-user31,Office_Staff,0,false,Eastwing
-user31,Office_Staff,0,false,Eastwing
-user31,Sub_Contractor,0,false,Eastwing
-user31,Sub_Contractor,0,false,Eastwing
-user31,Technician,0,false,Eastwing
-user31,Consumer,0,false,Eastwing
-user31,Consumer,0,false,Eastwing
-user31,Consumer,0,false,Eastwing
-user31,Consumer,0,false,Eastwing
-user31,Consumer,0,false,Eastwing
-user31,Consumer,0,true,Eastwing
-user31,Consumer,0,true,Eastwing
-user31,Consumer,0,true,Eastwing
-user31,Consumer,0,true,Eastwing
-user31,Consumer,0,true,Eastwing
-user31,Consumer,0,true,Eastwing
-user31,Consumer,0,true,Eastwing
-user31,Consumer,0,true,Eastwing
-user31,Consumer,0,true,Eastwing
-user31,Consumer,0,true,Eastwing
-user31,Consumer,0,true,Eastwing
-user31,Consumer,0,true,Eastwing
-user31,Consumer,0,true,Eastwing
-user31,Consumer,0,true,Eastwing
-user31,Consumer,0,true,Eastwing
+user_name,user_type,user_price,active_user,client_name,month,year
+user1,Admin,22.4,true,A&G,1,2023
+user2,Admin,22.4,true,A&G,1,2023
+user3,Admin,22.4,true,A&G,1,2023
+user4,Admin,22.4,true,A&G,1,2023
+user5,Admin,22.4,true,A&G,1,2023
+user6,Admin,22.4,false,A&G,1,2023
+user7,Admin,22.4,false,A&G,1,2023
+user8,Admin,22.4,false,A&G,1,2023
+user9,Admin,22.4,false,A&G,1,2023
+user10,Admin,22.4,false,A&G,1,2023
+user11,Dispatcher,22.4,true,A&G,1,2023
+user12,Dispatcher,22.4,true,A&G,1,2023
+user13,Dispatcher,22.4,true,A&G,1,2023
+user14,Dispatcher,22.4,false,A&G,1,2023
+user15,Dispatcher,22.4,false,A&G,1,2023
+user16,Mechanic,40,true,A&G,1,2023
+user17,Mechanic,40,true,A&G,1,2023
+user18,Mechanic,40,false,A&G,1,2023
+user19,Office_Staff,35.5,true,A&G,1,2023
+user20,Office_Staff,35.5,false,A&G,1,2023
+user21,Office_Staff,35.5,false,A&G,1,2023
+user22,Office_Staff,35.5,false,A&G,1,2023
+user23,Office_Staff,35.5,true,A&G,1,2023
+user24,Sub_Contractor,8.96,true,A&G,1,2023
+user25,Sub_Contractor,8.96,true,A&G,1,2023
+user26,Sub_Contractor,8.96,true,A&G,1,2023
+user27,Sub_Contractor,8.96,true,A&G,1,2023
+user28,Technician,20,true,A&G,1,2023
+user29,Technician,20,true,A&G,1,2023
+user30,Technician,20,true,A&G,1,2023
+user31,Consumer,0.0,true,A&G,1,2023
+user32,Consumer,0.0,true,A&G,1,2023
+user33,Consumer,0.0,true,A&G,1,2023
+user34,Consumer,0.0,true,A&G,1,2023
+user35,Consumer,0.0,false,A&G,1,2023
+user31,Consumer,0.0,false,A&G,1,2023
+user31,Consumer,0.0,false,A&G,1,2023
+user31,Consumer,0.0,false,A&G,1,2023
+user31,Consumer,0.0,false,A&G,1,2023
+user31,Consumer,0.0,false,A&G,1,2023
+user31,Consumer,0.0,false,A&G,1,2023
+user31,Consumer,0.0,false,A&G,1,2023
+user31,Admin,20,false,Custom Brands (Eclipse),1,2023
+user31,Admin,20,true,Custom Brands (Eclipse),1,2023
+user31,Admin,20,false,Custom Brands (Eclipse),1,2023
+user31,Admin,20,false,Custom Brands (Eclipse),1,2023
+user31,Admin,20,false,Custom Brands (Eclipse),1,2023
+user31,Dispatcher,30,true,Custom Brands (Eclipse),1,2023
+user31,Dispatcher,30,true,Custom Brands (Eclipse),1,2023
+user31,Dispatcher,30,true,Custom Brands (Eclipse),1,2023
+user31,Dispatcher,30,false,Custom Brands (Eclipse),1,2023
+user31,Mechanic,22.4,true,Custom Brands (Eclipse),1,2023
+user31,Mechanic,22.4,true,Custom Brands (Eclipse),1,2023
+user31,Mechanic,22.4,false,Custom Brands (Eclipse),1,2023
+user31,Office_Staff,0,false,Custom Brands (Eclipse),1,2023
+user31,Office_Staff,0,false,Custom Brands (Eclipse),1,2023
+user31,Office_Staff,0,false,Custom Brands (Eclipse),1,2023
+user31,Office_Staff,0,false,Custom Brands (Eclipse),1,2023
+user31,Office_Staff,0,false,Custom Brands (Eclipse),1,2023
+user31,Technician,0,false,Custom Brands (Eclipse),1,2023
+user31,Technician,0,false,Custom Brands (Eclipse),1,2023
+user31,Technician,0,false,Custom Brands (Eclipse),1,2023
+user31,Technician,0,false,Custom Brands (Eclipse),1,2023
+user31,Technician,0,false,Custom Brands (Eclipse),1,2023
+user31,Sub_Contractor,0,false,Custom Brands (Eclipse),1,2023
+user31,Sub_Contractor,0,false,Custom Brands (Eclipse),1,2023
+user31,Sub_Contractor,0,false,Custom Brands (Eclipse),1,2023
+user31,Sub_Contractor,0,false,Custom Brands (Eclipse),1,2023
+user31,Consumer,0,true,Custom Brands (Eclipse),1,2023
+user31,Sub_Contractor,0,false,Custom Brands (Eclipse),1,2023
+user31,Consumer,0,true,Custom Brands (Eclipse),1,2023
+user31,Consumer,0,true,Custom Brands (Eclipse),1,2023
+user31,Consumer,0,true,Custom Brands (Eclipse),1,2023
+user31,Consumer,0,true,Custom Brands (Eclipse),1,2023
+user31,Consumer,0,true,Custom Brands (Eclipse),1,2023
+user31,Consumer,0,true,Custom Brands (Eclipse),1,2023
+user31,Consumer,0,true,Custom Brands (Eclipse),1,2023
+user31,Consumer,0,false,Custom Brands (Eclipse),1,2023
+user31,Consumer,0,false,Custom Brands (Eclipse),1,2023
+user31,Consumer,0,false,Custom Brands (Eclipse),1,2023
+user31,Admin,0,false,Eastwing,1,2023
+user31,Admin,0,false,Eastwing,1,2023
+user31,Admin,0,false,Eastwing,1,2023
+user31,Admin,0,false,Eastwing,1,2023
+user31,Admin,0,false,Eastwing,1,2023
+user31,Admin,0,false,Eastwing,1,2023
+user31,Dispatcher,22.4,true,Eastwing,1,2023
+user31,Dispatcher,22.4,true,Eastwing,1,2023
+user31,Dispatcher,22.4,true,Eastwing,1,2023
+user31,Mechanic,35,true,Eastwing,1,2023
+user31,Mechanic,35,true,Eastwing,1,2023
+user31,Mechanic,35,true,Eastwing,1,2023
+user31,Mechanic,35,true,Eastwing,1,2023
+user31,Mechanic,35,true,Eastwing,1,2023
+user31,Office_Staff,0,false,Eastwing,1,2023
+user31,Office_Staff,0,false,Eastwing,1,2023
+user31,Office_Staff,0,false,Eastwing,1,2023
+user31,Sub_Contractor,0,false,Eastwing,1,2023
+user31,Sub_Contractor,0,false,Eastwing,1,2023
+user31,Technician,0,false,Eastwing,1,2023
+user31,Consumer,0,false,Eastwing,1,2023
+user31,Consumer,0,false,Eastwing,1,2023
+user31,Consumer,0,false,Eastwing,1,2023
+user31,Consumer,0,false,Eastwing,1,2023
+user31,Consumer,0,false,Eastwing,1,2023
+user31,Consumer,0,true,Eastwing,1,2023
+user31,Consumer,0,true,Eastwing,1,2023
+user31,Consumer,0,true,Eastwing,1,2023
+user31,Consumer,0,true,Eastwing,1,2023
+user31,Consumer,0,true,Eastwing,1,2023
+user31,Consumer,0,true,Eastwing,1,2023
+user31,Consumer,0,true,Eastwing,1,2023
+user31,Consumer,0,true,Eastwing,1,2023
+user31,Consumer,0,true,Eastwing,1,2023
+user31,Consumer,0,true,Eastwing,1,2023
+user31,Consumer,0,true,Eastwing,1,2023
+user31,Consumer,0,true,Eastwing,1,2023
+user31,Consumer,0,true,Eastwing,1,2023
+user31,Consumer,0,true,Eastwing,1,2023
+user31,Consumer,0,true,Eastwing,1,2023
+user31,Admin,20,true,LUMAR Fire,1,2023
+user31,Admin,20,true,LUMAR Fire,1,2023
+user31,Admin,20,false,LUMAR Fire,1,2023
+user31,Dispatcher,22,true,LUMAR Fire,1,2023
+user31,Dispatcher,22,true,LUMAR Fire,1,2023
+user31,Mechanic,0,false,LUMAR Fire,1,2023
+user31,Mechanic,0,false,LUMAR Fire,1,2023
+user31,Office_Staff,0,false,LUMAR Fire,1,2023
+user31,Office_Staff,0,false,LUMAR Fire,1,2023
+user31,Office_Staff,0,false,LUMAR Fire,1,2023
+user31,Sub_Contractor,30,false,LUMAR Fire,1,2023
+user31,Sub_Contractor,30,true,LUMAR Fire,1,2023
+user31,Sub_Contractor,30,false,LUMAR Fire,1,2023
+user31,Technician,10,false,LUMAR Fire,1,2023
+user31,Technician,10,false,LUMAR Fire,1,2023
+user31,Consumer,0,true,LUMAR Fire,1,2023
+user31,Consumer,0,true,LUMAR Fire,1,2023
+user31,Consumer,0,true,LUMAR Fire,1,2023
+user31,Consumer,0,true,LUMAR Fire,1,2023
+user31,Consumer,0,false,LUMAR Fire,1,2023
+user31,Admin,22,true,MC Mech,1,2023
+user31,Admin,22,true,MC Mech,1,2023
+user31,Admin,22,true,MC Mech,1,2023
+user31,Dispatcher,22,false,MC Mech,1,2023
+user31,Dispatcher,22,false,MC Mech,1,2023
+user31,Dispatcher,22,false,MC Mech,1,2023
+user31,Mechanic,0,false,MC Mech,1,2023
+user31,Mechanic,0,false,MC Mech,1,2023
+user31,Office_Staff,0,false,MC Mech,1,2023
+user31,Office_Staff,0,false,MC Mech,1,2023
+user31,Office_Staff,0,false,MC Mech,1,2023
+user31,Sub_Contractor,0,false,MC Mech,1,2023
+user31,Sub_Contractor,0,false,MC Mech,1,2023
+user31,Technician,0,false,MC Mech,1,2023
+user31,Consumer,0,false,MC Mech,1,2023
+user31,Consumer,0,false,MC Mech,1,2023
+user31,Consumer,0,false,MC Mech,1,2023
+user31,Consumer,0,false,MC Mech,1,2023
+user31,Consumer,0,false,MC Mech,1,2023
+user31,Consumer,0,false,MC Mech,1,2023
+user31,Consumer,0,true,MC Mech,1,2023
+user31,Consumer,0,true,MC Mech,1,2023
+user31,Consumer,0,true,MC Mech,1,2023
+user31,Admin,22,true,Mobile Mech,1,2023
+user31,Dispatcher,30,true,Mobile Mech,1,2023
+user31,Dispatcher,40,true,Mobile Mech,1,2023
+user31,Mechanic,20,true,Mobile Mech,1,2023
+user31,Office_Staff,20,true,Mobile Mech,1,2023
+user31,Sub_Contractor,0,false,Mobile Mech,1,2023
+user31,Technician,0,false,Mobile Mech,1,2023
+user31,Consumer,0,true,Mobile Mech,1,2023
+user31,Consumer,0,true,Mobile Mech,1,2023
+user31,Consumer,0,true,Mobile Mech,1,2023
+user31,Consumer,0,true,Mobile Mech,1,2023
+user31,Consumer,0,true,Mobile Mech,1,2023
+user31,Consumer,0,false,Mobile Mech,1,2023
+user31,Admin,22,true,PPL Aquatic,1,2023
+user31,Dispatcher,30,true,PPL Aquatic,1,2023
+user31,Dispatcher,40,true,PPL Aquatic,1,2023
+user31,Mechanic,20,true,PPL Aquatic,1,2023
+user31,Office_Staff,20,true,PPL Aquatic,1,2023
+user31,Sub_Contractor,0,false,PPL Aquatic,1,2023
+user31,Technician,0,false,PPL Aquatic,1,2023
+user31,Consumer,0,true,PPL Aquatic,1,2023
+user31,Consumer,0,true,PPL Aquatic,1,2023
+user31,Consumer,0,true,PPL Aquatic,1,2023
+user31,Consumer,0,true,PPL Aquatic,1,2023
+user31,Consumer,0,true,PPL Aquatic,1,2023
+user31,Consumer,0,false,PPL Aquatic,1,2023
+user31,Admin,22,true,Vics Group,1,2023
+user31,Dispatcher,30,true,Vics Group,1,2023
+user31,Dispatcher,40,true,Vics Group,1,2023
+user31,Mechanic,20,true,Vics Group,1,2023
+user31,Office_Staff,20,true,Vics Group,1,2023
+user31,Sub_Contractor,0,false,Vics Group,1,2023
+user31,Technician,0,false,Vics Group,1,2023
+user31,Consumer,0,true,Vics Group,1,2023
+user31,Consumer,0,true,Vics Group,1,2023
+user31,Consumer,0,true,Vics Group,1,2023
+user31,Consumer,0,true,Vics Group,1,2023
+user31,Consumer,0,true,Vics Group,1,2023
+user31,Consumer,0,false,Vics Group,1,2023
+user31,Admin,22,true,Daniels,1,2023
+user31,Dispatcher,30,true,Daniels,1,2023
+user31,Dispatcher,40,true,Daniels,1,2023
+user31,Mechanic,20,true,Daniels,1,2023
+user31,Office_Staff,20,true,Daniels,1,2023
+user31,Sub_Contractor,0,false,Daniels,1,2023
+user31,Technician,0,false,Daniels,1,2023
+user31,Consumer,0,true,Daniels,1,2023
+user31,Consumer,0,true,Daniels,1,2023
+user31,Consumer,0,true,Daniels,1,2023
+user31,Consumer,0,true,Daniels,1,2023
+user31,Consumer,0,true,Daniels,1,2023
+user31,Consumer,0,false,Daniels,1,2023
+user31,Admin,22,true,Talize Inc,1,2023
+user31,Dispatcher,30,true,Talize Inc,1,2023
+user31,Dispatcher,40,true,Talize Inc,1,2023
+user31,Mechanic,20,true,Talize Inc,1,2023
+user31,Office_Staff,20,true,Talize Inc,1,2023
+user31,Sub_Contractor,0,false,Talize Inc,1,2023
+user31,Technician,0,false,Talize Inc,1,2023
+user31,Consumer,0,true,Talize Inc,1,2023
+user31,Consumer,0,true,Talize Inc,1,2023
+user31,Consumer,0,true,Talize Inc,1,2023
+user31,Consumer,0,true,Talize Inc,1,2023
+user31,Consumer,0,true,Talize Inc,1,2023
+user31,Consumer,0,false,Talize Inc,1,2023
+user31,Admin,22,true,ventureLAB,1,2023
+user31,Dispatcher,30,true,ventureLAB,1,2023
+user31,Dispatcher,40,true,ventureLAB,1,2023
+user31,Mechanic,20,true,ventureLAB,1,2023
+user31,Office_Staff,20,true,ventureLAB,1,2023
+user31,Sub_Contractor,0,false,ventureLAB,1,2023
+user31,Technician,0,false,ventureLAB,1,2023
+user31,Consumer,0,true,ventureLAB,1,2023
+user31,Consumer,0,true,ventureLAB,1,2023
+user31,Consumer,0,true,ventureLAB,1,2023
+user31,Consumer,0,true,ventureLAB,1,2023
+user31,Consumer,0,true,ventureLAB,1,2023
+user31,Consumer,0,false,ventureLAB,1,2023
+user31,Admin,22,true,Goodmark,1,2023
+user31,Dispatcher,30,true,Goodmark,1,2023
+user31,Dispatcher,40,true,Goodmark,1,2023
+user31,Mechanic,20,true,Goodmark,1,2023
+user31,Office_Staff,20,true,Goodmark,1,2023
+user31,Sub_Contractor,0,false,Goodmark,1,2023
+user31,Technician,0,false,Goodmark,1,2023
+user31,Consumer,0,true,Goodmark,1,2023
+user31,Consumer,0,true,Goodmark,1,2023
+user31,Consumer,0,true,Goodmark,1,2023
+user31,Consumer,0,true,Goodmark,1,2023
+user31,Consumer,0,true,Goodmark,1,2023
+user31,Consumer,0,false,Goodmark,1,2023
+user31,Admin,22,true,Goodmark,2,2022
+user31,Admin,22,true,Goodmark,2,2022
+user31,Dispatcher,30,true,Goodmark,2,2022
+user31,Dispatcher,40,true,Goodmark,2,2022
+user31,Dispatcher,30,true,Goodmark,2,2022
+user31,Mechanic,20,true,Goodmark,2,2022
+user31,Office_Staff,20,true,Goodmark,2,2022
+user31,Sub_Contractor,0,false,Goodmark,2,2022
+user31,Sub_Contractor,0,false,Goodmark,2,2022
+user31,Technician,0,false,Goodmark,2,2022
+user31,Consumer,0,true,Goodmark,2,2022
+user31,Consumer,0,true,Goodmark,2,2022
+user31,Consumer,0,true,Goodmark,2,2022
+user31,Consumer,0,true,Goodmark,2,2022
+user31,Consumer,0,true,Goodmark,2,2022
+user31,Consumer,0,false,Goodmark,2,2022
+user31,Consumer,0,false,Goodmark,2,2022
+user31,Consumer,0,false,Goodmark,2,2022
+user31,Admin,22,true,ventureLAB,2,2022
+user31,Admin,22,true,ventureLAB,2,2022
+user31,Dispatcher,30,true,ventureLAB,2,2022
+user31,Dispatcher,40,true,ventureLAB,2,2022
+user31,Dispatcher,30,true,ventureLAB,2,2022
+user31,Mechanic,20,true,ventureLAB,2,2022
+user31,Office_Staff,20,true,ventureLAB,2,2022
+user31,Sub_Contractor,0,false,ventureLAB,2,2022
+user31,Sub_Contractor,0,false,ventureLAB,2,2022
+user31,Technician,0,false,ventureLAB,2,2022
+user31,Consumer,0,true,ventureLAB,2,2022
+user31,Consumer,0,true,ventureLAB,2,2022
+user31,Consumer,0,true,ventureLAB,2,2022
+user31,Consumer,0,true,ventureLAB,2,2022
+user31,Consumer,0,true,ventureLAB,2,2022
+user31,Consumer,0,false,ventureLAB,2,2022
+user31,Consumer,0,false,ventureLAB,2,2022
+user31,Consumer,0,false,ventureLAB,2,2022
+user31,Admin,22,true,Talize Inc,2,2022
+user31,Admin,22,true,Talize Inc,2,2022
+user31,Dispatcher,30,true,Talize Inc,2,2022
+user31,Dispatcher,40,true,Talize Inc,2,2022
+user31,Dispatcher,30,true,Talize Inc,2,2022
+user31,Mechanic,20,true,Talize Inc,2,2022
+user31,Office_Staff,20,true,Talize Inc,2,2022
+user31,Sub_Contractor,0,false,Talize Inc,2,2022
+user31,Sub_Contractor,0,false,Talize Inc,2,2022
+user31,Technician,0,false,Talize Inc,2,2022
+user31,Consumer,0,true,Talize Inc,2,2022
+user31,Consumer,0,true,Talize Inc,2,2022
+user31,Consumer,0,true,Talize Inc,2,2022
+user31,Consumer,0,true,Talize Inc,2,2022
+user31,Consumer,0,true,Talize Inc,2,2022
+user31,Consumer,0,false,Talize Inc,2,2022
+user31,Consumer,0,false,Talize Inc,2,2022
+user31,Consumer,0,false,Talize Inc,2,2022
+user31,Admin,22,true,Daniels,2,2022
+user31,Admin,22,true,Daniels,2,2022
+user31,Dispatcher,30,true,Daniels,2,2022
+user31,Dispatcher,40,true,Daniels,2,2022
+user31,Dispatcher,30,true,Daniels,2,2022
+user31,Mechanic,20,true,Daniels,2,2022
+user31,Office_Staff,20,true,Daniels,2,2022
+user31,Sub_Contractor,0,false,Daniels,2,2022
+user31,Sub_Contractor,0,false,Daniels,2,2022
+user31,Technician,0,false,Daniels,2,2022
+user31,Consumer,0,true,Daniels,2,2022
+user31,Consumer,0,true,Daniels,2,2022
+user31,Consumer,0,true,Daniels,2,2022
+user31,Consumer,0,true,Daniels,2,2022
+user31,Consumer,0,true,Daniels,2,2022
+user31,Consumer,0,false,Daniels,2,2022
+user31,Consumer,0,false,Daniels,2,2022
+user31,Consumer,0,false,Daniels,2,2022
+user31,Admin,22,true,Vics Group,2,2022
+user31,Admin,22,true,Vics Group,2,2022
+user31,Dispatcher,30,true,Vics Group,2,2022
+user31,Dispatcher,40,true,Vics Group,2,2022
+user31,Dispatcher,30,true,Vics Group,2,2022
+user31,Mechanic,20,true,Vics Group,2,2022
+user31,Office_Staff,20,true,Vics Group,2,2022
+user31,Sub_Contractor,0,false,Vics Group,2,2022
+user31,Sub_Contractor,0,false,Vics Group,2,2022
+user31,Technician,0,false,Vics Group,2,2022
+user31,Consumer,0,true,Vics Group,2,2022
+user31,Consumer,0,true,Vics Group,2,2022
+user31,Consumer,0,true,Vics Group,2,2022
+user31,Consumer,0,true,Vics Group,2,2022
+user31,Consumer,0,true,Vics Group,2,2022
+user31,Consumer,0,false,Vics Group,2,2022
+user31,Consumer,0,false,Vics Group,2,2022
+user31,Consumer,0,false,Vics Group,2,2022
+user31,Admin,22,true,PPL Aquatic,2,2022
+user31,Admin,22,true,PPL Aquatic,2,2022
+user31,Dispatcher,30,true,PPL Aquatic,2,2022
+user31,Dispatcher,40,true,PPL Aquatic,2,2022
+user31,Dispatcher,30,true,PPL Aquatic,2,2022
+user31,Mechanic,20,true,PPL Aquatic,2,2022
+user31,Office_Staff,20,true,PPL Aquatic,2,2022
+user31,Sub_Contractor,0,false,PPL Aquatic,2,2022
+user31,Sub_Contractor,0,false,PPL Aquatic,2,2022
+user31,Technician,0,false,PPL Aquatic,2,2022
+user31,Consumer,0,true,PPL Aquatic,2,2022
+user31,Consumer,0,true,PPL Aquatic,2,2022
+user31,Consumer,0,true,PPL Aquatic,2,2022
+user31,Consumer,0,true,PPL Aquatic,2,2022
+user31,Consumer,0,true,PPL Aquatic,2,2022
+user31,Consumer,0,false,PPL Aquatic,2,2022
+user31,Consumer,0,false,PPL Aquatic,2,2022
+user31,Consumer,0,false,PPL Aquatic,2,2022
+user31,Admin,22,true,ORHMA,2,2022
+user31,Admin,22,true,ORHMA,2,2022
+user31,Dispatcher,30,true,ORHMA,2,2022
+user31,Dispatcher,40,true,ORHMA,2,2022
+user31,Dispatcher,30,true,ORHMA,2,2022
+user31,Mechanic,20,true,ORHMA,2,2022
+user31,Office_Staff,20,true,ORHMA,2,2022
+user31,Sub_Contractor,0,false,ORHMA,2,2022
+user31,Sub_Contractor,0,false,ORHMA,2,2022
+user31,Technician,0,false,ORHMA,2,2022
+user31,Consumer,0,true,ORHMA,2,2022
+user31,Consumer,0,true,ORHMA,2,2022
+user31,Consumer,0,true,ORHMA,2,2022
+user31,Consumer,0,true,ORHMA,2,2022
+user31,Consumer,0,true,ORHMA,2,2022
+user31,Consumer,0,false,ORHMA,2,2022
+user31,Consumer,0,false,ORHMA,2,2022
+user31,Consumer,0,false,ORHMA,2,2022
+user31,Admin,22,true,Mobile Mech,2,2022
+user31,Admin,22,true,Mobile Mech,2,2022
+user31,Dispatcher,30,true,Mobile Mech,2,2022
+user31,Dispatcher,40,true,Mobile Mech,2,2022
+user31,Dispatcher,30,true,Mobile Mech,2,2022
+user31,Mechanic,20,true,Mobile Mech,2,2022
+user31,Office_Staff,20,true,Mobile Mech,2,2022
+user31,Sub_Contractor,0,false,Mobile Mech,2,2022
+user31,Sub_Contractor,0,false,Mobile Mech,2,2022
+user31,Technician,0,false,Mobile Mech,2,2022
+user31,Consumer,0,true,Mobile Mech,2,2022
+user31,Consumer,0,true,Mobile Mech,2,2022
+user31,Consumer,0,true,Mobile Mech,2,2022
+user31,Consumer,0,true,Mobile Mech,2,2022
+user31,Consumer,0,true,Mobile Mech,2,2022
+user31,Consumer,0,false,Mobile Mech,2,2022
+user31,Consumer,0,false,Mobile Mech,2,2022
+user31,Consumer,0,false,Mobile Mech,2,2022
+user31,Admin,22,true,MC Mech,2,2022
+user31,Admin,22,true,MC Mech,2,2022
+user31,Dispatcher,30,true,MC Mech,2,2022
+user31,Dispatcher,40,true,MC Mech,2,2022
+user31,Dispatcher,30,true,MC Mech,2,2022
+user31,Mechanic,20,true,MC Mech,2,2022
+user31,Office_Staff,20,true,MC Mech,2,2022
+user31,Sub_Contractor,0,false,MC Mech,2,2022
+user31,Sub_Contractor,0,false,MC Mech,2,2022
+user31,Technician,0,false,MC Mech,2,2022
+user31,Consumer,0,true,MC Mech,2,2022
+user31,Consumer,0,true,MC Mech,2,2022
+user31,Consumer,0,true,MC Mech,2,2022
+user31,Consumer,0,true,MC Mech,2,2022
+user31,Consumer,0,true,MC Mech,2,2022
+user31,Consumer,0,false,MC Mech,2,2022
+user31,Consumer,0,false,MC Mech,2,2022
+user31,Consumer,0,false,MC Mech,2,2022
+user31,Admin,22,true,LUMAR Fire,2,2022
+user31,Admin,22,true,LUMAR Fire,2,2022
+user31,Dispatcher,30,true,LUMAR Fire,2,2022
+user31,Dispatcher,40,true,LUMAR Fire,2,2022
+user31,Dispatcher,30,true,LUMAR Fire,2,2022
+user31,Mechanic,20,true,LUMAR Fire,2,2022
+user31,Office_Staff,20,true,LUMAR Fire,2,2022
+user31,Sub_Contractor,0,false,LUMAR Fire,2,2022
+user31,Sub_Contractor,0,false,LUMAR Fire,2,2022
+user31,Technician,0,false,LUMAR Fire,2,2022
+user31,Consumer,0,true,LUMAR Fire,2,2022
+user31,Consumer,0,true,LUMAR Fire,2,2022
+user31,Consumer,0,true,LUMAR Fire,2,2022
+user31,Consumer,0,true,LUMAR Fire,2,2022
+user31,Consumer,0,true,LUMAR Fire,2,2022
+user31,Consumer,0,false,LUMAR Fire,2,2022
+user31,Consumer,0,false,LUMAR Fire,2,2022
+user31,Consumer,0,false,LUMAR Fire,2,2022
+user31,Admin,22,true,Eastwing,2,2022
+user31,Admin,22,true,Eastwing,2,2022
+user31,Dispatcher,30,true,Eastwing,2,2022
+user31,Dispatcher,40,true,Eastwing,2,2022
+user31,Dispatcher,30,true,Eastwing,2,2022
+user31,Mechanic,20,true,Eastwing,2,2022
+user31,Office_Staff,20,true,Eastwing,2,2022
+user31,Sub_Contractor,0,false,Eastwing,2,2022
+user31,Sub_Contractor,0,false,Eastwing,2,2022
+user31,Technician,0,false,Eastwing,2,2022
+user31,Consumer,0,true,Eastwing,2,2022
+user31,Consumer,0,true,Eastwing,2,2022
+user31,Consumer,0,true,Eastwing,2,2022
+user31,Consumer,0,true,Eastwing,2,2022
+user31,Consumer,0,true,Eastwing,2,2022
+user31,Consumer,0,false,Eastwing,2,2022
+user31,Consumer,0,false,Eastwing,2,2022
+user31,Consumer,0,false,Eastwing,2,2022
+user31,Admin,22,true,Custom Brands (Eclipse),2,2022
+user31,Admin,22,true,Custom Brands (Eclipse),2,2022
+user31,Dispatcher,30,true,Custom Brands (Eclipse),2,2022
+user31,Dispatcher,40,true,Custom Brands (Eclipse),2,2022
+user31,Dispatcher,30,true,Custom Brands (Eclipse),2,2022
+user31,Mechanic,20,true,Custom Brands (Eclipse),2,2022
+user31,Office_Staff,20,true,Custom Brands (Eclipse),2,2022
+user31,Sub_Contractor,0,false,Custom Brands (Eclipse),2,2022
+user31,Sub_Contractor,0,false,Custom Brands (Eclipse),2,2022
+user31,Technician,0,false,Custom Brands (Eclipse),2,2022
+user31,Consumer,0,true,Custom Brands (Eclipse),2,2022
+user31,Consumer,0,true,Custom Brands (Eclipse),2,2022
+user31,Consumer,0,true,Custom Brands (Eclipse),2,2022
+user31,Consumer,0,true,Custom Brands (Eclipse),2,2022
+user31,Consumer,0,true,Custom Brands (Eclipse),2,2022
+user31,Consumer,0,false,Custom Brands (Eclipse),2,2022
+user31,Consumer,0,false,Custom Brands (Eclipse),2,2022
+user31,Consumer,0,false,Custom Brands (Eclipse),2,2022
+user31,Admin,22,true,A&G,2,2022
+user31,Admin,22,true,A&G,2,2022
+user31,Dispatcher,30,true,A&G,2,2022
+user31,Dispatcher,40,true,A&G,2,2022
+user31,Dispatcher,30,true,A&G,2,2022
+user31,Mechanic,20,true,A&G,2,2022
+user31,Office_Staff,20,true,A&G,2,2022
+user31,Sub_Contractor,0,false,A&G,2,2022
+user31,Sub_Contractor,0,false,A&G,2,2022
+user31,Technician,0,false,A&G,2,2022
+user31,Consumer,0,true,A&G,2,2022
+user31,Consumer,0,true,A&G,2,2022
+user31,Consumer,0,true,A&G,2,2022
+user31,Consumer,0,true,A&G,2,2022
+user31,Consumer,0,true,A&G,2,2022
+user31,Consumer,0,false,A&G,2,2022
+user31,Consumer,0,false,A&G,2,2022
+user31,Consumer,0,false,A&G,2,2022
+user31,Admin,22,true,ORHMA,1,2023
+user31,Admin,22,true,ORHMA,1,2023
+user31,Dispatcher,30,true,ORHMA,1,2023
+user31,Dispatcher,40,true,ORHMA,1,2023
+user31,Dispatcher,30,true,ORHMA,1,2023
+user31,Mechanic,20,true,ORHMA,1,2023
+user31,Office_Staff,20,true,ORHMA,1,2023
+user31,Sub_Contractor,0,false,ORHMA,1,2023
+user31,Sub_Contractor,0,false,ORHMA,1,2023
+user31,Technician,0,false,ORHMA,1,2023
+user31,Consumer,0,true,ORHMA,1,2023
+user31,Consumer,0,true,ORHMA,1,2023
+user31,Consumer,0,true,ORHMA,1,2023
+user31,Consumer,0,true,ORHMA,1,2023
+user31,Consumer,0,true,ORHMA,1,2023
+user31,Consumer,0,false,ORHMA,1,2023
+user31,Consumer,0,false,ORHMA,1,2023
+user31,Consumer,0,false,ORHMA,1,2023

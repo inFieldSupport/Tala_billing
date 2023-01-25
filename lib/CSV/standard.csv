@@ -1,0 +1,534 @@
+standard_name,standard_type,standard_price,active_standard,client_name,month,year
+standard,Telematics,30,true,A&G,1,2023
+standard,Telematics,30,true,A&G,1,2023
+standard,Telematics,30,true,A&G,1,2023
+standard,Telematics,30,true,A&G,1,2023
+standard,Telematics,30,false,A&G,1,2023
+standard,Telematics,30,false,A&G,1,2023
+standard,Accounting,0,false,A&G,1,2023
+standard,Accounting,0,false,A&G,1,2023
+standard,Accounting,0,false,A&G,1,2023
+standard,Bin Module,0,false,A&G,1,2023
+standard,Bin Module,0,false,A&G,1,2023
+standard,Bin Monitoring,12,true,A&G,1,2023
+standard,Bin Monitoring,12,true,A&G,1,2023
+standard,SMS Delivery,10,true,A&G,1,2023
+standard,SMS Delivery,10,true,A&G,1,2023
+standard,Routing,0,false,A&G,1,2023
+standard,Routing,0,false,A&G,1,2023
+standard,Routing,0,false,A&G,1,2023
+standard,Telematics,30,true,Custom Brands (Eclipse),1,2023
+standard,Telematics,30,true,Custom Brands (Eclipse),1,2023
+standard,Telematics,30,true,Custom Brands (Eclipse),1,2023
+standard,Telematics,30,true,Custom Brands (Eclipse),1,2023
+standard,Telematics,30,false,Custom Brands (Eclipse),1,2023
+standard,Telematics,30,false,Custom Brands (Eclipse),1,2023
+standard,Accounting,0,false,Custom Brands (Eclipse),1,2023
+standard,Accounting,0,false,Custom Brands (Eclipse),1,2023
+standard,Accounting,0,false,Custom Brands (Eclipse),1,2023
+standard,Bin Module,0,false,Custom Brands (Eclipse),1,2023
+standard,Bin Module,0,false,Custom Brands (Eclipse),1,2023
+standard,Bin Monitoring,12,true,Custom Brands (Eclipse),1,2023
+standard,Bin Monitoring,12,true,Custom Brands (Eclipse),1,2023
+standard,SMS Delivery,10,true,Custom Brands (Eclipse),1,2023
+standard,SMS Delivery,10,true,Custom Brands (Eclipse),1,2023
+standard,Routing,0,false,Custom Brands (Eclipse),1,2023
+standard,Routing,0,false,Custom Brands (Eclipse),1,2023
+standard,Routing,0,false,Custom Brands (Eclipse),1,2023
+standard,Telematics,30,true,Eastwing,1,2023
+standard,Telematics,30,true,Eastwing,1,2023
+standard,Telematics,30,true,Eastwing,1,2023
+standard,Telematics,30,true,Eastwing,1,2023
+standard,Telematics,30,false,Eastwing,1,2023
+standard,Telematics,30,false,Eastwing,1,2023
+standard,Accounting,0,false,Eastwing,1,2023
+standard,Accounting,0,false,Eastwing,1,2023
+standard,Accounting,0,false,Eastwing,1,2023
+standard,Bin Module,0,false,Eastwing,1,2023
+standard,Bin Module,0,false,Eastwing,1,2023
+standard,Bin Monitoring,12,true,Eastwing,1,2023
+standard,Bin Monitoring,12,true,Eastwing,1,2023
+standard,SMS Delivery,10,true,Eastwing,1,2023
+standard,SMS Delivery,10,true,Eastwing,1,2023
+standard,Routing,0,false,Eastwing,1,2023
+standard,Routing,0,false,Eastwing,1,2023
+standard,Routing,0,false,Eastwing,1,2023
+standard,Telematics,30,true,LUMAR Fire,1,2023
+standard,Telematics,30,true,LUMAR Fire,1,2023
+standard,Telematics,30,true,LUMAR Fire,1,2023
+standard,Telematics,30,true,LUMAR Fire,1,2023
+standard,Telematics,30,false,LUMAR Fire,1,2023
+standard,Telematics,30,false,LUMAR Fire,1,2023
+standard,Accounting,0,false,LUMAR Fire,1,2023
+standard,Accounting,0,false,LUMAR Fire,1,2023
+standard,Accounting,0,false,LUMAR Fire,1,2023
+standard,Bin Module,0,false,LUMAR Fire,1,2023
+standard,Bin Module,0,false,LUMAR Fire,1,2023
+standard,Bin Monitoring,12,true,LUMAR Fire,1,2023
+standard,Bin Monitoring,12,true,LUMAR Fire,1,2023
+standard,SMS Delivery,10,true,LUMAR Fire,1,2023
+standard,SMS Delivery,10,true,LUMAR Fire,1,2023
+standard,Routing,0,false,LUMAR Fire,1,2023
+standard,Routing,0,false,LUMAR Fire,1,2023
+standard,Routing,0,false,LUMAR Fire,1,2023
+standard,Telematics,30,true,MC Mech,1,2023
+standard,Telematics,30,true,MC Mech,1,2023
+standard,Telematics,30,true,MC Mech,1,2023
+standard,Telematics,30,true,MC Mech,1,2023
+standard,Telematics,30,false,MC Mech,1,2023
+standard,Telematics,30,false,MC Mech,1,2023
+standard,Accounting,0,false,MC Mech,1,2023
+standard,Accounting,0,false,MC Mech,1,2023
+standard,Accounting,0,false,MC Mech,1,2023
+standard,Bin Module,0,false,MC Mech,1,2023
+standard,Bin Module,0,false,MC Mech,1,2023
+standard,Bin Monitoring,12,true,MC Mech,1,2023
+standard,Bin Monitoring,12,true,MC Mech,1,2023
+standard,SMS Delivery,10,true,MC Mech,1,2023
+standard,SMS Delivery,10,true,MC Mech,1,2023
+standard,Routing,0,false,MC Mech,1,2023
+standard,Routing,0,false,MC Mech,1,2023
+standard,Routing,0,false,MC Mech,1,2023
+standard,Telematics,30,true,Mobile Mech,1,2023
+standard,Telematics,30,true,Mobile Mech,1,2023
+standard,Telematics,30,true,Mobile Mech,1,2023
+standard,Telematics,30,true,Mobile Mech,1,2023
+standard,Telematics,30,false,Mobile Mech,1,2023
+standard,Telematics,30,false,Mobile Mech,1,2023
+standard,Accounting,0,false,Mobile Mech,1,2023
+standard,Accounting,0,false,Mobile Mech,1,2023
+standard,Accounting,0,false,Mobile Mech,1,2023
+standard,Bin Module,0,false,Mobile Mech,1,2023
+standard,Bin Module,0,false,Mobile Mech,1,2023
+standard,Bin Monitoring,12,true,Mobile Mech,1,2023
+standard,Bin Monitoring,12,true,Mobile Mech,1,2023
+standard,SMS Delivery,10,true,Mobile Mech,1,2023
+standard,SMS Delivery,10,true,Mobile Mech,1,2023
+standard,Routing,0,false,Mobile Mech,1,2023
+standard,Routing,0,false,Mobile Mech,1,2023
+standard,Routing,0,false,Mobile Mech,1,2023
+standard,Telematics,30,true,ORHMA,1,2023
+standard,Telematics,30,true,ORHMA,1,2023
+standard,Telematics,30,true,ORHMA,1,2023
+standard,Telematics,30,true,ORHMA,1,2023
+standard,Telematics,30,false,ORHMA,1,2023
+standard,Telematics,30,false,ORHMA,1,2023
+standard,Accounting,0,false,ORHMA,1,2023
+standard,Accounting,0,false,ORHMA,1,2023
+standard,Accounting,0,false,ORHMA,1,2023
+standard,Bin Module,0,false,ORHMA,1,2023
+standard,Bin Module,0,false,ORHMA,1,2023
+standard,Bin Monitoring,12,true,ORHMA,1,2023
+standard,Bin Monitoring,12,true,ORHMA,1,2023
+standard,SMS Delivery,10,true,ORHMA,1,2023
+standard,SMS Delivery,10,true,ORHMA,1,2023
+standard,Routing,0,false,ORHMA,1,2023
+standard,Routing,0,false,ORHMA,1,2023
+standard,Routing,0,false,ORHMA,1,2023
+standard,Telematics,30,true,PPL Aquatic,1,2023
+standard,Telematics,30,true,PPL Aquatic,1,2023
+standard,Telematics,30,true,PPL Aquatic,1,2023
+standard,Telematics,30,true,PPL Aquatic,1,2023
+standard,Telematics,30,false,PPL Aquatic,1,2023
+standard,Telematics,30,false,PPL Aquatic,1,2023
+standard,Accounting,0,false,PPL Aquatic,1,2023
+standard,Accounting,0,false,PPL Aquatic,1,2023
+standard,Accounting,0,false,PPL Aquatic,1,2023
+standard,Bin Module,0,false,PPL Aquatic,1,2023
+standard,Bin Module,0,false,PPL Aquatic,1,2023
+standard,Bin Monitoring,12,true,PPL Aquatic,1,2023
+standard,Bin Monitoring,12,true,PPL Aquatic,1,2023
+standard,SMS Delivery,10,true,PPL Aquatic,1,2023
+standard,SMS Delivery,10,true,PPL Aquatic,1,2023
+standard,Routing,0,false,PPL Aquatic,1,2023
+standard,Routing,0,false,PPL Aquatic,1,2023
+standard,Routing,0,false,PPL Aquatic,1,2023
+standard,Telematics,30,true,Vics Group,1,2023
+standard,Telematics,30,true,Vics Group,1,2023
+standard,Telematics,30,true,Vics Group,1,2023
+standard,Telematics,30,true,Vics Group,1,2023
+standard,Telematics,30,false,Vics Group,1,2023
+standard,Telematics,30,false,Vics Group,1,2023
+standard,Accounting,0,false,Vics Group,1,2023
+standard,Accounting,0,false,Vics Group,1,2023
+standard,Accounting,0,false,Vics Group,1,2023
+standard,Bin Module,0,false,Vics Group,1,2023
+standard,Bin Module,0,false,Vics Group,1,2023
+standard,Bin Monitoring,12,true,Vics Group,1,2023
+standard,Bin Monitoring,12,true,Vics Group,1,2023
+standard,SMS Delivery,10,true,Vics Group,1,2023
+standard,SMS Delivery,10,true,Vics Group,1,2023
+standard,Routing,0,false,Vics Group,1,2023
+standard,Routing,0,false,Vics Group,1,2023
+standard,Routing,0,false,Vics Group,1,2023
+standard,Telematics,30,true,Daniels,1,2023
+standard,Telematics,30,true,Daniels,1,2023
+standard,Telematics,30,true,Daniels,1,2023
+standard,Telematics,30,true,Daniels,1,2023
+standard,Telematics,30,false,Daniels,1,2023
+standard,Telematics,30,false,Daniels,1,2023
+standard,Accounting,0,false,Daniels,1,2023
+standard,Accounting,0,false,Daniels,1,2023
+standard,Accounting,0,false,Daniels,1,2023
+standard,Bin Module,0,false,Daniels,1,2023
+standard,Bin Module,0,false,Daniels,1,2023
+standard,Bin Monitoring,12,true,Daniels,1,2023
+standard,Bin Monitoring,12,true,Daniels,1,2023
+standard,SMS Delivery,10,true,Daniels,1,2023
+standard,SMS Delivery,10,true,Daniels,1,2023
+standard,Routing,0,false,Daniels,1,2023
+standard,Routing,0,false,Daniels,1,2023
+standard,Routing,0,false,Daniels,1,2023
+standard,Telematics,30,true,Talize Inc,1,2023
+standard,Telematics,30,true,Talize Inc,1,2023
+standard,Telematics,30,true,Talize Inc,1,2023
+standard,Telematics,30,true,Talize Inc,1,2023
+standard,Telematics,30,false,Talize Inc,1,2023
+standard,Telematics,30,false,Talize Inc,1,2023
+standard,Accounting,0,false,Talize Inc,1,2023
+standard,Accounting,0,false,Talize Inc,1,2023
+standard,Accounting,0,false,Talize Inc,1,2023
+standard,Bin Module,0,false,Talize Inc,1,2023
+standard,Bin Module,0,false,Talize Inc,1,2023
+standard,Bin Monitoring,12,true,Talize Inc,1,2023
+standard,Bin Monitoring,12,true,Talize Inc,1,2023
+standard,SMS Delivery,10,true,Talize Inc,1,2023
+standard,SMS Delivery,10,true,Talize Inc,1,2023
+standard,Routing,0,false,Talize Inc,1,2023
+standard,Routing,0,false,Talize Inc,1,2023
+standard,Routing,0,false,Talize Inc,1,2023
+standard,Telematics,30,true,ventureLAB,1,2023
+standard,Telematics,30,true,ventureLAB,1,2023
+standard,Telematics,30,true,ventureLAB,1,2023
+standard,Telematics,30,true,ventureLAB,1,2023
+standard,Telematics,30,false,ventureLAB,1,2023
+standard,Telematics,30,false,ventureLAB,1,2023
+standard,Accounting,0,false,ventureLAB,1,2023
+standard,Accounting,0,false,ventureLAB,1,2023
+standard,Accounting,0,false,ventureLAB,1,2023
+standard,Bin Module,0,false,ventureLAB,1,2023
+standard,Bin Module,0,false,ventureLAB,1,2023
+standard,Bin Monitoring,12,true,ventureLAB,1,2023
+standard,Bin Monitoring,12,true,ventureLAB,1,2023
+standard,SMS Delivery,10,true,ventureLAB,1,2023
+standard,SMS Delivery,10,true,ventureLAB,1,2023
+standard,Routing,0,false,ventureLAB,1,2023
+standard,Routing,0,false,ventureLAB,1,2023
+standard,Routing,0,false,ventureLAB,1,2023
+standard,Telematics,30,true,Goodmark,1,2023
+standard,Telematics,30,true,Goodmark,1,2023
+standard,Telematics,30,true,Goodmark,1,2023
+standard,Telematics,30,true,Goodmark,1,2023
+standard,Telematics,30,false,Goodmark,1,2023
+standard,Telematics,30,false,Goodmark,1,2023
+standard,Accounting,0,false,Goodmark,1,2023
+standard,Accounting,0,false,Goodmark,1,2023
+standard,Accounting,0,false,Goodmark,1,2023
+standard,Bin Module,0,false,Goodmark,1,2023
+standard,Bin Module,0,false,Goodmark,1,2023
+standard,Bin Monitoring,12,true,Goodmark,1,2023
+standard,Bin Monitoring,12,true,Goodmark,1,2023
+standard,SMS Delivery,10,true,Goodmark,1,2023
+standard,SMS Delivery,10,true,Goodmark,1,2023
+standard,Routing,0,false,Goodmark,1,2023
+standard,Routing,0,false,Goodmark,1,2023
+standard,Routing,0,false,Goodmark,1,2023
+standard,Telematics,30,true,Goodmark,2,2022
+standard,Telematics,30,true,Goodmark,2,2022
+standard,Telematics,30,true,Goodmark,2,2022
+standard,Telematics,30,true,Goodmark,2,2022
+standard,Telematics,30,true,Goodmark,2,2022
+standard,Telematics,30,false,Goodmark,2,2022
+standard,Telematics,30,false,Goodmark,2,2022
+standard,Telematics,30,false,Goodmark,2,2022
+standard,Accounting,0,false,Goodmark,2,2022
+standard,Accounting,0,false,Goodmark,2,2022
+standard,Accounting,0,false,Goodmark,2,2022
+standard,Accounting,0,false,Goodmark,2,2022
+standard,Bin Module,0,false,Goodmark,2,2022
+standard,Bin Module,0,false,Goodmark,2,2022
+standard,Bin Module,0,false,Goodmark,2,2022
+standard,Bin Monitoring,12,true,Goodmark,2,2022
+standard,Bin Monitoring,12,true,Goodmark,2,2022
+standard,SMS Delivery,10,true,Goodmark,2,2022
+standard,SMS Delivery,10,true,Goodmark,2,2022
+standard,Routing,12,false,Goodmark,2,2022
+standard,Routing,12,false,Goodmark,2,2022
+standard,Routing,12,false,Goodmark,2,2022
+standard,Routing,12,true,Goodmark,2,2022
+standard,Telematics,30,true,ventureLAB,2,2022
+standard,Telematics,30,true,ventureLAB,2,2022
+standard,Telematics,30,true,ventureLAB,2,2022
+standard,Telematics,30,true,ventureLAB,2,2022
+standard,Telematics,30,true,ventureLAB,2,2022
+standard,Telematics,30,false,ventureLAB,2,2022
+standard,Telematics,30,false,ventureLAB,2,2022
+standard,Telematics,30,false,ventureLAB,2,2022
+standard,Accounting,0,false,ventureLAB,2,2022
+standard,Accounting,0,false,ventureLAB,2,2022
+standard,Accounting,0,false,ventureLAB,2,2022
+standard,Accounting,0,false,ventureLAB,2,2022
+standard,Bin Module,0,false,ventureLAB,2,2022
+standard,Bin Module,0,false,ventureLAB,2,2022
+standard,Bin Module,0,false,ventureLAB,2,2022
+standard,Bin Monitoring,12,true,ventureLAB,2,2022
+standard,Bin Monitoring,12,true,ventureLAB,2,2022
+standard,SMS Delivery,10,true,ventureLAB,2,2022
+standard,SMS Delivery,10,true,ventureLAB,2,2022
+standard,Routing,12,false,ventureLAB,2,2022
+standard,Routing,12,false,ventureLAB,2,2022
+standard,Routing,12,false,ventureLAB,2,2022
+standard,Routing,12,true,ventureLAB,2,2022
+standard,Telematics,30,true,Talize Inc,2,2022
+standard,Telematics,30,true,Talize Inc,2,2022
+standard,Telematics,30,true,Talize Inc,2,2022
+standard,Telematics,30,true,Talize Inc,2,2022
+standard,Telematics,30,true,Talize Inc,2,2022
+standard,Telematics,30,false,Talize Inc,2,2022
+standard,Telematics,30,false,Talize Inc,2,2022
+standard,Telematics,30,false,Talize Inc,2,2022
+standard,Accounting,0,false,Talize Inc,2,2022
+standard,Accounting,0,false,Talize Inc,2,2022
+standard,Accounting,0,false,Talize Inc,2,2022
+standard,Accounting,0,false,Talize Inc,2,2022
+standard,Bin Module,0,false,Talize Inc,2,2022
+standard,Bin Module,0,false,Talize Inc,2,2022
+standard,Bin Module,0,false,Talize Inc,2,2022
+standard,Bin Monitoring,12,true,Talize Inc,2,2022
+standard,Bin Monitoring,12,true,Talize Inc,2,2022
+standard,SMS Delivery,10,true,Talize Inc,2,2022
+standard,SMS Delivery,10,true,Talize Inc,2,2022
+standard,Routing,12,false,Talize Inc,2,2022
+standard,Routing,12,false,Talize Inc,2,2022
+standard,Routing,12,false,Talize Inc,2,2022
+standard,Routing,12,true,Talize Inc,2,2022
+standard,Telematics,30,true,Daniels,2,2022
+standard,Telematics,30,true,Daniels,2,2022
+standard,Telematics,30,true,Daniels,2,2022
+standard,Telematics,30,true,Daniels,2,2022
+standard,Telematics,30,true,Daniels,2,2022
+standard,Telematics,30,false,Daniels,2,2022
+standard,Telematics,30,false,Daniels,2,2022
+standard,Telematics,30,false,Daniels,2,2022
+standard,Accounting,0,false,Daniels,2,2022
+standard,Accounting,0,false,Daniels,2,2022
+standard,Accounting,0,false,Daniels,2,2022
+standard,Accounting,0,false,Daniels,2,2022
+standard,Bin Module,0,false,Daniels,2,2022
+standard,Bin Module,0,false,Daniels,2,2022
+standard,Bin Module,0,false,Daniels,2,2022
+standard,Bin Monitoring,12,true,Daniels,2,2022
+standard,Bin Monitoring,12,true,Daniels,2,2022
+standard,SMS Delivery,10,true,Daniels,2,2022
+standard,SMS Delivery,10,true,Daniels,2,2022
+standard,Routing,12,false,Daniels,2,2022
+standard,Routing,12,false,Daniels,2,2022
+standard,Routing,12,false,Daniels,2,2022
+standard,Routing,12,true,Daniels,2,2022
+standard,Telematics,30,true,Vics Group,2,2022
+standard,Telematics,30,true,Vics Group,2,2022
+standard,Telematics,30,true,Vics Group,2,2022
+standard,Telematics,30,true,Vics Group,2,2022
+standard,Telematics,30,true,Vics Group,2,2022
+standard,Telematics,30,false,Vics Group,2,2022
+standard,Telematics,30,false,Vics Group,2,2022
+standard,Telematics,30,false,Vics Group,2,2022
+standard,Accounting,0,false,Vics Group,2,2022
+standard,Accounting,0,false,Vics Group,2,2022
+standard,Accounting,0,false,Vics Group,2,2022
+standard,Accounting,0,false,Vics Group,2,2022
+standard,Bin Module,0,false,Vics Group,2,2022
+standard,Bin Module,0,false,Vics Group,2,2022
+standard,Bin Module,0,false,Vics Group,2,2022
+standard,Bin Monitoring,12,true,Vics Group,2,2022
+standard,Bin Monitoring,12,true,Vics Group,2,2022
+standard,SMS Delivery,10,true,Vics Group,2,2022
+standard,SMS Delivery,10,true,Vics Group,2,2022
+standard,Routing,12,false,Vics Group,2,2022
+standard,Routing,12,false,Vics Group,2,2022
+standard,Routing,12,false,Vics Group,2,2022
+standard,Routing,12,true,Vics Group,2,2022
+standard,Telematics,30,true,PPL Aquatic,2,2022
+standard,Telematics,30,true,PPL Aquatic,2,2022
+standard,Telematics,30,true,PPL Aquatic,2,2022
+standard,Telematics,30,true,PPL Aquatic,2,2022
+standard,Telematics,30,true,PPL Aquatic,2,2022
+standard,Telematics,30,false,PPL Aquatic,2,2022
+standard,Telematics,30,false,PPL Aquatic,2,2022
+standard,Telematics,30,false,PPL Aquatic,2,2022
+standard,Accounting,0,false,PPL Aquatic,2,2022
+standard,Accounting,0,false,PPL Aquatic,2,2022
+standard,Accounting,0,false,PPL Aquatic,2,2022
+standard,Accounting,0,false,PPL Aquatic,2,2022
+standard,Bin Module,0,false,PPL Aquatic,2,2022
+standard,Bin Module,0,false,PPL Aquatic,2,2022
+standard,Bin Module,0,false,PPL Aquatic,2,2022
+standard,Bin Monitoring,12,true,PPL Aquatic,2,2022
+standard,Bin Monitoring,12,true,PPL Aquatic,2,2022
+standard,SMS Delivery,10,true,PPL Aquatic,2,2022
+standard,SMS Delivery,10,true,PPL Aquatic,2,2022
+standard,Routing,12,false,PPL Aquatic,2,2022
+standard,Routing,12,false,PPL Aquatic,2,2022
+standard,Routing,12,false,PPL Aquatic,2,2022
+standard,Routing,12,true,PPL Aquatic,2,2022
+standard,Telematics,30,true,ORHMA,2,2022
+standard,Telematics,30,true,ORHMA,2,2022
+standard,Telematics,30,true,ORHMA,2,2022
+standard,Telematics,30,true,ORHMA,2,2022
+standard,Telematics,30,true,ORHMA,2,2022
+standard,Telematics,30,false,ORHMA,2,2022
+standard,Telematics,30,false,ORHMA,2,2022
+standard,Telematics,30,false,ORHMA,2,2022
+standard,Accounting,0,false,ORHMA,2,2022
+standard,Accounting,0,false,ORHMA,2,2022
+standard,Accounting,0,false,ORHMA,2,2022
+standard,Accounting,0,false,ORHMA,2,2022
+standard,Bin Module,0,false,ORHMA,2,2022
+standard,Bin Module,0,false,ORHMA,2,2022
+standard,Bin Module,0,false,ORHMA,2,2022
+standard,Bin Monitoring,12,true,ORHMA,2,2022
+standard,Bin Monitoring,12,true,ORHMA,2,2022
+standard,SMS Delivery,10,true,ORHMA,2,2022
+standard,SMS Delivery,10,true,ORHMA,2,2022
+standard,Routing,12,false,ORHMA,2,2022
+standard,Routing,12,false,ORHMA,2,2022
+standard,Routing,12,false,ORHMA,2,2022
+standard,Routing,12,true,ORHMA,2,2022
+standard,Telematics,30,true,Mobile Mech,2,2022
+standard,Telematics,30,true,Mobile Mech,2,2022
+standard,Telematics,30,true,Mobile Mech,2,2022
+standard,Telematics,30,true,Mobile Mech,2,2022
+standard,Telematics,30,true,Mobile Mech,2,2022
+standard,Telematics,30,false,Mobile Mech,2,2022
+standard,Telematics,30,false,Mobile Mech,2,2022
+standard,Telematics,30,false,Mobile Mech,2,2022
+standard,Accounting,0,false,Mobile Mech,2,2022
+standard,Accounting,0,false,Mobile Mech,2,2022
+standard,Accounting,0,false,Mobile Mech,2,2022
+standard,Accounting,0,false,Mobile Mech,2,2022
+standard,Bin Module,0,false,Mobile Mech,2,2022
+standard,Bin Module,0,false,Mobile Mech,2,2022
+standard,Bin Module,0,false,Mobile Mech,2,2022
+standard,Bin Monitoring,12,true,Mobile Mech,2,2022
+standard,Bin Monitoring,12,true,Mobile Mech,2,2022
+standard,SMS Delivery,10,true,Mobile Mech,2,2022
+standard,SMS Delivery,10,true,Mobile Mech,2,2022
+standard,Routing,12,false,Mobile Mech,2,2022
+standard,Routing,12,false,Mobile Mech,2,2022
+standard,Routing,12,false,Mobile Mech,2,2022
+standard,Routing,12,true,Mobile Mech,2,2022
+standard,Telematics,30,true,MC Mech,2,2022
+standard,Telematics,30,true,MC Mech,2,2022
+standard,Telematics,30,true,MC Mech,2,2022
+standard,Telematics,30,true,MC Mech,2,2022
+standard,Telematics,30,true,MC Mech,2,2022
+standard,Telematics,30,false,MC Mech,2,2022
+standard,Telematics,30,false,MC Mech,2,2022
+standard,Telematics,30,false,MC Mech,2,2022
+standard,Accounting,0,false,MC Mech,2,2022
+standard,Accounting,0,false,MC Mech,2,2022
+standard,Accounting,0,false,MC Mech,2,2022
+standard,Accounting,0,false,MC Mech,2,2022
+standard,Bin Module,0,false,MC Mech,2,2022
+standard,Bin Module,0,false,MC Mech,2,2022
+standard,Bin Module,0,false,MC Mech,2,2022
+standard,Bin Monitoring,12,true,MC Mech,2,2022
+standard,Bin Monitoring,12,true,MC Mech,2,2022
+standard,SMS Delivery,10,true,MC Mech,2,2022
+standard,SMS Delivery,10,true,MC Mech,2,2022
+standard,Routing,12,false,MC Mech,2,2022
+standard,Routing,12,false,MC Mech,2,2022
+standard,Routing,12,false,MC Mech,2,2022
+standard,Routing,12,true,MC Mech,2,2022
+standard,Telematics,30,true,LUMAR Fire,2,2022
+standard,Telematics,30,true,LUMAR Fire,2,2022
+standard,Telematics,30,true,LUMAR Fire,2,2022
+standard,Telematics,30,true,LUMAR Fire,2,2022
+standard,Telematics,30,true,LUMAR Fire,2,2022
+standard,Telematics,30,false,LUMAR Fire,2,2022
+standard,Telematics,30,false,LUMAR Fire,2,2022
+standard,Telematics,30,false,LUMAR Fire,2,2022
+standard,Accounting,0,false,LUMAR Fire,2,2022
+standard,Accounting,0,false,LUMAR Fire,2,2022
+standard,Accounting,0,false,LUMAR Fire,2,2022
+standard,Accounting,0,false,LUMAR Fire,2,2022
+standard,Bin Module,0,false,LUMAR Fire,2,2022
+standard,Bin Module,0,false,LUMAR Fire,2,2022
+standard,Bin Module,0,false,LUMAR Fire,2,2022
+standard,Bin Monitoring,12,true,LUMAR Fire,2,2022
+standard,Bin Monitoring,12,true,LUMAR Fire,2,2022
+standard,SMS Delivery,10,true,LUMAR Fire,2,2022
+standard,SMS Delivery,10,true,LUMAR Fire,2,2022
+standard,Routing,12,false,LUMAR Fire,2,2022
+standard,Routing,12,false,LUMAR Fire,2,2022
+standard,Routing,12,false,LUMAR Fire,2,2022
+standard,Routing,12,true,LUMAR Fire,2,2022
+standard,Telematics,30,true,Eastwing,2,2022
+standard,Telematics,30,true,Eastwing,2,2022
+standard,Telematics,30,true,Eastwing,2,2022
+standard,Telematics,30,true,Eastwing,2,2022
+standard,Telematics,30,true,Eastwing,2,2022
+standard,Telematics,30,false,Eastwing,2,2022
+standard,Telematics,30,false,Eastwing,2,2022
+standard,Telematics,30,false,Eastwing,2,2022
+standard,Accounting,0,false,Eastwing,2,2022
+standard,Accounting,0,false,Eastwing,2,2022
+standard,Accounting,0,false,Eastwing,2,2022
+standard,Accounting,0,false,Eastwing,2,2022
+standard,Bin Module,0,false,Eastwing,2,2022
+standard,Bin Module,0,false,Eastwing,2,2022
+standard,Bin Module,0,false,Eastwing,2,2022
+standard,Bin Monitoring,12,true,Eastwing,2,2022
+standard,Bin Monitoring,12,true,Eastwing,2,2022
+standard,SMS Delivery,10,true,Eastwing,2,2022
+standard,SMS Delivery,10,true,Eastwing,2,2022
+standard,Routing,12,false,Eastwing,2,2022
+standard,Routing,12,false,Eastwing,2,2022
+standard,Routing,12,false,Eastwing,2,2022
+standard,Routing,12,true,Eastwing,2,2022
+standard,Telematics,30,true,Custom Brands (Eclipse),2,2022
+standard,Telematics,30,true,Custom Brands (Eclipse),2,2022
+standard,Telematics,30,true,Custom Brands (Eclipse),2,2022
+standard,Telematics,30,true,Custom Brands (Eclipse),2,2022
+standard,Telematics,30,true,Custom Brands (Eclipse),2,2022
+standard,Telematics,30,false,Custom Brands (Eclipse),2,2022
+standard,Telematics,30,false,Custom Brands (Eclipse),2,2022
+standard,Telematics,30,false,Custom Brands (Eclipse),2,2022
+standard,Accounting,0,false,Custom Brands (Eclipse),2,2022
+standard,Accounting,0,false,Custom Brands (Eclipse),2,2022
+standard,Accounting,0,false,Custom Brands (Eclipse),2,2022
+standard,Accounting,0,false,Custom Brands (Eclipse),2,2022
+standard,Bin Module,0,false,Custom Brands (Eclipse),2,2022
+standard,Bin Module,0,false,Custom Brands (Eclipse),2,2022
+standard,Bin Module,0,false,Custom Brands (Eclipse),2,2022
+standard,Bin Monitoring,12,true,Custom Brands (Eclipse),2,2022
+standard,Bin Monitoring,12,true,Custom Brands (Eclipse),2,2022
+standard,SMS Delivery,10,true,Custom Brands (Eclipse),2,2022
+standard,SMS Delivery,10,true,Custom Brands (Eclipse),2,2022
+standard,Routing,12,false,Custom Brands (Eclipse),2,2022
+standard,Routing,12,false,Custom Brands (Eclipse),2,2022
+standard,Routing,12,false,Custom Brands (Eclipse),2,2022
+standard,Routing,12,true,Custom Brands (Eclipse),2,2022
+standard,Telematics,30,true,A&G,2,2022
+standard,Telematics,30,true,A&G,2,2022
+standard,Telematics,30,true,A&G,2,2022
+standard,Telematics,30,true,A&G,2,2022
+standard,Telematics,30,true,A&G,2,2022
+standard,Telematics,30,false,A&G,2,2022
+standard,Telematics,30,false,A&G,2,2022
+standard,Telematics,30,false,A&G,2,2022
+standard,Accounting,0,false,A&G,2,2022
+standard,Accounting,0,false,A&G,2,2022
+standard,Accounting,0,false,A&G,2,2022
+standard,Accounting,0,false,A&G,2,2022
+standard,Bin Module,0,false,A&G,2,2022
+standard,Bin Module,0,false,A&G,2,2022
+standard,Bin Module,0,false,A&G,2,2022
+standard,Bin Monitoring,12,true,A&G,2,2022
+standard,Bin Monitoring,12,true,A&G,2,2022
+standard,SMS Delivery,10,true,A&G,2,2022
+standard,SMS Delivery,10,true,A&G,2,2022
+standard,Routing,12,false,A&G,2,2022
+standard,Routing,12,false,A&G,2,2022
+standard,Routing,12,false,A&G,2,2022
+standard,Routing,12,true,A&G,2,2022

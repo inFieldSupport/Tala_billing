@@ -6,8 +6,9 @@ RSpec.describe "Users", type: :system do
    it "edit the activity and price for users with specific type" do 
     client= Client.new(client_name:"A&G",email:"example@gmail.com")
     client.save
-    user = User.new(user_name:"test",user_price: 20,user_type:"Admin",client: client)
+    user = User.new(user_name:"test",user_price: 20,user_type:"Admin",client: client,month: 1,year: 2023)
     user.save
+    get admin_panel_path,:params=>{:client=>client.id,:select=>{:month=> 1,:year=> 2023}}
     put user_path(user.id),:params=>{:user=>{:price=>30}}
     put active_user_path,:params=>{:client=> client.id,:user_type=>"Admin",:active_user_count=>1}
    end

@@ -25,8 +25,8 @@
  <%= image_tag("infield.png")%>
  <br><br><br>
  <span class="bg-gray-500 p-2 text-white font-sans">INVOICE 2184</span><br><br>
- <span class="bg-gray-500 p-2 text-white font-sans">DATE <%= @bill.date_of_bill %> TERMS Due on receipt</span><br><br>
- <span class="bg-gray-500 p-2 text-white font-sans">DUE DATE <%= @bill.date_of_bill %></span><br><br>
+ <span class="bg-gray-500 p-2 text-white font-sans">DATE <%= Date.today.to_s %> TERMS Due on receipt</span><br><br>
+ <span class="bg-gray-500 p-2 text-white font-sans">DUE DATE <%= Date.today.to_s %></span><br><br>
  </div>
  </div>
 <br>
@@ -48,25 +48,25 @@
 
 <tbody>
 <% @users_type.each do |user_type| %>
- <% if User.active_user(user_type,@client).count > 0 %>
+ <% if User.active_user(user_type,@client,@month,@year).count > 0 %>
   <tr class="bg-white border-b">
    <td class="text-base text-gray-900 font-semibold py-2 whitespace-nowrap text-left pl-10 font-sans">inField Clipboard - <%= user_type %></td>
-   <td class="text-base text-gray-900 font-semibold px-2 py-2 whitespace-nowrap font-sans "><%=  User.active_user(user_type,@client).count %></td>
-   <td class="text-base text-gray-900 font-semibold px-2 py-2 whitespace-nowrap font-sans "> <%= User.user_type(user_type,@client).first.user_price %></td>
-   <td class="text-base text-gray-900 font-semibold px-2 py-2 whitespace-nowrap font-sans"><%= (User.active_user(user_type,@client).count * User.user_type(user_type,@client).first.user_price).round(2)  %></td>
-   <% total_amount = total_amount + (User.active_user(user_type,@client).count * User.user_type(user_type,@client).first.user_price).round(2) %>
+   <td class="text-base text-gray-900 font-semibold px-2 py-2 whitespace-nowrap font-sans "><%=  User.active_user(user_type,@client,@month,@year).count %></td>
+   <td class="text-base text-gray-900 font-semibold px-2 py-2 whitespace-nowrap font-sans "> <%= User.user_type(user_type,@client,@month,@year).first.user_price %></td>
+   <td class="text-base text-gray-900 font-semibold px-2 py-2 whitespace-nowrap font-sans"><%= (User.active_user(user_type,@client,@month,@year).count * User.user_type(user_type,@client,@month,@year).first.user_price).round(2)  %></td>
+   <% total_amount = total_amount + (User.active_user(user_type,@client,@month,@year).count * User.user_type(user_type,@client,@month,@year).first.user_price).round(2) %>
   </tr class="bg-white border-b">
   <% end %>
 <% end %>
 
 <% @standards_type.each do |standard_type| %>
- <% if Standard.active_standard(standard_type,@client).count > 0 %>
+ <% if Standard.active_standard(standard_type,@client,@month,@year).count > 0 %>
   <tr class="bg-white border-b">
    <td class="text-base text-gray-900 font-semibold py-2 whitespace-nowrap text-left pl-10 font-sans">inField Tracker - <%= standard_type %></td>
-   <td class="text-base text-gray-900 font-semibold px-2 py-2 whitespace-nowrap font-sans"><%=  Standard.active_standard(standard_type,@client).count %></td>
-   <td class="text-base text-gray-900 font-semibold px-2 py-2 whitespace-nowrap font-sans"> <%= Standard.standard_type(standard_type,@client).first.standard_price %></td>
-   <td class="text-base text-gray-900 font-semibold px-2 py-2 whitespace-nowrap font-sans"><%= (Standard.active_standard(standard_type,@client).count * Standard.standard_type(standard_type,@client).first.standard_price).round(2)  %></td>
-   <% total_amount = total_amount + (Standard.active_standard(standard_type,@client).count * Standard.standard_type(standard_type,@client).first.standard_price).round(2) %>
+   <td class="text-base text-gray-900 font-semibold px-2 py-2 whitespace-nowrap font-sans"><%=  Standard.active_standard(standard_type,@client,@month,@year).count %></td>
+   <td class="text-base text-gray-900 font-semibold px-2 py-2 whitespace-nowrap font-sans"> <%= Standard.standard_type(standard_type,@client,@month,@year).first.standard_price %></td>
+   <td class="text-base text-gray-900 font-semibold px-2 py-2 whitespace-nowrap font-sans"><%= (Standard.active_standard(standard_type,@client,@month,@year).count * Standard.standard_type(standard_type,@client,@month,@year).first.standard_price).round(2)  %></td>
+   <% total_amount = total_amount + (Standard.active_standard(standard_type,@client,@month,@year).count * Standard.standard_type(standard_type,@client,@month,@year).first.standard_price).round(2) %>
   </tr class="bg-white border-b">
   <% end %>
 <% end %>
@@ -83,7 +83,7 @@ TOTAL:<br><br><br>
 </div>
 <div class="font-sans">
  <span><%= total_amount %></span><br>
- <span> <%= total_amount * 0.13 %></span><br>
+ <span> <%= (total_amount * 0.13).round(2) %></span><br>
  <span><%= (total_amount + total_amount * 0.13).round(2)  %></span>
 </div>
 </div>
@@ -116,7 +116,7 @@ Credit Card, we will send an authorization form.
 <tbody>
  <tr class="bg-white border-b">
   <td class="text-base text-gray-900 font-semibold font-sans px-2 py-2 whitespace-nowrap ">HST (ON) @ 13%</td>
-  <td class="text-base text-gray-900 font-semibold font-sans px-2 py-2 whitespace-nowrap "><%= total_amount * 0.13 %></td>
+  <td class="text-base text-gray-900 font-semibold font-sans px-2 py-2 whitespace-nowrap "><%= (total_amount * 0.13).round(2) %></td>
   <td class="text-base text-gray-900 font-semibold font-sans px-2 py-2 whitespace-nowrap ">$<%= (total_amount + total_amount * 0.13).round(2) %></td>
  </tr class="bg-white border-b">
 </tbody>
@@ -127,7 +127,7 @@ Credit Card, we will send an authorization form.
 <% if current_user %>
   <div class="text-center p-4 bg-gray-600">
     <span class="text-base font-bold font-serif px-4 py-4 text-white"> Click on the button to send The Bill Sheet to client:</span> 
-    <%= link_to "Send",send_email_path(client_id: @client.id),class:"bg-orange-500 font-serif text-white px-4 py-2.5 rounded-md border border-transparent hover:bg-orange-900 font-semibold" %>
+    <%= button_to "Send",send_email_path(client_id: @client.id),data: {turbo_confirm: "Are you sure you want to send the bill sheet to client?"},class:"bg-orange-500 font-serif text-white px-4 py-2.5 rounded-md border border-transparent hover:bg-orange-900 font-semibold" %>
   </div>
 <% end %>
 <br><br>

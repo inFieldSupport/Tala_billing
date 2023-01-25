@@ -2,13 +2,13 @@
 
 
   <td class="text-base text-gray-900 font-semibold font-sans px-2 py-4 whitespace-nowrap border-r">
-  <% if User.user_type( type,@client.id).any?  %>  
+  <% if User.user_type( type,@client.id,session[:month],session[:year]).any?  %>  
     <% if type == "Consumer" %>
-      $<%= User.user_type( type,@client.id).first.user_price %>
+      $<%= User.user_type( type,@client.id,session[:month],session[:year]).first.user_price %>
     <% else %>
-     <% @total_rate_user= @total_rate_user + User.user_type(type,@client.id).first.user_price %>
+     <% @total_rate_user= @total_rate_user + User.user_type(type,@client.id,session[:month],session[:year]).first.user_price %>
       <%= turbo_frame_tag "new_price" do %>
-       $<%= User.user_type( type,@client.id).first.user_price %>
+       $<%= User.user_type( type,@client.id,session[:month],session[:year]).first.user_price %>
         <%= link_to "Edit",new_price_path(client: @client,user_type: type),class:"text-left text-sky-700 font-serif font-semibold hover:font-bold pl-2" %>
       <% end %>
     <% end %>
@@ -18,17 +18,17 @@
   </td>
 
   <td class="text-base text-gray-900 font-semibold font-sans px-2 py-4 whitespace-nowrap border-r">
-  <% if User.user_type(type,@client.id).count > 0  %>
-     <%= User.user_type(type,@client.id).count  %>
+  <% if User.user_type(type,@client.id,session[:month],session[:year]).count > 0  %>
+     <%= User.user_type(type,@client.id,session[:month],session[:year]).count  %>
   <% else %>
     0
   <% end %>
   </td>
 
   <td class="text-base text-gray-900 font-semibold font-sans px-2 py-4 whitespace-nowrap border-r">
-  <% if User.user_type(type,@client.id).count > 0  %>
+  <% if User.user_type(type,@client.id,session[:month],session[:year]).count > 0  %>
   <%= turbo_frame_tag "new_active_user" do %>
-    <%=  User.active_user(type,@client.id).count %> 
+    <%=  User.active_user(type,@client.id,session[:month],session[:year]).count %> 
     <%= link_to "Edit",new_active_user_path(client: @client,user_type: type),class:"text-left font-serif text-sky-700 font-semibold hover:font-bold pl-2" %>
   <% end %>
   <% else %>
@@ -37,12 +37,12 @@
   </td>
 
   <td class="text-base text-gray-900 font-semibold font-sans px-2 py-4 whitespace-nowrap border-r"> $
-  <% if User.user_type(type,@client.id).any? && User.active_user(type,@client.id).count > 0 %>
-   <%= (User.active_user(type,@client.id).count * User.user_type(type,@client.id).first.user_price).round(2) %>
+  <% if User.user_type(type,@client.id,session[:month],session[:year]).any? && User.active_user(type,@client.id,session[:month],session[:year]).count > 0 %>
+   <%= (User.active_user(type,@client.id,session[:month],session[:year]).count * User.user_type(type,@client.id,session[:month],session[:year]).first.user_price).round(2) %>
   <% else %>
   0.0
   <% end %>
   </td>
 
 
-  <% @total_amount_user= @total_amount_user + (User.active_user(type,@client.id).count * User.user_type(type,@client.id).first.user_price).round(2) if User.user_type(type,@client.id).any? && User.active_user(type,@client.id).count > 0%>
+  <% @total_amount_user= @total_amount_user + (User.active_user(type,@client.id,session[:month],session[:year]).count * User.user_type(type,@client.id,session[:month],session[:year]).first.user_price).round(2) if User.user_type(type,@client.id,session[:month],session[:year]).any? && User.active_user(type,@client.id,session[:month],session[:year]).count > 0%>

@@ -10,18 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_24_061730) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_24_193445) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "bills", force: :cascade do |t|
-    t.float "total_amount"
-    t.date "date_of_bill"
-    t.bigint "client_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["client_id"], name: "index_bills_on_client_id"
-  end
 
   create_table "clients", force: :cascade do |t|
     t.string "client_name"
@@ -46,6 +37,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_24_061730) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "active_standard"
+    t.integer "year"
+    t.integer "month"
     t.index ["client_id"], name: "index_standards_on_client_id"
   end
 
@@ -57,10 +50,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_24_061730) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "active_user"
+    t.integer "month"
+    t.integer "year"
     t.index ["client_id"], name: "index_users_on_client_id"
   end
 
-  add_foreign_key "bills", "clients"
   add_foreign_key "standards", "clients"
   add_foreign_key "users", "clients"
 end

@@ -5,7 +5,7 @@ RSpec.describe "AdminPanels", type: :request do
     it "index" do
       client = Client.new(client_name:"A&G",email:"example@gmail.com")
       client.save
-      get admin_panel_path,:params=>{:client=>client.id}
+      get admin_panel_path,:params=>{:client=>client.id,:select=>{:month=> 1,:year=> 2023}}
     end
 
     it "new price" do
@@ -31,7 +31,7 @@ RSpec.describe "AdminPanels", type: :request do
     it " send email" do 
       client = Client.new(client_name:"A&G",email:"example@gmail.com")
       client.save
-      get send_email_path,:params=>{:client_id=>client.id}
+      post send_email_path,:params=>{:client_id=>client.id}
     end
 
 

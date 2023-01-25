@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   get'/new_active_user',to: "admin_panel#new_active_user"
   root 'sessions#new'
 
-  get '/send_email',to:"admin_panel#send_email"
+  post '/send_email',to:"admin_panel#send_email"
 
   get '/invoice',to:"invoice#bill"
 end
